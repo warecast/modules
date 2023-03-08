@@ -44,7 +44,16 @@ jobs:
           fi
         done
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Apply regex replacements
+        run: |
+          find . -type f -name '*.sgmodule' -exec sed -i 's/^\(reject\|REJECT\)/REJECT-TINYGIF/g' {} +
+          find . -type f -name '*.sgmodule' -exec sed -i 's/^\(hostname =\)/hostname = %APPEND%/g' {} +
+          find . -type f -name '*.sgmodule' -exec sed -i 's/^\(tag =\)/tag =/g' {} +
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "tk4900@gmail.com"
+          git config --global user.name "warecast"
+          git add .
+          git commit -m "Update files"
+          git push
