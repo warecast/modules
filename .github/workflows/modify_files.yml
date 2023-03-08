@@ -1,0 +1,41 @@
+name: Fetch URLs and update files
+
+on:
+  push:
+    branches:
+      - main  # change this to match your repository's default branch
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && \
+          sudo apt-get install -y curl jq
+      
+      - name: Fetch URLs from YAML file
+        id: fetch-urls
+        run: |
+          URLS=$(cat urls.yml | jq -r '.[]')
+          echo "::set-output name=urls::$URLS"
+        shell: bash
+      
+      - name: Save URLs content to files in Loon directory
+        run: |
+          for URL in ${{ steps.fetch-urls.outputs.urls }}; do
+            FILENAME=$(echo $URL | sed 's:.*/::')
+            CONTENT=$(curl -s $URL)
+            echo "$CONTENT" > Loon/$FILENAME
+          done
+      
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: 'Loon/**'
+          message: 'Update Loon files'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
