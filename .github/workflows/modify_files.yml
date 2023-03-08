@@ -1,41 +1,44 @@
-name: Fetch URLs and update files
+name: Fetch URLs and update Loon directory
 
 on:
   push:
     branches:
-      - main  # change this to match your repository's default branch
+      - main
 
 jobs:
-  fetch-and-update:
+  fetch-urls-and-update-loon-directory:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      
-      - name: Install dependencies
-        run: |
-          sudo apt-get update && \
-          sudo apt-get install -y curl jq
-      
-      - name: Fetch URLs from YAML file
-        id: fetch-urls
-        run: |
-          URLS=$(cat urls.yml | jq -r '.[]')
-          echo "::set-output name=urls::$URLS"
-        shell: bash
-      
-      - name: Save URLs content to files in Loon directory
-        run: |
-          for URL in ${{ steps.fetch-urls.outputs.urls }}; do
-            FILENAME=$(echo $URL | sed 's:.*/::')
-            CONTENT=$(curl -s $URL)
-            echo "$CONTENT" > Loon/$FILENAME
-          done
-      
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          add: 'Loon/**'
-          message: 'Update Loon files'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Fetch URLs and update files
+      run: |
+        declare -a URLS=(
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Zhihu_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weibo_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/UnionPay_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Cainiao_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Bilibili_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin"
+        )
+
+        for url in "${URLS[@]}"
+        do
+          filename=$(basename "$url")
+          echo "Fetching $url and saving to $filename"
+          curl -s "$url" > "./Loon/$filename"
+        done
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add -A
+        git commit -m "Update files from URLs"
+        git push
