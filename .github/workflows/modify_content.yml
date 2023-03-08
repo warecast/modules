@@ -19,7 +19,7 @@ jobs:
         for file in $files
         do
           # Use regex to process the contents
-          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gI' -e 's/REJECT-.*$/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' -e $file)
+          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gI' -e 's/REJECT-.*$/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' $file)
 
           # Save modified contents to Surge directory and change file extension
           surge_dir=./Surge
@@ -32,4 +32,4 @@ jobs:
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "Update files"
+        commit_message: "Process contents from plugin and save to sgmodule"
