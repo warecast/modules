@@ -18,7 +18,7 @@ jobs:
         run: |
           for url in $(cat urls.yml); do
             filename=$(basename $url)
-            curl --silent --show-error --location --output Loon/$filename $url
+            curl -L $url -o Loon/$filename
           done
       
       - name: Commit and Push changes
