@@ -27,11 +27,27 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin"
         )
 
+        # loop through the URLs and fetch the contents
         for url in "${URLS[@]}"
         do
+          # extract the filename from the URL
           filename=$(basename "$url")
-          echo "Fetching $url and saving to $filename"
-          curl -s "$url" > "./Loon/$filename"
+
+          # check if the file exists
+          if [ -f "./Loon/$filename" ]; then
+            # compare the contents of the existing file with the downloaded content
+            if ! cmp -s <(curl -s "$url") "./Loon/$filename"; then
+              echo "Updating $filename"
+              # overwrite the existing file with the downloaded content
+              curl -s "$url" > "./Loon/$filename"
+            else
+              echo "$filename is up to date"
+            fi
+          else
+            echo "Fetching $url and saving to $filename"
+            # create a new file with the downloaded content
+            curl -s "$url" > "./Loon/$filename"
+          fi
         done
 
     - name: Process files
@@ -42,12 +58,28 @@ jobs:
         do
           # Use regex to process the contents
           modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gmi' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, tag =.*$//gm' -e 's/, tag=.*$//gm' $file)
+
           # Save modified contents to Surge directory and change file extension
           surge_dir=./Surge
           surge_file=$(basename $file .plugin).sgmodule
           surge_path=$surge_dir/$surge_file
-          mkdir -p $surge_dir
-          echo "$modified_contents" > $surge_path
+
+          # check if the file exists
+          if [ -f "$surge_path" ]; then
+            # compare the contents of the existing file with the modified contents
+            if ! cmp -s <(echo "$modified_contents") "$surge_path"; then
+              echo "Updating $surge_file"
+              # overwrite the existing file with the modified contents
+              echo "$modified_contents" > "$surge_path"
+            else
+              echo "$surge_file is up to date"
+            fi
+          else
+            mkdir -p "$surge_dir"
+            echo "Creating $surge_file"
+            # create a new file with the modified contents
+            echo "$modified_contents" > "$surge_path"
+          fi
         done
 
     - name: Commit changes
