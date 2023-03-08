@@ -62,4 +62,4 @@ jobs:
             # Create a new commit with the modified file and updated tree SHA
             curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -d "{\"message\":\"Modify file\",\"parents\":[\"$sha\"],\"tree\":\"$tree\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/git/commits\""
+            "https://api.github.com/repos/${{ github.repository }}/git/commits" \
