@@ -9,10 +9,10 @@
 # 屏蔽默认搜索框关键词
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords reject
 # 直播间商品广告浮窗 //api.live.bilibili.com
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? REJECT-TINYGIF
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject
 # IP请求、地理位置请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ REJECT-TINYGIF
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ reject
 # 将香港CDN切换至腾讯CDN以提高视频加载速度
 # ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net 302 https://upos-sz-mirrorcos.bilivideo.com
 

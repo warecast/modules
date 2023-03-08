@@ -14,18 +14,18 @@ DOMAIN, sdkclick.biz.weibo.com, REJECT
 DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 
 [Rewrite]
-^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/photo\/info\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? REJECT-TINYGIF
-^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? REJECT-TINYGIF
-^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ REJECT-TINYGIF
+^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? reject
+^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject
+^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? reject
+^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject
+^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject
+^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject
+^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject
+^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ reject
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php$|sdkconfig\.php\?) reject
-^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? REJECT-TINYGIF
-^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? REJECT-TINYGIF
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject
 
 [Script]
 # 首页 签到、发布按钮、侧边栏、右上角红包、侧边栏提醒、超话tab悬浮、顶部直播
