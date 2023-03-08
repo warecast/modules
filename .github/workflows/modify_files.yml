@@ -41,7 +41,7 @@ jobs:
         for file in $files
         do
           # Use regex to process the contents
-          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gI' -e 's/REJECT-.*$/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' -e 's/,\s?tag\s?=.*$//g' $file)
+          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gI' -e 's/REJECT-.*$/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' -e 's/,\s?tag\s?=.*$//gm' $file)
           # Save modified contents to Surge directory and change file extension
           surge_dir=./Surge
           surge_file=$(basename $file .plugin).sgmodule
