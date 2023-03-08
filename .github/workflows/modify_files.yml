@@ -34,10 +34,26 @@ jobs:
           curl -s "$url" > "./Loon/$filename"
         done
 
+    - name: Process files
+      run: |
+        # Read all file contents from Loon directory
+        files=$(find ./Loon -type f)
+        for file in $files
+        do
+          # Use regex to process the contents
+          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gI' -e 's/REJECT-.*$/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, tag =.*$//g' $file)
+          # Save modified contents to Surge directory and change file extension
+          surge_dir=./Surge
+          surge_file=$(basename $file .plugin).sgmodule
+          surge_path=$surge_dir/$surge_file
+          mkdir -p $surge_dir
+          echo "$modified_contents" > $surge_path
+        done
+
     - name: Commit changes
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
         git add -A
-        git commit -m "Update files from URLs"
+        git commit -m "update and save files"
         git push
