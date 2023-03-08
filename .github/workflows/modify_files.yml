@@ -3,6 +3,7 @@ name: Update SGModules
 on:
   schedule:
     - cron: '0 0 * * *'  # Run once a day at midnight UTC
+  workflow_dispatch:
 
 jobs:
   update_sgmodules:
