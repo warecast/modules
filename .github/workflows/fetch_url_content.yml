@@ -2,8 +2,7 @@ name: Fetch URLs and update Loon directory
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   fetch-urls-and-update-loon-directory:
