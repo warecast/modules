@@ -1,62 +1,29 @@
-name: Update SGModules
+name: Fetch URLs and Save to Loon Directory
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Run once a day at midnight UTC
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  update_sgmodules:
+  fetch-and-save:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get -y install curl
-
-    - name: Fetch and modify SGModule files
-      run: |
-        urls=(
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Zhihu_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weibo_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/UnionPay_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Cainiao_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Bilibili_remove_ads.plugin'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin'
-        )
-        for url in "${urls[@]}"; do
-          content=$(curl -sSL "$url")
-          modified_content=$(echo "$content" | \
-            sed -e 's/^\(reject\|REJECT\)/REJECT-TINYGIF/g' \
-                -e 's/^\(hostname =\)/hostname = %APPEND%/g' \
-                -e 's/^\(tag =\)//g')
-          filename=$(basename "$url" | sed 's/\.plugin$/.sgmodule/')
-          if [[ ! -f "$filename" ]]; then
-            echo "$modified_content" > "$filename"
-            git add "$filename"
-            git commit -m "Add $filename"
-          fi
-        done
-
-    - name: Apply regex replacements
-      run: |
-        find . -type f -name '*.sgmodule' -exec sed -i 's/^\(reject\|REJECT\)/REJECT-TINYGIF/g' {} +
-        find . -type f -name '*.sgmodule' -exec sed -i 's/^\(hostname =\)/hostname = %APPEND%/g' {} +
-        find . -type f -name '*.sgmodule' -exec sed -i 's/^\(tag =\)/tag =/g' {} +
-
-    - name: Commit and push changes
-      env:
-        GIT_AUTHOR_NAME: warecast
-        GIT_AUTHOR_EMAIL: tk4900@gmail.com
-      run: |
-        git config --unset-all user.name
-        git config user.name "GitHub Actions"
-        git add .
-        git commit -m "Update files"
-        git push
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Fetch URLs
+        id: fetch-urls
+        run: |
+          for url in $(cat urls.yml); do
+            filename=$(basename $url)
+            curl -L $url -o Loon/$filename
+          done
+      
+      - name: Commit and Push changes
+        if: steps.fetch-urls.outputs.modified_files != ''
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update files: ${{ steps.fetch-urls.outputs.modified_files }}"
+          commit_options: '--author "GitHub Action <action@github.com>"'
