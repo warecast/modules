@@ -51,9 +51,10 @@ jobs:
         done
 
     - name: Commit changes
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "action@github.com"
-        git add -A
-        git commit -m "update and save files"
-        git push
+      uses: EndBug/add-and-commit@v7
+      with:
+        add: '.'
+        author_name: 'GitHub Action'
+        author_email: 'action@github.com'
+        message: 'update and save filess'
+        dry_run: true
