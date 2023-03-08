@@ -1,27 +1,35 @@
-name: Modify contents
+name: Process Files
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  modify-files:
+  process-files:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Modify files
-        run: |
-          mkdir -p Surge
-          for file in Loon/*.plugin; do
-            filename=$(basename "$file")
-            sed -e 's/^reject/REJECT-TINYGIF/g' -e 's/^REJECT/REJECT-TINYGIF/g' -e 's/hostname =/hostname = %APPEND%/g' -e '/^tag = /d' "$file" > "Surge/${filename%.*}.sgmodule"
-          done
+    - name: Process files
+      run: |
+        # Read all file contents from Loon directory
+        files=$(find ./Loon -type f)
+        for file in $files
+        do
+          # Use regex to process the contents
+          modified_contents=$(sed -e 's/reject-.*/REJECT-TINYGIF/gI' -e 's/REJECT-.*/REJECT-TINYGIF/gI' -e 's/hostname =/hostname = %APPEND%/g' -e '/tag =.*/d' $file)
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: modify strings and save to sgmodule
-          commit_options: '--no-verify'
+          # Save modified contents to Surge directory and change file extension
+          surge_dir=./Surge
+          surge_file=$(basename $file .plugin).sgmodule
+          surge_path=$surge_dir/$surge_file
+          mkdir -p $surge_dir
+          echo "$modified_contents" > $surge_path
+        done
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update files"
