@@ -104,7 +104,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/fuss10.elemecdn.com\/.+.mp4 - reject
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ - reject
 # > echongdian
-^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 - reject-200
+^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 - REJECT-TINYGIF
 # > feizhu
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allresource - reject
 # > feikechaguan
@@ -126,11 +126,11 @@ https://guanyu.longfor.com/app-server/api/v1/main/start - reject
 # > huazhu
 ^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ - reject
 # > hupu
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject-img
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ - REJECT-TINYGIF
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. - REJECT-TINYGIF
+^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - REJECT-TINYGIF
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} - reject-img
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} - REJECT-TINYGIF
 # > hongbanbao
 https://fbchina.flipchina.cn/v2/ad/query/* - reject
 # > huyazhibo
@@ -184,7 +184,7 @@ https://jdread-api.jd.com/jdread/api/popup - reject
 # > kuaikan
 ^https?:\/\/api.kkmh.com\/v\d\/(ad|advertisement)\/ - reject
 ^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk - reject
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - reject-dict
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - REJECT-TINYGIF
 # > kanlixiang
 ^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
 # > kantianxia
@@ -241,7 +241,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # > mixuebingcheng
 ^https?:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/limitedAds$ - reject
 # > maoyan*
-^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? - reject-img
+^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? - REJECT-TINYGIF
 # > nanfanghangkong
 ^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement - reject
 # > omofun
@@ -279,8 +279,8 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 # > ShunFengYouXuan
 ^https?:\/\/mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* - reject
 # > spotify
-^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) - reject-img
-^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ - reject-img
+^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) - REJECT-TINYGIF
+^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ - REJECT-TINYGIF
 # > SanLianZhongDu
 https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig - reject
 # > ShunFeng
@@ -438,7 +438,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad - reject
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad - reject
 # > zhongguoyinhang
-#^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-img
+#^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - REJECT-TINYGIF
 # > zhuijudaren
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
 # > zhangshangyingxionglianmeng
