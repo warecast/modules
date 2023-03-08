@@ -10,7 +10,7 @@ DOMAIN, amdc.m.taobao.com, REJECT
 
 [Rewrite]
 # 通用广告请求[包含开屏广告]
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn REJECT-TINYGIF
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn reject
 
 [Script]
 # 首页中部的惊喜福利推广
