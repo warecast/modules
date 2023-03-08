@@ -51,6 +51,9 @@ jobs:
         find . -type f -name '*.sgmodule' -exec sed -i 's/^\(tag =\)/tag =/g' {} +
 
     - name: Commit and push changes
+      env:
+        GIT_AUTHOR_NAME: warecast
+        GIT_AUTHOR_EMAIL: tk4900@gmail.com
       run: |
         git config --unset-all user.name
         git config user.name "GitHub Actions"
