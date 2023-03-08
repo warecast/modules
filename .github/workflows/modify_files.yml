@@ -12,20 +12,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
       - name: Modify and commit files
         run: |
           # Define the list of URLs and their corresponding file names
           urls=(
             'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Zhihu_remove_ads.plugin,Zhihu_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin,Weixin_Official_Accounts_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin,Weixin_external_links_unlock.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weibo_remove_ads.plugin,Weibo_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/UnionPay_remove_ads.plugin,UnionPay_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin,Remove_splash_screen_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin,JD_Price.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Cainiao_remove_ads.plugin,Cainiao_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Bilibili_remove_ads.plugin,Bilibili_remove_ads.sgmodule'
-            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin,Amap_remove_ads.sgmodule'
+            'https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/QuantumultX/Filter/YouTube_adBlock.list,YouTube_adBlock.txt'
           )
 
           # Loop over the URLs and their file names
@@ -72,4 +69,4 @@ jobs:
             # Create a new commit with the modified file and updated tree SHA
             curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -d "{\"message\":\"Modify file\",\"parents\":[\"$sha\"],\"tree\":\"$tree\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/git/
+            "https://api.github.com/repos/${{ github.repository }}/git/commits
