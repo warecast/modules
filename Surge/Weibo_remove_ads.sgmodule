@@ -6,26 +6,26 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 [Rule]
-DOMAIN, adstrategy.biz.weibo.com, REJECT-TINYGIF
-;DOMAIN, boot.biz.weibo.com, REJECT-TINYGIF
-DOMAIN, kadmimage.biz.weibo.com, REJECT-TINYGIF
-DOMAIN, sdkaction.biz.weibo.com, REJECT-TINYGIF
-DOMAIN, sdkclick.biz.weibo.com, REJECT-TINYGIF
-DOMAIN, sdkmonitor.biz.weibo.com, REJECT-TINYGIF
+DOMAIN, adstrategy.biz.weibo.com, REJECT
+;DOMAIN, boot.biz.weibo.com, REJECT
+DOMAIN, kadmimage.biz.weibo.com, REJECT
+DOMAIN, sdkaction.biz.weibo.com, REJECT
+DOMAIN, sdkclick.biz.weibo.com, REJECT
+DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 
 [Rewrite]
-^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/photo\/info\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? REJECT-TINYGIF-dict
-^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? REJECT-TINYGIF-dict
-^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ REJECT-TINYGIF-dict
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php$|sdkconfig\.php\?) REJECT-TINYGIF
-^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? REJECT-TINYGIF-dict
-^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? REJECT-TINYGIF-dict
+^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject-dict
+^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject-dict
+^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ reject-dict
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php$|sdkconfig\.php\?) reject
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
 
 [Script]
 # 首页 签到、发布按钮、侧边栏、右上角红包、侧边栏提醒、超话tab悬浮、顶部直播

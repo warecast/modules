@@ -6,9 +6,9 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/UnionPay.png
 
 [Rule]
-DOMAIN, ads.95516.com, REJECT-TINYGIF
-DOMAIN, cm-10-138.getui.com, REJECT-TINYGIF
-DOMAIN, sdk.open.talk.getui.net, REJECT-TINYGIF
-DOMAIN, sdk-conf.getui.com, REJECT-TINYGIF
-DOMAIN, switch.cup.com.cn, REJECT-TINYGIF
-DOMAIN, tysdk.95516.com, REJECT-TINYGIF
+DOMAIN, ads.95516.com, REJECT
+DOMAIN, cm-10-138.getui.com, REJECT
+DOMAIN, sdk.open.talk.getui.net, REJECT
+DOMAIN, sdk-conf.getui.com, REJECT
+DOMAIN, switch.cup.com.cn, REJECT
+DOMAIN, tysdk.95516.com, REJECT

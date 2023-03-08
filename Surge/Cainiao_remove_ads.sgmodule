@@ -6,11 +6,11 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Cainiao.png
 
 [Rule]
-DOMAIN, amdc.m.taobao.com, REJECT-TINYGIF
+DOMAIN, amdc.m.taobao.com, REJECT
 
 [Rewrite]
 # 通用广告请求[包含开屏广告]
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn REJECT-TINYGIF-200
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn reject-200
 
 [Script]
 # 首页中部的惊喜福利推广

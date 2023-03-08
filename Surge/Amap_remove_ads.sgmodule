@@ -7,30 +7,30 @@
 
 [Rewrite]
 # 通用广告请求
-^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution REJECT-TINYGIF
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution reject
 
 [Rewrite]
 # 导航详情页、路线规划、地点详情页
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? REJECT-TINYGIF-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? REJECT-TINYGIF-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|tips_adv)\? REJECT-TINYGIF-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|tips_adv)\? reject-dict
 
 # 首页 卡片、红点角标、右上角动图、搜索框热词、左下角天气、天气动效图层、消息横幅
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? REJECT-TINYGIF-dict
-^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? REJECT-TINYGIF-dict
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? REJECT-TINYGIF-dict
-^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? REJECT-TINYGIF
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(_mp)?\? REJECT-TINYGIF-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
+^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(_mp)?\? reject-dict
 
 # 我的页面 个人主页、卡片、足迹
-^https:\/\/sns\.amap\.com\/ws\/userview\/footprint REJECT-TINYGIF-dict
+^https:\/\/sns\.amap\.com\/ws\/userview\/footprint reject-dict
 
 # 其他
-^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? REJECT-TINYGIF-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? REJECT-TINYGIF-dict
+^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 
 # 打车页、红点角标、弹窗、卡片
-^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order(_web\/friendly_information|\/car\/king_toolbox_car_bubble)\? REJECT-TINYGIF-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order(_web\/friendly_information|\/car\/king_toolbox_car_bubble)\? reject-dict
 
 [Script]
 # 导航详情页、路线规划、地点详情页
