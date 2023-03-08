@@ -88,10 +88,9 @@ jobs:
         done
 
     - name: Commit changes
-      uses: EndBug/add-and-commit@v7
+      uses: EndBug/add-and-commit@v9
       with:
         add: '.'
         author_name: 'GitHub Action'
         author_email: 'action@github.com'
         message: 'update and save files'
-        dry_run: true
