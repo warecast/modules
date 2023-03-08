@@ -52,8 +52,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config user.email "tk4900@gmail.com"
-        git config user.name "warecast"
+        git config --unset-all user.name
+        git config user.name "GitHub Actions"
         git add .
         git commit -m "Update files"
         git push
