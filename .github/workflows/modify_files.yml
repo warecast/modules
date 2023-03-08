@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Create Loon directory
+        run: |
+          mkdir -p Loon
       
       - name: Fetch URLs
         id: fetch-urls
