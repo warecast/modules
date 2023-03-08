@@ -1,0 +1,29 @@
+name: Fetch URLs and Save to Loon Directory
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  fetch-and-save:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Fetch URLs
+        id: fetch-urls
+        run: |
+          for url in $(cat urls.yml); do
+            filename=$(basename $url)
+            curl -L $url -o Loon/$filename
+          done
+      
+      - name: Commit and Push changes
+        if: steps.fetch-urls.outputs.modified_files != ''
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update files: ${{ steps.fetch-urls.outputs.modified_files }}"
+          commit_options: '--author "GitHub Action <action@github.com>"'
