@@ -31,38 +31,50 @@ jobs:
           for url in "${urls[@]}"; do
             # Split the URL and file name using a comma
             IFS=',' read -r url file_name <<< "$url"
+
             # Fetch the content from the URL
             content=$(curl -s "$url")
+
             # Modify the content using regex
             modified=$(echo "$content" | sed -e 's/^\(reject\|REJECT\)/REJECT-TINYGIF/g' \
-                                                 -e 's/^\(hostname =\)/hostname = %APPEND%/g' \
-                                                 -e '/^tag =/d')
+                                                -e 's/^\(hostname =\)/hostname = %APPEND%/g' \
+                                                -e '/^tag =/d')
+
             # Save the modified content to a new file with the specified file name
             echo "$modified" > "$file_name"
+
             # Encode the modified content as base64
             encoded=$(base64 "$file_name" | tr -d '\n')
+
             # Get the current commit SHA
-            sha=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                  "https://api.github.com/repos/${{ github.repository }}/branches/main" \
+            sha=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+                  "https://api.github.com/repos/$GITHUB_REPOSITORY/branches/main" \
                   | jq -r '.commit.sha')
+
             # Get the tree SHA for the current commit
-            tree=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                   "https://api.github.com/repos/${{ github.repository }}/git/commits/$sha" \
-                   | jq -r '.tree.sha')
+            tree=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+                  "https://api.github.com/repos/$GITHUB_REPOSITORY/git/commits/$sha" \
+                  | jq -r '.tree.sha')
+
             # Create a new blob object with the modified content
-            blob=$(curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                   -d "{\"content\":\"$encoded\",\"encoding\":\"base64\"}" \
-                   "https://api.github.com/repos/${{ github.repository }}/git/blobs" \
-                   | jq -r '.sha')
+            blob=$(curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
+                  -d "{\"content\":\"$encoded\",\"encoding\":\"base64\"}" \
+                  "https://api.github.com/repos/$GITHUB_REPOSITORY/git/blobs" \
+                  | jq -r '.sha')
+
             # Create a new tree object with the modified file name and blob SHA
-            tree=$(curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                   -d "{\"base_tree\":\"$tree\",\"tree\":[{\"path\":\"$file_name\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"$blob\"}]}" \
-                   "https://api.github.com/repos/${{ github.repository }}/git/trees" \
-                   | jq -r '.sha')
+            tree=$(curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
+                  -d "{\"base_tree\":\"$tree\",\"tree\":[{\"path\":\"$file_name\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"$blob\"}]}" \
+                  "https://api.github.com/repos/$GITHUB_REPOSITORY/git/trees" \
+                  | jq -r '.sha')
+
             # Create a new commit with the modified file and updated tree SHA
-            curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
             -d "{\"message\":\"Modify file\",\"parents\":[\"$sha\"],\"tree\":\"$tree\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/git/commits" > /dev/null
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/git/commits" > /dev/null
 
             # Update the branch pointer to the new commit
-            curl -s -X PATCH
+            curl -s -X PATCH -H "Authorization: token $GITHUB_TOKEN" \
+            -d "{\"sha\":\"$tree\",\"force\":true}" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/git/refs/heads/main" > /dev/null
+          done
