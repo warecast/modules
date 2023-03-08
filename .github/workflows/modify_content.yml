@@ -1,28 +1,27 @@
-name: Replace contents
+name: Modify contents
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  replace:
+  modify-files:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Replace strings
-      run: |
-        mkdir -p Surge
-        for file in Loon/*.plugin; do
-          cat $file | \
-          sed -E 's/(^|\W)(reject|REJECT)\b/\1REJECT-TINYGIF/g; s/hostname =/hostname = %APPEND%/g; s/^tag =.*$/tag =/g' \
-          > Surge/$(basename $file .plugin).sgmodule
-        done
+      - name: Modify files
+        run: |
+          mkdir -p Surge
+          for file in Loon/*.plugin; do
+            filename=$(basename "$file")
+            sed -e 's/^reject/REJECT-TINYGIF/g' -e 's/^REJECT/REJECT-TINYGIF/g' -e 's/hostname =/hostname = %APPEND%/g' -e '/^tag = /d' "$file" > "Surge/${filename%.*}.sgmodule"
+          done
 
-    - name: Commit changes
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
-        git add Surge
-        git commit -m "Replace strings in Loon plugins"
-        git push
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: modify strings and save to sgmodule
+          commit_options: '--no-verify'
