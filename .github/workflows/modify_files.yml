@@ -3,6 +3,11 @@ name: Fetch URLs and update Loon directory
 on:
   push:
     branches: [main]
+  # schedule a weekly auto update at 12:00 AM every Monday
+  schedule:
+    - cron: '0 0 * * 1'
+  # allow manual trigger via the GitHub UI or API
+  workflow_dispatch:
 
 jobs:
   fetch-urls-and-update-loon-directory:
