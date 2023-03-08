@@ -41,7 +41,7 @@ jobs:
         for file in $files
         do
           # Use regex to process the contents
-          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gmi' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, ?tag ?=.*$//gm' $file)
+          modified_contents=$(sed -e 's/reject-.*$/REJECT-TINYGIF/gmi' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, tag =.*$//gm' -e 's/, tag=.*$//gm' $file)
           # Save modified contents to Surge directory and change file extension
           surge_dir=./Surge
           surge_file=$(basename $file .plugin).sgmodule
@@ -56,5 +56,5 @@ jobs:
         add: '.'
         author_name: 'GitHub Action'
         author_email: 'action@github.com'
-        message: 'update and save filess'
+        message: 'update and save files'
         dry_run: true
