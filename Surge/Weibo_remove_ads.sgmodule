@@ -13,7 +13,7 @@ DOMAIN, sdkaction.biz.weibo.com, REJECT
 DOMAIN, sdkclick.biz.weibo.com, REJECT
 DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 
-[Rewrite]
+[URL Rewrite]
 ^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? reject
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject

@@ -8,7 +8,7 @@
 [Rule]
 DOMAIN, amdc.m.taobao.com, REJECT
 
-[Rewrite]
+[URL Rewrite]
 # 通用广告请求[包含开屏广告]
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn reject
 

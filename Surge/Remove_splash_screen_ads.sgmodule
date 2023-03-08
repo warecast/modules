@@ -5,7 +5,7 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/80px/Ads.png
 
-[Rewrite]
+[URL Rewrite]
 # > version
 ^https?:\/\/2023.01.31\/v2.0.250 - reject
 # > 58
