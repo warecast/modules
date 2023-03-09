@@ -95,6 +95,9 @@ jobs:
         author_email: 'action@github.com'
         message: 'update and save files'
 
+    - name: Install dependecies
+      run: npm install @octokit/rest
+      
     - name: Notify file changes
       uses: actions/github-script@v6
       env:
