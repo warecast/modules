@@ -94,30 +94,17 @@ jobs:
         author_name: 'GitHub Action'
         author_email: 'action@github.com'
         message: 'update and save files'
-
-    - name: Install dependecies
-      run: npm install @octokit/rest
       
-    - name: Notify file changes
-      uses: actions/github-script@v6
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v4
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const { Octokit } = require("@octokit/rest");
-          const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-          const { data } = await octokit.repos.compareCommits({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            base: context.payload.before,
-            head: context.payload.after
-          });
-          const changedFiles = data.files.map((file) => file.filename);
-          const message = `Files changed in commit ${context.sha}: ${changedFiles.join(", ")}`;
-          await octokit.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
-            body: message
-          });
+        commit-message: "Changes made to the following files:\n- ${{ steps.changed_files.outputs.files }}"
+        branch: notify-file-changes
+        title: "Notification: Files changed"
+        body: "This pull request is generated automatically to notify that the following files have been changed in the recent commit:\n\n${{ steps.changed_files.outputs.files }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Get list of changed files
+      id: changed_files
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
