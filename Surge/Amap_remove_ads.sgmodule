@@ -5,11 +5,11 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
 
-[Rewrite]
+[URL Rewrite]
 # 通用广告请求
 ^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution reject
 
-[Rewrite]
+[URL Rewrite]
 # 导航详情页、路线规划、地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? reject
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject
