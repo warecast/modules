@@ -96,25 +96,25 @@ jobs:
         message: 'update and save files'
 
     - name: Notify file changes
-    uses: actions/github-script@v4
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
-      script: |
-        const { Octokit } = require("@octokit/rest");
-        const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-        const { data } = await octokit.repos.compareCommits({
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          base: context.payload.before,
-          head: context.payload.after
-        });
-        const changedFiles = data.files.map((file) => file.filename);
-        const message = `Files changed in commit ${context.sha}: ${changedFiles.join(", ")}`;
-        await octokit.issues.createComment({
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          issue_number: context.issue.number,
-          body: message
-        });
+      uses: actions/github-script@v4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { Octokit } = require("@octokit/rest");
+          const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+          const { data } = await octokit.repos.compareCommits({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            base: context.payload.before,
+            head: context.payload.after
+          });
+          const changedFiles = data.files.map((file) => file.filename);
+          const message = `Files changed in commit ${context.sha}: ${changedFiles.join(", ")}`;
+          await octokit.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body: message
+          });
