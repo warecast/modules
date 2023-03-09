@@ -96,7 +96,7 @@ jobs:
         message: 'update and save files'
 
     - name: Notify file changes
-      uses: actions/github-script@v4
+      uses: actions/github-script@v6
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
