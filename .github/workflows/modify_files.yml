@@ -95,16 +95,15 @@ jobs:
         author_email: 'action@github.com'
         message: 'update and save files'
       
+    - name: Get list of changed files
+      run: |
+        export CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r $GIT_SHA)
+
     - name: Create pull request
       uses: peter-evans/create-pull-request@v4
       with:
-        commit-message: "Changes made to the following files:\n- ${{ steps.changed_files.outputs.files }}"
+        commit-message: "Changes made to the following files:\n- ${{ env.CHANGED_FILES }}"
         branch: notify-file-changes
         title: "Notification: Files changed"
-        body: "This pull request is generated automatically to notify that the following files have been changed in the recent commit:\n\n${{ steps.changed_files.outputs.files }}"
+        body: "This pull request is generated automatically to notify that the following files have been changed in the recent commit:\n\n${{ env.CHANGED_FILES }}"
         token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Get list of changed files
-      id: changed_files
-      run: |
-        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
