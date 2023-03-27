@@ -6,6 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 [Rule]
+DOMAIN, dns.weibo.cn, REJECT
 DOMAIN, adstrategy.biz.weibo.com, REJECT
 ;DOMAIN, boot.biz.weibo.com, REJECT
 DOMAIN, kadmimage.biz.weibo.com, REJECT
