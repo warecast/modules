@@ -30,6 +30,7 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Cainiao_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Bilibili_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Amap_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Himalaya_remove_ads.plugin"
         )
 
         # loop through the URLs and fetch the contents
