@@ -15,6 +15,11 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 # TubeMax搜索栏广告
 DOMAIN-SUFFIX, applovin.com, REJECT
 
+# 通用广告
+DOMAIN-SUFFIX, doubleclick-cn.net, REJECT
+DOMAIN-SUFFIX, doubleclick.net, REJECT
+
+
 
 [Rewrite]
 # 摩托范弹窗广告
