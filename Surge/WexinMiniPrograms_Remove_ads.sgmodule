@@ -119,7 +119,7 @@
 ^https:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid reject
 
 #松果出行 @keywos api.songguo7.com
-^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info) reject
+^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info|unlock_without_order|unlock_operate_info) reject
 
 #花小猪打车 @是豆豆呀 api.hongyibo.com.cn, res.hongyibo.com.cn
 ^https:\/\/api\.hongyibo\.com\.cn reject
