@@ -9,7 +9,7 @@
 # 导航详情页 - 路线规划、地点详情页、搜索详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? reject
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject
-^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|tips_adv)\? reject
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? reject
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? reject
@@ -30,7 +30,7 @@ http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path 
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(search\/sp|tips_operation_location)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|search\/sp|tips_operation_location)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search(_poi)?\/sug\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅

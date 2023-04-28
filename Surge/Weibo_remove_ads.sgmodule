@@ -8,7 +8,7 @@
 [Rule]
 DOMAIN, dns.weibo.cn, REJECT
 DOMAIN, adstrategy.biz.weibo.com, REJECT
-;DOMAIN, boot.biz.weibo.com, REJECT
+;DOMAIN, REJECT
 DOMAIN, kadmimage.biz.weibo.com, REJECT
 DOMAIN, sdkaction.biz.weibo.com, REJECT
 DOMAIN, sdkclick.biz.weibo.com, REJECT
@@ -31,8 +31,8 @@ DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject
 
-# 开屏广告 //boot.biz.weibo.com, *.uve.weibo.com
-^https:\/\/boot(realtime)?\.(biz|uve)\.weibo\.com\/v[12]\/ad\/realtime$ reject
+# 开屏广告 //*.uve.weibo.com
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v2\/ad\/realtime$ reject
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php$|sdkconfig\.php\?) reject
 
 # 微博长文章推广
@@ -46,7 +46,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_lis
 # 详情页 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、话题卡片
 http-response ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
-http-response ^https:\/\/api\.weibo\.cn\/2\/container\/asyn\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
+http-response ^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|me)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_topic|_unread|_hot)?|unread_hot_timeline)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(extend|show)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
@@ -60,7 +60,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path = 
 http-response ^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 
-# 开屏广告 //boot.biz.weibo.com, *.uve.weibo.com
+# 开屏广告 //*.uve.weibo.com
 http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php$ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
@@ -71,4 +71,4 @@ http-request ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= script
 http-response ^https:\/\/(sinaurl|t)\.cn\/ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 
 [Mitm]
-hostname = %APPEND% api.weibo.cn, boot.biz.weibo.com, *.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+hostname = %APPEND% api.weibo.cn, *.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
