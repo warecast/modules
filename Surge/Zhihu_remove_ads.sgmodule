@@ -25,6 +25,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 # 我的页面 项目列表、会员卡片、更多卡片
 ^https:\/\/api\.zhihu\.com\/me\/guides\?? reject
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card$ reject
+^https:\/\/www\.zhihu\.com\/appview\/v2\/zhmore\? reject
 
 # 搜索页 关键词、猜你想搜
 ^https:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading$ reject
@@ -48,10 +49,6 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/recommend(_v2)?)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
-
-# 我的页面 - 项目列表、会员卡片、更多卡片
-http-response ^https:\/\/api\.zhihu\.com\/people\/homepage_entry$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
-http-response ^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore\?? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 
 # 搜索页 - 关键词、猜你想搜
 http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument=""recommend_queries":\{.+\}->"recommend_queries":{}"
