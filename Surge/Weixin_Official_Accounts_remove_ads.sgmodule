@@ -1,12 +1,16 @@
 #!name = 微信公众号去广告
 #!desc = 过滤微信公众号广告
 #!openUrl = 
-#!author = 可莉🅥
+#!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weixin.png
 
-[Script]
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true
+[URL Rewrite]
+# 移除公众号中的推广内容 //mp.weixin.qq.com
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|relatedarticle)\? reject
+
+# [Script]
+# http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true
 
 [Mitm]
 hostname = %APPEND% mp.weixin.qq.com
