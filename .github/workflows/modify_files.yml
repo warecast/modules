@@ -38,6 +38,7 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_ads_by_keli.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/smzdm_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/TikTokJP.plugin"
         )
 
         # loop through the URLs and fetch the contents
@@ -70,7 +71,7 @@ jobs:
         for file in $files
         do
           # Use regex to process the contents
-          modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' -e 's/reject-.*$/reject/gmi' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, tag =.*$//gm' -e 's/, tag=.*$//gm' $file)
+          modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' -e 's/PROXY/📽️Tiktok/gm' -e 's/reject-.*$/reject/gmi' -e 's/hostname =/hostname = %APPEND%/g' -e 's/, tag =.*$//gm' -e 's/, tag=.*$//gm' $file)
 
           # Save modified contents to Surge directory and change file extension
           surge_dir=./Surge
