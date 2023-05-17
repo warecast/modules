@@ -1,0 +1,34 @@
+#!name = TikTok日区解锁
+#!desc = 解锁日区TikTok，需要配置此插件至日本节点。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/TikTok.png
+
+[Rule]
+DOMAIN,p16-tiktokcdn-com.akamaized.net, 📽️Tiktok
+DOMAIN-SUFFIX,byteoversea.com, 📽️Tiktok
+DOMAIN-SUFFIX,ibytedtos.com, 📽️Tiktok
+DOMAIN-SUFFIX,ibyteimg.com, 📽️Tiktok
+DOMAIN-SUFFIX,ipstatp.com, 📽️Tiktok
+DOMAIN-SUFFIX,isnssdk.com, 📽️Tiktok
+DOMAIN-SUFFIX,muscdn.com, 📽️Tiktok
+DOMAIN-SUFFIX,musical.ly, 📽️Tiktok
+DOMAIN-SUFFIX,sgpstatp.com, 📽️Tiktok
+DOMAIN-SUFFIX,snssdk.com, 📽️Tiktok
+DOMAIN-SUFFIX,tik-tokapi.com, 📽️Tiktok
+DOMAIN-SUFFIX,tiktok.com, 📽️Tiktok
+DOMAIN-SUFFIX,tiktokcdn.com, 📽️Tiktok
+DOMAIN-SUFFIX,tiktokv.com, 📽️Tiktok
+DOMAIN-KEYWORD,musical.ly, 📽️Tiktok
+DOMAIN-KEYWORD,tiktok, 📽️Tiktok
+USER-AGENT,TikTok*, 📽️Tiktok
+
+[URL Rewrite]
+(?<=&mcc_mnc=)4 2 307
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+(?<=_region=)CN(?=&) JP 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
+
+[MITM]
+hostname = %APPEND% *.byteoversea.com,*.tik-tokapi.com,*.tiktokv.com
