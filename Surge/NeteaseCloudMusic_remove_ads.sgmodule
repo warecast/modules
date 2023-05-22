@@ -12,10 +12,10 @@ force-http-engine-hosts = 59.111.*:0
 DOMAIN, iadmusicmat.music.126.net, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, iadmatapk.nosdn.127.net, REJECT
-DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
+URL-REGEX, ^http:\/\/iadmusicmatvideo\.music\.126\.net, reject
 
 [URL Rewrite]
 # 开屏广告、首页顶部横幅广告
@@ -33,10 +33,12 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get\? reject
 
 # 评论页、回复广告、星评馆
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/batch header-replace-regex cookie appver=.+$ appver=2333
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/(hotcomment\/collect\/fetchmodelinfov2|feed\/inserted\/resources|tips\/v2\/get)\? reject
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject
 
 # 首页、右上角多余图标、会员续费弹窗、侧边栏推广
+^https:\/\/interface3\.music\.163\.com\/eapi\/event\/floating\/layer\? reject
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(homepage\/banner\/ad\/get|link\/scene\/show\/resource)\? reject
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle)\? reject
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver)\? reject
@@ -52,4 +54,4 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 ^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config)\? reject
 
 [MITM]
-hostname = %APPEND% 112.13.*, 59.111.*, interface*.music.163.com:0, httpdns.n.netease.com
+hostname = %APPEND% 59.111.*, 112.13.119.52, 117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com, *.163jiasu.com
