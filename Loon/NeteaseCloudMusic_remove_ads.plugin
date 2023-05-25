@@ -54,4 +54,4 @@ URL-REGEX, ^http:\/\/iadmusicmatvideo\.music\.126\.net, REJECT-VIDEO
 ^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config)\? reject-dict
 
 [MITM]
-hostname = 59.111.*, 112.13.119.52, 117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com, *.163jiasu.com
+hostname = interface*.music.163.com
