@@ -1,6 +1,6 @@
 #!name = 高德地图去广告
 #!desc = 过滤高德地图广告
-#!open = 
+#!openUrl = 
 #!author = RuCu6 kokoryh
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Amap.png
