@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = Keywos RuCu6 kokoryh
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/NeteaseCloudMusic.png
 
 [General]
 force-http-engine-hosts = 59.111.*:0

@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = Choler DivineEngine app2smile Maasea 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/YouTube.png
 
 [URL Rewrite]
 # 使用reject

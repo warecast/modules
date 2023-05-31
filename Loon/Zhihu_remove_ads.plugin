@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = RuCu6 blackmatrix7
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Zhihu.png
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Zhihu.png
 
 [Rule]
 DOMAIN, appcloud.zhihu.com, REJECT
