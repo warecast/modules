@@ -54,6 +54,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_chan
 
 # 消息页
 http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除消息页推广
+http-response ^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除消息页推广
 
 # 发现页 热门微博信息流、搜索列表、热搜提醒、猜你想搜、视频流红包
 http-response ^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除发现页推广
