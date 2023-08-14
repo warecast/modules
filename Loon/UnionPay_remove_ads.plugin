@@ -4,6 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/UnionPay.png
+#!date = 2023-08-08 18:48:44
 
 [Rule]
 DOMAIN, ads.95516.com, REJECT
@@ -12,3 +13,9 @@ DOMAIN, sdk.open.talk.getui.net, REJECT
 DOMAIN, sdk-conf.getui.com, REJECT
 DOMAIN, switch.cup.com.cn, REJECT
 DOMAIN, tysdk.95516.com, REJECT
+
+[Rewrite]
+^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
+
+[Mitm]
+hostname = wallet.95516.com
