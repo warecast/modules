@@ -16,5 +16,5 @@ http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|pl
 
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads_response.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
 
-[MITM]
+[Mitm]
 hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, -redirector*.googlevideo.com

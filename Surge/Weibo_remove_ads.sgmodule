@@ -4,9 +4,13 @@
 #!author = RuCu6 zmqcherish Cuttlefish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-08-23 16:25:33
+#!date = 2023-09-06 18:55:33
 
 [Rule]
+# 请求放行
+DOMAIN, wbapp.uve.weibo.com, DIRECT
+
+# 请求拦截
 DOMAIN, adstrategy.biz.weibo.com, REJECT
 DOMAIN, kadmimage.biz.weibo.com, REJECT
 DOMAIN, sdkaction.biz.weibo.com, REJECT
@@ -67,9 +71,9 @@ http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php scr
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
-http-request ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
+http-request ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=url script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 http-request ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 http-response ^https:\/\/(sinaurl|t)\.cn\/ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 
 [Mitm]
-hostname = %APPEND% api.weibo.cn, *.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+hostname = %APPEND% *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn

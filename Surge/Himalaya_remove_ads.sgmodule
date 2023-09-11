@@ -4,6 +4,7 @@
 #!author = 佚名
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Himalaya.png
+#!date = 2023-09-08 13:48:55
 
 [URL Rewrite]
 # 喜马拉雅_修复轮播广告失效Bug
@@ -53,5 +54,5 @@ http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category scri
 # 喜马拉雅_去除我的页面广告标签
 http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true
 
-[MITM]
+[Mitm]
 hostname = %APPEND% *.xima*.*, *.xmcdn.*

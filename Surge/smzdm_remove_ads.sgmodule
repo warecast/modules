@@ -4,6 +4,7 @@
 #!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/smzdm.png
+#!date = 2023-09-08 13:48:55
 
 [Rule]
 DOMAIN, api.zuihuimai.com, REJECT
@@ -34,6 +35,5 @@ http-response ^https:\/\/s-api\.smzdm\.com\/sou\/(filter\/tags\/hot_tags|list_v1
 # 值会员权益中心banner广告
 http-response ^https:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/smzdm/smzdm_remove_ads.js, requires-body = true
 
-[MITM]
-# 删除主机名haojia-api.smzdm.com
+[Mitm]
 hostname = %APPEND% app-api.smzdm.com, baike-api.smzdm.com, haojia.m.smzdm.com, homepage-api.smzdm.com, s-api.smzdm.com, zhiyou.m.smzdm.com, haojia-api.smzdm.com

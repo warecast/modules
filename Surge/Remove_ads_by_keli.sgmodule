@@ -4,7 +4,7 @@
 #!author = 张军 RuCU6 app2smile 可莉🅥 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/KeLee.png
-#!date = 2023-08-09 22:49:33
+#!date = 2023-09-05 23:51:54
 
 [Rule]
 # 小米
@@ -105,10 +105,29 @@ DOMAIN-SUFFIX, doubleclick.net, REJECT
 # 我的页面轮播图
 ^http:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native reject
 
+# 掌上英雄联盟 @𝑨梦 @𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑
+^https?:\/\/us\.l\.qq\.com\/exapp reject
+
+# 有道词典 @安妮
+# 翻译广告
+^https:\/\/dict\.youdao\.com\/course\/tab\/translateTab reject
+# 听读训练
+^https:\/\/dict\.youdao\.com\/homepage\/tile reject
+# 首次查词弹窗
+^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig reject
+# 首页弹窗
+^https:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup reject
+# 搜索预想
+^https:\/\/dict\.youdao\.com\/commonsearch reject
+# 会员优惠券弹窗
+^https:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo reject
+# 首页左上角福利中心
+^https:\/\/dict\.youdao\.com\/dictusertask\/system reject
+
 [Script]
 # 快手联盟、优量汇、穿山甲
-http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body=true
+http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body = true
 
 
-[MITM]
-hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com
+[Mitm]
+hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com
