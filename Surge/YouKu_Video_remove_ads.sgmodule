@@ -1,0 +1,54 @@
+#!name = 优酷视频去广告
+#!desc = 过滤优酷视频客户端广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/YouKu_Video.png
+#!date = 2023-09-22 22:30:13
+
+[Rule]
+# 放行地址
+DOMAIN, push.m.youku.com, DIRECT
+DOMAIN, un-acs.youku.com, DIRECT
+DOMAIN, dorangesource.alicdn.com, DIRECT
+
+# 拦截地址
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, apiv4-iyes.youku.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
+DOMAIN, iyes.youku.com, REJECT
+# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+
+[URL Rewrite]
+# 播放页 - 主演陪你看、弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject
+
+[Script]
+# 播放详情页、首页信息流、顶部标签、我的页面、评论区
+http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+# 底部标签
+http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+# 青少年模式弹窗
+http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+# 搜索列表
+http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+# 热剧弹窗
+http-response ^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+# 开屏广告
+http-response ^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouKu_Video/YouKu_Video_remove_ads.js, requires-body = true
+
+[MITM]
+hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com

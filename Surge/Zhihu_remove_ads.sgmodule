@@ -4,7 +4,7 @@
 #!author = RuCu6 blackmatrix7
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Zhihu.png
-#!date = 2023-08-29 11:25:03
+#!date = 2023-09-21 22:38:52
 
 [Rule]
 DOMAIN, appcloud.zhihu.com, REJECT
@@ -54,7 +54,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 [Script]
 # 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片
 http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
-http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/recommend) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
+http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 
 # 搜索页 - 关键词、猜你想搜
@@ -70,4 +70,4 @@ http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https:/
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% api.zhihu.com, appcloud2.zhihu.com, m-cloud.zhihu.com, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com
+hostname = %APPEND% *.zhihu.com

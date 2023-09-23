@@ -4,12 +4,22 @@
 #!author = keywos RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Cainiao.png
-#!date = 2023-08-27 21:00:51
+#!date = 2023-09-22 21:57:36
 
 [Rule]
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, apiv4-iyes.youku.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, iyes.youku.com, REJECT
-DOMAIN, vali.cp31.ott.cibntv.net, REJECT
-IP-CIDR, 117.161.156.227/32, REJECT, no-resolve
+# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
 
 [Rewrite]
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标

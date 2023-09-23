@@ -1,10 +1,10 @@
 #!name = 微博去广告
 #!desc = 过滤微博广告及去除各部分推广模块
 #!openUrl = 
-#!author = RuCu6 zmqcherish Cuttlefish
+#!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-09-06 18:55:33
+#!date = 2023-09-21 22:27:24
 
 [Rule]
 # 请求放行
@@ -45,7 +45,7 @@ DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 
 [Script]
 # 首页 签到、发布按钮、侧边栏、右上角红包、侧边栏提醒、超话tab悬浮、顶部直播
-^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
+http-response ^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 
 # 详情页 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
 http-response ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
@@ -71,7 +71,7 @@ http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php scr
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
-http-request ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=url script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
+http-request ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 http-request ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 http-response ^https:\/\/(sinaurl|t)\.cn\/ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js
 
