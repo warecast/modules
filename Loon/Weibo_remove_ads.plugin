@@ -4,7 +4,7 @@
 #!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-10-08 13:15:10
+#!date = 2023-10-08 19:35:10
 
 [Rule]
 # 请求放行
@@ -52,7 +52,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path 
 http-response ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
-http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|me)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|dealatt|me|userinfo)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_hot|_topic|_topicpage|_unread)?|unread_hot_timeline)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(extend|show)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除详情页广告
