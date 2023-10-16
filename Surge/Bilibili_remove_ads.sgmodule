@@ -4,11 +4,12 @@
 #!author = RuCu6 VirgilClyne Maasea ClydeTimea BiliUniverse kokoryh app2smile 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-09-05 20:58:53
+#!date = 2023-10-09 19:21:07
 
 [Rule]
-DOMAIN, mall.bilibili.com, REJECT
-DOMAIN, passport.bilibili.com, REJECT
+# 仅QX需要启用此规则，Loon无需启用。
+# DOMAIN, mall.bilibili.com, REJECT
+# DOMAIN, passport.bilibili.com, REJECT
 
 [URL Rewrite]
 # 移除搜索中的默认关键词
