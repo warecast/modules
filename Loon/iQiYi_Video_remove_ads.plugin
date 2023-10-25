@@ -1,5 +1,5 @@
 #!name = 爱奇艺去广告
-#!desc = 过滤爱奇艺客户端广告
+#!desc = 过滤爱奇艺客户端广告，由于此插件不再维护，客户端版本高于14.9.5可能会导致此插件失效，请勿升级客户端。
 #!openUrl = 
 #!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
