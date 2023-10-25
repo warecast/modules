@@ -4,7 +4,7 @@
 #!author = 张军 RuCU6 app2smile 可莉🅥 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/KeLee.png
-#!date = 2023-09-05 23:51:54
+#!date = 2023-10-25 01:27:50
 
 [Rule]
 # 小米
@@ -37,7 +37,7 @@ DOMAIN-SUFFIX, doubleclick.net, REJECT
 ^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|search/(specialkeyword|defaultkeyword|hot)) reject
 
 # 米家
-^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab reject
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject
 
 # 小米
 ^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start reject
