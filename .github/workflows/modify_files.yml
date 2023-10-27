@@ -42,6 +42,9 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouKu_Video_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/CoolApk_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Taobao_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Umetrip_remove_ads.plugin"
         )
 
         # loop through the URLs and fetch the contents
