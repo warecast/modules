@@ -40,7 +40,7 @@ DOMAIN, ykad-data.youku.com, REJECT
 
 [Script]
 # 移除阿里巴巴通用广告请求
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js, tag = 移除阿里巴巴通用广告请求
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js, tag = 移除阿里巴巴通用广告请求
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body = true, tag = 移除首页推广
