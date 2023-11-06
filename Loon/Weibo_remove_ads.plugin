@@ -4,7 +4,7 @@
 #!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-10-23 19:50:10
+#!date = 2023-11-04 19:25:41
 
 [Rule]
 # 请求放行
@@ -38,7 +38,7 @@ DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject-dict
 
 # 开屏广告 //*.uve.weibo.com
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime reject-dict
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime reject-dict
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
 
 # 微博长文章推广

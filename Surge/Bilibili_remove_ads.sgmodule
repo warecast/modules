@@ -1,15 +1,17 @@
 #!name = Bilibili去广告
 #!desc = 过滤Bilibili广告、移除青少年模式弹窗和交互式弹幕、移除无用功能。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。
 #!openUrl = 
-#!author = RuCu6 VirgilClyne Maasea ClydeTimea BiliUniverse kokoryh app2smile 
+#!author = Maasea RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-10-21 07:25:07
+#!date = 2023-11-02 22:30:57
 
 [Rule]
-# 仅QX需要启用此规则，Loon无需启用。
-# DOMAIN, mall.bilibili.com, REJECT
-# DOMAIN, passport.bilibili.com, REJECT
+# 放行规则
+DOMAIN, mall.bilibili.com, DIRECT
+DOMAIN, passport.bilibili.com, DIRECT
+# 开屏广告
+URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT
 
 [URL Rewrite]
 # 移除搜索中的默认关键词
@@ -55,7 +57,7 @@ http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v
 # 移除青少年模式弹窗
 http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_helper_beta.js, requires-body = true, binary-body-mode = true
 
-# -----------------
+# 上部为Proto处理，下部为JSON配置处理
 
 # 移除开屏广告
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true
