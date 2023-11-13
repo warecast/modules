@@ -4,9 +4,37 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/KeLee.png
-#!date = 2023-10-31 20:40:03
+#!date = 2023-11-12 16:44:20
 
 [Rule]
+# 广告联盟
+DOMAIN, i.snssdk.com, REJECT
+DOMAIN, is.snssdk.com, REJECT
+DOMAIN, mi.gdt.qq.com, REJECT
+DOMAIN, open.e.kuaishou.com, REJECT
+DOMAIN-SUFFIX, miaozhen.com, REJECT
+DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
+DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
+DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
+DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
+
+# 字节跳动
+DOMAIN, ad.zijieapi.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
+DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+
+# 美团
+DOMAIN, al-log.d.meituan.net, REJECT
+DOMAIN, babel-statistics-android.d.meituan.net, REJECT
+DOMAIN, maplocatesdksnapshot.d.meituan.net, REJECT
+DOMAIN, metrics-picture.d.meituan.net, REJECT
+DOMAIN, route-stats.d.meituan.net, REJECT
+
+# Outlook
+DOMAIN, acdn.adnxs.com, REJECT
+DOMAIN, mediation.adnxs.com, REJECT
+DOMAIN, sin3-ib.adnxs.com, REJECT
+
 # 小米
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 DOMAIN, data.mistat.xiaomi.com, REJECT
@@ -33,6 +61,17 @@ DOMAIN, admarket.21cn.com, REJECT
 DOMAIN, adshows.21cn.com, REJECT
 IP-CIDR, 122.229.8.47/32, REJECT
 IP-CIDR, 122.229.29.89/32, REJECT
+
+# 京东
+# 弃用地址
+DOMAIN, waapdg.jd.com, REJECT
+
+#向日葵 #开屏广告 #主机名client-api-v2.oray.com
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUPreject-dict
+#向日葵 #首页文字广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICEreject-dict
+#向日葵 #发现页广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTIONreject-dict
 
 [Rewrite]
 # 摩托范弹窗广告
@@ -65,8 +104,6 @@ IP-CIDR, 122.229.29.89/32, REJECT
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? reject-img
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? reject-img
 
-# 小米商城
-^https?:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 # 小米有品
 ^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig reject-200
 # 小米运动
@@ -167,9 +204,19 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 # 手机QQ
 ^https:\/\/v6ii\.gdt\.qq\.com\/api\/gdt\.display\.QQAdService\.GetAds reject-dict
 
+# 埋堆堆 @Kuraki //sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList reject-dict
+^https?:\/\/t-dsp\.pinduoduo\.com reject-200
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php reject-200
+^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? reject-dict
+^https?:\/\/tower\.ubixioe\.com\/mob\/mediation reject
+^https?:\/\/toblog\.ctobsnssdk\.com reject-200
+^https?:\/\/conf-darwin\.xycdn\.com reject-dict
+^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com reject
+
 [Script]
 # 快手联盟、优量汇、穿山甲
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body = true, tag = 移除广告联盟广告
 
 [Mitm]
-hostname = api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com
+hostname = api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com

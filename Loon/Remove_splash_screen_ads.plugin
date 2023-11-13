@@ -1,525 +1,73 @@
-#!name = 开屏广告过滤器
-#!desc = 过滤部分主流应用的开屏广告[2023/04/15]
-#!openUrl = 
-#!author = 佚名 可莉🅥
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/RemoveAds.png
-#!date = 2023-09-05 23:51:54
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Not Found</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#333238;text-align:left;background-color:#fff}[tabindex="-1"]:focus:not(:focus-visible){outline:0 !important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0.5rem}p{margin-top:0;margin-bottom:1rem}abbr[title],abbr[data-original-title]{text-decoration:underline;text-decoration:underline dotted;cursor:help;border-bottom:0;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul,dl{margin-top:0;margin-bottom:1rem}ol ol,ul ul,ol ul,ul ol{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#1f75cb;text-decoration:none;background-color:transparent}a:hover{color:#1f75cb;text-decoration:underline}a:not([href]):not([class]){color:inherit;text-decoration:none}a:not([href]):not([class]):hover{color:inherit;text-decoration:none}pre,code,kbd,samp{font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}table{border-collapse:collapse}caption{padding-top:0.75rem;padding-bottom:0.75rem;color:#626168;text-align:left;caption-side:bottom}th{text-align:inherit;text-align:-webkit-match-parent}label{display:inline-block;margin-bottom:0.5rem}button{border-radius:0}button:focus:not(:focus-visible){outline:0}input,button,select,optgroup,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[role="button"]{cursor:pointer}select{word-wrap:normal}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button:not(:disabled),[type="button"]:not(:disabled),[type="reset"]:not(:disabled),[type="submit"]:not(:disabled){cursor:pointer}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{padding:0;border-style:none}input[type="radio"],input[type="checkbox"]{box-sizing:border-box;padding:0}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{outline-offset:-2px;-webkit-appearance:none}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none !important}.btn{display:inline-block;font-weight:400;color:#333238;text-align:center;vertical-align:middle;-webkit-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:0.375rem 0.75rem;font-size:1rem;line-height:1.5;border-radius:0.25rem;transition:color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out}@media (prefers-reduced-motion: reduce){.btn{transition:none}}.btn:hover{color:#333238;text-decoration:none}.btn:focus,.btn.focus{outline:0;box-shadow:0 0 0 0.2rem rgba(0,123,255,0.25)}.btn.disabled,.btn:disabled{opacity:0.65}.btn:not(:disabled):not(.disabled){cursor:pointer}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}.btn-primary:focus,.btn-primary.focus{color:#fff;background-color:#0069d9;border-color:#0062cc;box-shadow:0 0 0 0.2rem rgba(38,143,255,0.5)}.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:not(:disabled):not(.disabled):active,.btn-primary.active:not(:disabled):not(.disabled),.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary.active:not(:disabled):not(.disabled):focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(38,143,255,0.5)}.btn-secondary{color:#fff;background-color:#626168;border-color:#626168}.btn-secondary:hover{color:#fff;background-color:#4f4f54;border-color:#49484e}.btn-secondary:focus,.btn-secondary.focus{color:#fff;background-color:#4f4f54;border-color:#49484e;box-shadow:0 0 0 0.2rem rgba(122,121,127,0.5)}.btn-secondary.disabled,.btn-secondary:disabled{color:#fff;background-color:#626168;border-color:#626168}.btn-secondary:not(:disabled):not(.disabled):active,.btn-secondary.active:not(:disabled):not(.disabled),.show>.btn-secondary.dropdown-toggle{color:#fff;background-color:#49484e;border-color:#434247}.btn-secondary:not(:disabled):not(.disabled):active:focus,.btn-secondary.active:not(:disabled):not(.disabled):focus,.show>.btn-secondary.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(122,121,127,0.5)}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success:focus,.btn-success.focus{color:#fff;background-color:#218838;border-color:#1e7e34;box-shadow:0 0 0 0.2rem rgba(72,180,97,0.5)}.btn-success.disabled,.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:not(:disabled):not(.disabled):active,.btn-success.active:not(:disabled):not(.disabled),.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled):active:focus,.btn-success.active:not(:disabled):not(.disabled):focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(72,180,97,0.5)}.btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info:focus,.btn-info.focus{color:#fff;background-color:#138496;border-color:#117a8b;box-shadow:0 0 0 0.2rem rgba(58,176,195,0.5)}.btn-info.disabled,.btn-info:disabled{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:not(:disabled):not(.disabled):active,.btn-info.active:not(:disabled):not(.disabled),.show>.btn-info.dropdown-toggle{color:#fff;background-color:#117a8b;border-color:#10707f}.btn-info:not(:disabled):not(.disabled):active:focus,.btn-info.active:not(:disabled):not(.disabled):focus,.show>.btn-info.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(58,176,195,0.5)}.btn-warning{color:#333238;background-color:#ffc107;border-color:#ffc107}.btn-warning:hover{color:#333238;background-color:#e0a800;border-color:#d39e00}.btn-warning:focus,.btn-warning.focus{color:#333238;background-color:#e0a800;border-color:#d39e00;box-shadow:0 0 0 0.2rem rgba(224,172,14,0.5)}.btn-warning.disabled,.btn-warning:disabled{color:#333238;background-color:#ffc107;border-color:#ffc107}.btn-warning:not(:disabled):not(.disabled):active,.btn-warning.active:not(:disabled):not(.disabled),.show>.btn-warning.dropdown-toggle{color:#333238;background-color:#d39e00;border-color:#c69500}.btn-warning:not(:disabled):not(.disabled):active:focus,.btn-warning.active:not(:disabled):not(.disabled):focus,.show>.btn-warning.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(224,172,14,0.5)}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130}.btn-danger:focus,.btn-danger.focus{color:#fff;background-color:#c82333;border-color:#bd2130;box-shadow:0 0 0 0.2rem rgba(225,83,97,0.5)}.btn-danger.disabled,.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:not(:disabled):not(.disabled):active,.btn-danger.active:not(:disabled):not(.disabled),.show>.btn-danger.dropdown-toggle{color:#fff;background-color:#bd2130;border-color:#b21f2d}.btn-danger:not(:disabled):not(.disabled):active:focus,.btn-danger.active:not(:disabled):not(.disabled):focus,.show>.btn-danger.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(225,83,97,0.5)}.btn-light{color:#333238;background-color:#dcdcde;border-color:#dcdcde}.btn-light:hover{color:#333238;background-color:#c8c8cb;border-color:#c2c2c5}.btn-light:focus,.btn-light.focus{color:#333238;background-color:#c8c8cb;border-color:#c2c2c5;box-shadow:0 0 0 0.2rem rgba(195,195,197,0.5)}.btn-light.disabled,.btn-light:disabled{color:#333238;background-color:#dcdcde;border-color:#dcdcde}.btn-light:not(:disabled):not(.disabled):active,.btn-light.active:not(:disabled):not(.disabled),.show>.btn-light.dropdown-toggle{color:#333238;background-color:#c2c2c5;border-color:#bbbbbf}.btn-light:not(:disabled):not(.disabled):active:focus,.btn-light.active:not(:disabled):not(.disabled):focus,.show>.btn-light.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(195,195,197,0.5)}.btn-dark{color:#fff;background-color:#434248;border-color:#434248}.btn-dark:hover{color:#fff;background-color:#303034;border-color:#2a2a2d}.btn-dark:focus,.btn-dark.focus{color:#fff;background-color:#303034;border-color:#2a2a2d;box-shadow:0 0 0 0.2rem rgba(95,94,99,0.5)}.btn-dark.disabled,.btn-dark:disabled{color:#fff;background-color:#434248;border-color:#434248}.btn-dark:not(:disabled):not(.disabled):active,.btn-dark.active:not(:disabled):not(.disabled),.show>.btn-dark.dropdown-toggle{color:#fff;background-color:#2a2a2d;border-color:#242427}.btn-dark:not(:disabled):not(.disabled):active:focus,.btn-dark.active:not(:disabled):not(.disabled):focus,.show>.btn-dark.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(95,94,99,0.5)}.btn-outline-primary{color:#007bff;border-color:#007bff}.btn-outline-primary:hover{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:focus,.btn-outline-primary.focus{box-shadow:0 0 0 0.2rem rgba(0,123,255,0.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#007bff;background-color:transparent}.btn-outline-primary:not(:disabled):not(.disabled):active,.btn-outline-primary.active:not(:disabled):not(.disabled),.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.btn-outline-primary.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(0,123,255,0.5)}.btn-outline-secondary{color:#626168;border-color:#626168}.btn-outline-secondary:hover{color:#fff;background-color:#626168;border-color:#626168}.btn-outline-secondary:focus,.btn-outline-secondary.focus{box-shadow:0 0 0 0.2rem rgba(98,97,104,0.5)}.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#626168;background-color:transparent}.btn-outline-secondary:not(:disabled):not(.disabled):active,.btn-outline-secondary.active:not(:disabled):not(.disabled),.show>.btn-outline-secondary.dropdown-toggle{color:#fff;background-color:#626168;border-color:#626168}.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.btn-outline-secondary.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-secondary.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(98,97,104,0.5)}.btn-outline-success{color:#28a745;border-color:#28a745}.btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success:focus,.btn-outline-success.focus{box-shadow:0 0 0 0.2rem rgba(40,167,69,0.5)}.btn-outline-success.disabled,.btn-outline-success:disabled{color:#28a745;background-color:transparent}.btn-outline-success:not(:disabled):not(.disabled):active,.btn-outline-success.active:not(:disabled):not(.disabled),.show>.btn-outline-success.dropdown-toggle{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success:not(:disabled):not(.disabled):active:focus,.btn-outline-success.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-success.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(40,167,69,0.5)}.btn-outline-info{color:#17a2b8;border-color:#17a2b8}.btn-outline-info:hover{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info:focus,.btn-outline-info.focus{box-shadow:0 0 0 0.2rem rgba(23,162,184,0.5)}.btn-outline-info.disabled,.btn-outline-info:disabled{color:#17a2b8;background-color:transparent}.btn-outline-info:not(:disabled):not(.disabled):active,.btn-outline-info.active:not(:disabled):not(.disabled),.show>.btn-outline-info.dropdown-toggle{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info:not(:disabled):not(.disabled):active:focus,.btn-outline-info.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-info.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(23,162,184,0.5)}.btn-outline-warning{color:#ffc107;border-color:#ffc107}.btn-outline-warning:hover{color:#333238;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning:focus,.btn-outline-warning.focus{box-shadow:0 0 0 0.2rem rgba(255,193,7,0.5)}.btn-outline-warning.disabled,.btn-outline-warning:disabled{color:#ffc107;background-color:transparent}.btn-outline-warning:not(:disabled):not(.disabled):active,.btn-outline-warning.active:not(:disabled):not(.disabled),.show>.btn-outline-warning.dropdown-toggle{color:#333238;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.btn-outline-warning.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-warning.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(255,193,7,0.5)}.btn-outline-danger{color:#dc3545;border-color:#dc3545}.btn-outline-danger:hover{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger:focus,.btn-outline-danger.focus{box-shadow:0 0 0 0.2rem rgba(220,53,69,0.5)}.btn-outline-danger.disabled,.btn-outline-danger:disabled{color:#dc3545;background-color:transparent}.btn-outline-danger:not(:disabled):not(.disabled):active,.btn-outline-danger.active:not(:disabled):not(.disabled),.show>.btn-outline-danger.dropdown-toggle{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.btn-outline-danger.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-danger.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(220,53,69,0.5)}.btn-outline-light{color:#dcdcde;border-color:#dcdcde}.btn-outline-light:hover{color:#333238;background-color:#dcdcde;border-color:#dcdcde}.btn-outline-light:focus,.btn-outline-light.focus{box-shadow:0 0 0 0.2rem rgba(220,220,222,0.5)}.btn-outline-light.disabled,.btn-outline-light:disabled{color:#dcdcde;background-color:transparent}.btn-outline-light:not(:disabled):not(.disabled):active,.btn-outline-light.active:not(:disabled):not(.disabled),.show>.btn-outline-light.dropdown-toggle{color:#333238;background-color:#dcdcde;border-color:#dcdcde}.btn-outline-light:not(:disabled):not(.disabled):active:focus,.btn-outline-light.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-light.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(220,220,222,0.5)}.btn-outline-dark{color:#434248;border-color:#434248}.btn-outline-dark:hover{color:#fff;background-color:#434248;border-color:#434248}.btn-outline-dark:focus,.btn-outline-dark.focus{box-shadow:0 0 0 0.2rem rgba(67,66,72,0.5)}.btn-outline-dark.disabled,.btn-outline-dark:disabled{color:#434248;background-color:transparent}.btn-outline-dark:not(:disabled):not(.disabled):active,.btn-outline-dark.active:not(:disabled):not(.disabled),.show>.btn-outline-dark.dropdown-toggle{color:#fff;background-color:#434248;border-color:#434248}.btn-outline-dark:not(:disabled):not(.disabled):active:focus,.btn-outline-dark.active:not(:disabled):not(.disabled):focus,.show>.btn-outline-dark.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(67,66,72,0.5)}.btn-link{font-weight:400;color:#1f75cb;text-decoration:none}.btn-link:hover{color:#1f75cb;text-decoration:underline}.btn-link:focus,.btn-link.focus{text-decoration:underline}.btn-link:disabled,.btn-link.disabled{color:#626168;pointer-events:none}.btn-lg{padding:0.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:0.3rem}.btn-sm{padding:0.25rem 0.5rem;font-size:0.875rem;line-height:1.5;border-radius:0.2rem}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:0.5rem}input.btn-block[type="submit"],input.btn-block[type="reset"],input.btn-block[type="button"]{width:100%}.form-control{display:block;width:100%;height:32px;padding:0.375rem 0.75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#535158;background-color:#fff;background-clip:padding-box;border:1px solid #89888d;border-radius:0.25rem;transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out}@media (prefers-reduced-motion: reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:focus{color:#535158;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 0.2rem rgba(0,123,255,0.25)}.form-control::placeholder{color:#626168;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#bfbfc3;opacity:1}input.form-control[type="date"],input.form-control[type="time"],input.form-control[type="datetime-local"],input.form-control[type="month"]{-webkit-appearance:none;appearance:none}select.form-control:-moz-focusring{color:transparent;text-shadow:0 0 0 #535158}select.form-control:focus::-ms-value{color:#535158;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}.col-form-label{padding-top:calc(0.375rem + 1px);padding-bottom:calc(0.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(0.5rem + 1px);padding-bottom:calc(0.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(0.25rem + 1px);padding-bottom:calc(0.25rem + 1px);font-size:0.875rem;line-height:1.5}.form-control-plaintext{display:block;width:100%;padding:0.375rem 0;margin-bottom:0;font-size:1rem;line-height:1.5;color:#333238;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-sm,.form-control-plaintext.form-control-lg{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.5em + 0.5rem + 2px);padding:0.25rem 0.5rem;font-size:0.875rem;line-height:1.5;border-radius:0.2rem}.form-control-lg{height:calc(1.5em + 1rem + 2px);padding:0.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:0.3rem}select.form-control[size],select.form-control[multiple]{height:auto}textarea.form-control{height:auto}.form-group{margin-bottom:1rem}.form-text{display:block;margin-top:0.25rem}.form-row{display:flex;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*="col-"]{padding-right:5px;padding-left:5px}.form-check{position:relative;display:block;padding-left:1.25rem}.form-check-input{position:absolute;margin-top:0.3rem;margin-left:-1.25rem}.form-check-input[disabled]~.form-check-label,.form-check-input:disabled~.form-check-label{color:#626168}.form-check-label{margin-bottom:0}.form-check-inline{display:inline-flex;align-items:center;padding-left:0;margin-right:0.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:0.3125rem;margin-left:0}.valid-feedback{display:none;width:100%;margin-top:0.25rem;font-size:0.875em;color:#28a745}.valid-tooltip{position:absolute;top:100%;left:0;z-index:5;display:none;max-width:100%;padding:0.25rem 0.5rem;margin-top:.1rem;font-size:0.75rem;line-height:1.5;color:#fff;background-color:rgba(40,167,69,0.9);border-radius:0.25rem}.form-row>.col>.valid-tooltip,.form-row>[class*="col-"]>.valid-tooltip{left:5px}.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip,.is-valid~.valid-feedback,.is-valid~.valid-tooltip{display:block}.was-validated .form-control:valid,.form-control.is-valid{border-color:#28a745}.was-validated .form-control:valid:focus,.form-control.is-valid:focus{border-color:#28a745;box-shadow:0 0 0 0.2rem rgba(40,167,69,0.25)}.was-validated .custom-select:valid,.custom-select.is-valid{border-color:#28a745}.was-validated .custom-select:valid:focus,.custom-select.is-valid:focus{border-color:#28a745;box-shadow:0 0 0 0.2rem rgba(40,167,69,0.25)}.was-validated .form-check-input:valid~.form-check-label,.form-check-input.is-valid~.form-check-label{color:#28a745}.was-validated .form-check-input:valid~.valid-feedback,.was-validated .form-check-input:valid~.valid-tooltip,.form-check-input.is-valid~.valid-feedback,.form-check-input.is-valid~.valid-tooltip{display:block}.was-validated .custom-control-input:valid~.custom-control-label,.custom-control-input.is-valid~.custom-control-label{color:#28a745}.was-validated .custom-control-input:valid~.custom-control-label::before,.custom-control-input.is-valid~.custom-control-label::before{border-color:#28a745}.was-validated .custom-control-input:valid:checked~.custom-control-label::before,.custom-control-input.is-valid:checked~.custom-control-label::before{border-color:#34ce57;background-color:#34ce57}.was-validated .custom-control-input:valid:focus~.custom-control-label::before,.custom-control-input.is-valid:focus~.custom-control-label::before{box-shadow:0 0 0 0.2rem rgba(40,167,69,0.25)}.was-validated .custom-control-input:valid:focus:not(:checked)~.custom-control-label::before,.custom-control-input.is-valid:focus:not(:checked)~.custom-control-label::before{border-color:#28a745}.was-validated .custom-file-input:valid~.custom-file-label,.custom-file-input.is-valid~.custom-file-label{border-color:#28a745}.was-validated .custom-file-input:valid:focus~.custom-file-label,.custom-file-input.is-valid:focus~.custom-file-label{border-color:#28a745;box-shadow:0 0 0 0.2rem rgba(40,167,69,0.25)}.invalid-feedback{display:none;width:100%;margin-top:0.25rem;font-size:0.875em;color:#dc3545}.invalid-tooltip{position:absolute;top:100%;left:0;z-index:5;display:none;max-width:100%;padding:0.25rem 0.5rem;margin-top:.1rem;font-size:0.75rem;line-height:1.5;color:#fff;background-color:rgba(220,53,69,0.9);border-radius:0.25rem}.form-row>.col>.invalid-tooltip,.form-row>[class*="col-"]>.invalid-tooltip{left:5px}.was-validated :invalid~.invalid-feedback,.was-validated :invalid~.invalid-tooltip,.is-invalid~.invalid-feedback,.is-invalid~.invalid-tooltip{display:block}.was-validated .form-control:invalid,.form-control.is-invalid{border-color:#dc3545}.was-validated .form-control:invalid:focus,.form-control.is-invalid:focus{border-color:#dc3545;box-shadow:0 0 0 0.2rem rgba(220,53,69,0.25)}.was-validated .custom-select:invalid,.custom-select.is-invalid{border-color:#dc3545}.was-validated .custom-select:invalid:focus,.custom-select.is-invalid:focus{border-color:#dc3545;box-shadow:0 0 0 0.2rem rgba(220,53,69,0.25)}.was-validated .form-check-input:invalid~.form-check-label,.form-check-input.is-invalid~.form-check-label{color:#dc3545}.was-validated .form-check-input:invalid~.invalid-feedback,.was-validated .form-check-input:invalid~.invalid-tooltip,.form-check-input.is-invalid~.invalid-feedback,.form-check-input.is-invalid~.invalid-tooltip{display:block}.was-validated .custom-control-input:invalid~.custom-control-label,.custom-control-input.is-invalid~.custom-control-label{color:#dc3545}.was-validated .custom-control-input:invalid~.custom-control-label::before,.custom-control-input.is-invalid~.custom-control-label::before{border-color:#dc3545}.was-validated .custom-control-input:invalid:checked~.custom-control-label::before,.custom-control-input.is-invalid:checked~.custom-control-label::before{border-color:#e4606d;background-color:#e4606d}.was-validated .custom-control-input:invalid:focus~.custom-control-label::before,.custom-control-input.is-invalid:focus~.custom-control-label::before{box-shadow:0 0 0 0.2rem rgba(220,53,69,0.25)}.was-validated .custom-control-input:invalid:focus:not(:checked)~.custom-control-label::before,.custom-control-input.is-invalid:focus:not(:checked)~.custom-control-label::before{border-color:#dc3545}.was-validated .custom-file-input:invalid~.custom-file-label,.custom-file-input.is-invalid~.custom-file-label{border-color:#dc3545}.was-validated .custom-file-input:invalid:focus~.custom-file-label,.custom-file-input.is-invalid:focus~.custom-file-label{border-color:#dc3545;box-shadow:0 0 0 0.2rem rgba(220,53,69,0.25)}.form-inline{display:flex;flex-flow:row wrap;align-items:center}.form-inline .form-check{width:100%}@media (min-width: 576px){.form-inline label{display:flex;align-items:center;justify-content:center;margin-bottom:0}.form-inline .form-group{display:flex;flex:0 0 auto;flex-flow:row wrap;align-items:center;margin-bottom:0}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .form-control-plaintext{display:inline-block}.form-inline .input-group,.form-inline .custom-select{width:auto}.form-inline .form-check{display:flex;align-items:center;justify-content:center;width:auto;padding-left:0}.form-inline .form-check-input{position:relative;flex-shrink:0;margin-top:0;margin-right:0.25rem;margin-left:0}.form-inline .custom-control{align-items:center;justify-content:center}.form-inline .custom-control-label{margin-bottom:0}}@keyframes gl-spinner-rotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes gl-keyframes-skeleton-loader{0%{background-position-x:-32rem}100%{background-position-x:32rem}}.gl-button{display:inline-flex}.gl-button:not(.btn-link):focus,.gl-button:not(.btn-link):active,.gl-button:not(.btn-link):focus:active{text-decoration:none}.gl-button.gl-button,.gl-button.gl-button.btn-block{border-width:0;padding-top:0.5rem;padding-bottom:0.5rem;padding-left:0.75rem;padding-right:0.75rem;background-color:transparent;line-height:1rem;color:#333238;fill:currentColor;box-shadow:inset 0 0 0 1px #bfbfc3;justify-content:center;align-items:center;font-size:0.875rem;border-radius:0.25rem}.gl-button.gl-button .gl-button-text,.gl-button.gl-button.btn-block .gl-button-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-top:1px;padding-bottom:1px;margin-top:-1px;margin-bottom:-1px}.gl-button.gl-button .gl-button-icon,.gl-button.gl-button.btn-block .gl-button-icon{height:1rem;width:1rem;flex-shrink:0;margin-right:0.25rem;top:auto}.gl-button.gl-button gl-emoji,.gl-button.gl-button.btn-block gl-emoji{margin-right:0.25rem;position:relative;font-size:1rem}.gl-button.gl-button.btn-default,.gl-button.gl-button.btn-dashed,.gl-button.gl-button.btn-block.btn-default,.gl-button.gl-button.btn-block.btn-dashed{background-color:#fff}.gl-button.gl-button.btn-default.btn-default-tertiary,.gl-button.gl-button.btn-dashed.btn-default-tertiary,.gl-button.gl-button.btn-block.btn-default.btn-default-tertiary,.gl-button.gl-button.btn-block.btn-dashed.btn-default-tertiary{background-color:transparent}.gl-button.gl-button.btn-default:hover,.gl-button.gl-button.btn-dashed:hover,.gl-button.gl-button.btn-block.btn-default:hover,.gl-button.gl-button.btn-block.btn-dashed:hover{box-shadow:inset 0 0 0 2px #89888d,0 2px 2px 0 rgba(0,0,0,0.08);background:#ececef}.gl-button.gl-button.btn-default:hover .gl-icon,.gl-button.gl-button.btn-dashed:hover .gl-icon,.gl-button.gl-button.btn-block.btn-default:hover .gl-icon,.gl-button.gl-button.btn-block.btn-dashed:hover .gl-icon{color:#535158}.gl-button.gl-button.btn-default:focus,.gl-button.gl-button.btn-dashed:focus,.gl-button.gl-button.btn-block.btn-default:focus,.gl-button.gl-button.btn-block.btn-dashed:focus{box-shadow:inset 0 0 0 1px #89888d, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#ececef}.gl-button.gl-button.btn-default:focus .gl-icon,.gl-button.gl-button.btn-dashed:focus .gl-icon,.gl-button.gl-button.btn-block.btn-default:focus .gl-icon,.gl-button.gl-button.btn-block.btn-dashed:focus .gl-icon{color:#535158}.gl-button.gl-button.btn-default:active,.gl-button.gl-button.btn-default.active,.gl-button.gl-button.btn-dashed:active,.gl-button.gl-button.btn-dashed.active,.gl-button.gl-button.btn-block.btn-default:active,.gl-button.gl-button.btn-block.btn-default.active,.gl-button.gl-button.btn-block.btn-dashed:active,.gl-button.gl-button.btn-block.btn-dashed.active{box-shadow:inset 0 0 0 1px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#dcdcde}.gl-button.gl-button.btn-default:active .gl-icon,.gl-button.gl-button.btn-default.active .gl-icon,.gl-button.gl-button.btn-dashed:active .gl-icon,.gl-button.gl-button.btn-dashed.active .gl-icon,.gl-button.gl-button.btn-block.btn-default:active .gl-icon,.gl-button.gl-button.btn-block.btn-default.active .gl-icon,.gl-button.gl-button.btn-block.btn-dashed:active .gl-icon,.gl-button.gl-button.btn-block.btn-dashed.active .gl-icon{color:#333238}.gl-button.gl-button.btn-default:active:focus,.gl-button.gl-button.btn-default.active:focus,.gl-button.gl-button.btn-dashed:active:focus,.gl-button.gl-button.btn-dashed.active:focus,.gl-button.gl-button.btn-block.btn-default:active:focus,.gl-button.gl-button.btn-block.btn-default.active:focus,.gl-button.gl-button.btn-block.btn-dashed:active:focus,.gl-button.gl-button.btn-block.btn-dashed.active:focus{box-shadow:inset 0 0 0 1px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-default:active:focus .gl-icon,.gl-button.gl-button.btn-default.active:focus .gl-icon,.gl-button.gl-button.btn-dashed:active:focus .gl-icon,.gl-button.gl-button.btn-dashed.active:focus .gl-icon,.gl-button.gl-button.btn-block.btn-default:active:focus .gl-icon,.gl-button.gl-button.btn-block.btn-default.active:focus .gl-icon,.gl-button.gl-button.btn-block.btn-dashed:active:focus .gl-icon,.gl-button.gl-button.btn-block.btn-dashed.active:focus .gl-icon{color:#333238}.gl-button.gl-button.btn-default .gl-icon,.gl-button.gl-button.btn-dashed .gl-icon,.gl-button.gl-button.btn-block.btn-default .gl-icon,.gl-button.gl-button.btn-block.btn-dashed .gl-icon{color:#737278}.gl-button.gl-button.selected,.gl-button.gl-button.btn-block.selected{background-color:#fff;box-shadow:inset 0 0 0 2px #a4a3a8}.gl-button.gl-button.selected:hover,.gl-button.gl-button.selected:focus,.gl-button.gl-button.btn-block.selected:hover,.gl-button.gl-button.btn-block.selected:focus{background-color:#ececef}.gl-button.gl-button.selected:hover,.gl-button.gl-button.btn-block.selected:hover{box-shadow:inset 0 0 0 2px #89888d}.gl-button.gl-button.selected:focus,.gl-button.gl-button.btn-block.selected:focus{box-shadow:inset 0 0 0 2px #89888d, 0 0 0 1px #fff, 0 0 0 3px #428fdc}.gl-button.gl-button.selected:active,.gl-button.gl-button.selected:active:focus,.gl-button.gl-button.btn-block.selected:active,.gl-button.gl-button.btn-block.selected:active:focus{background-color:#dcdcde;box-shadow:inset 0 0 0 2px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc}.gl-button.gl-button.btn-confirm,.gl-button.gl-button.btn-info,.gl-button.gl-button.btn-success,.gl-button.gl-button.btn-danger,.gl-button.gl-button.btn-block.btn-confirm,.gl-button.gl-button.btn-block.btn-info,.gl-button.gl-button.btn-block.btn-success,.gl-button.gl-button.btn-block.btn-danger{color:#fff}.gl-button.gl-button.btn-confirm,.gl-button.gl-button.btn-info,.gl-button.gl-button.btn-block.btn-confirm,.gl-button.gl-button.btn-block.btn-info{background-color:#1f75cb;box-shadow:inset 0 0 0 1px #1068bf}.gl-button.gl-button.btn-confirm:hover,.gl-button.gl-button.btn-info:hover,.gl-button.gl-button.btn-block.btn-confirm:hover,.gl-button.gl-button.btn-block.btn-info:hover{box-shadow:inset 0 0 0 2px #064787,0 2px 2px 0 rgba(0,0,0,0.08);background:#1068bf}.gl-button.gl-button.btn-confirm:focus,.gl-button.gl-button.btn-info:focus,.gl-button.gl-button.btn-block.btn-confirm:focus,.gl-button.gl-button.btn-block.btn-info:focus{box-shadow:inset 0 0 0 1px #064787, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#1068bf}.gl-button.gl-button.btn-confirm:active,.gl-button.gl-button.btn-confirm.active,.gl-button.gl-button.btn-info:active,.gl-button.gl-button.btn-info.active,.gl-button.gl-button.btn-block.btn-confirm:active,.gl-button.gl-button.btn-block.btn-confirm.active,.gl-button.gl-button.btn-block.btn-info:active,.gl-button.gl-button.btn-block.btn-info.active{box-shadow:inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#0b5cad}.gl-button.gl-button.btn-confirm:active:focus,.gl-button.gl-button.btn-confirm.active:focus,.gl-button.gl-button.btn-info:active:focus,.gl-button.gl-button.btn-info.active:focus,.gl-button.gl-button.btn-block.btn-confirm:active:focus,.gl-button.gl-button.btn-block.btn-confirm.active:focus,.gl-button.gl-button.btn-block.btn-info:active:focus,.gl-button.gl-button.btn-block.btn-info.active:focus{box-shadow:inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-confirm-secondary,.gl-button.gl-button.btn-confirm-tertiary,.gl-button.gl-button.btn-info-secondary,.gl-button.gl-button.btn-info-tertiary,.gl-button.gl-button.btn-block.btn-confirm-secondary,.gl-button.gl-button.btn-block.btn-confirm-tertiary,.gl-button.gl-button.btn-block.btn-info-secondary,.gl-button.gl-button.btn-block.btn-info-tertiary{background-color:transparent;color:#1f75cb;font-weight:400;box-shadow:inset 0 0 0 1px #1f75cb}.gl-button.gl-button.btn-confirm-secondary:hover,.gl-button.gl-button.btn-confirm-tertiary:hover,.gl-button.gl-button.btn-info-secondary:hover,.gl-button.gl-button.btn-info-tertiary:hover,.gl-button.gl-button.btn-block.btn-confirm-secondary:hover,.gl-button.gl-button.btn-block.btn-confirm-tertiary:hover,.gl-button.gl-button.btn-block.btn-info-secondary:hover,.gl-button.gl-button.btn-block.btn-info-tertiary:hover{color:#0b5cad;box-shadow:inset 0 0 0 2px #0b5cad,0 2px 2px 0 rgba(0,0,0,0.08);background:#e9f3fc}.gl-button.gl-button.btn-confirm-secondary:focus,.gl-button.gl-button.btn-confirm-tertiary:focus,.gl-button.gl-button.btn-info-secondary:focus,.gl-button.gl-button.btn-info-tertiary:focus,.gl-button.gl-button.btn-block.btn-confirm-secondary:focus,.gl-button.gl-button.btn-block.btn-confirm-tertiary:focus,.gl-button.gl-button.btn-block.btn-info-secondary:focus,.gl-button.gl-button.btn-block.btn-info-tertiary:focus{color:#0b5cad;box-shadow:inset 0 0 0 1px #0b5cad, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#e9f3fc}.gl-button.gl-button.btn-confirm-secondary:active,.gl-button.gl-button.btn-confirm-secondary.active,.gl-button.gl-button.btn-confirm-tertiary:active,.gl-button.gl-button.btn-confirm-tertiary.active,.gl-button.gl-button.btn-info-secondary:active,.gl-button.gl-button.btn-info-secondary.active,.gl-button.gl-button.btn-info-tertiary:active,.gl-button.gl-button.btn-info-tertiary.active,.gl-button.gl-button.btn-block.btn-confirm-secondary:active,.gl-button.gl-button.btn-block.btn-confirm-secondary.active,.gl-button.gl-button.btn-block.btn-confirm-tertiary:active,.gl-button.gl-button.btn-block.btn-confirm-tertiary.active,.gl-button.gl-button.btn-block.btn-info-secondary:active,.gl-button.gl-button.btn-block.btn-info-secondary.active,.gl-button.gl-button.btn-block.btn-info-tertiary:active,.gl-button.gl-button.btn-block.btn-info-tertiary.active{color:#033464;box-shadow:inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#cbe2f9}.gl-button.gl-button.btn-confirm-secondary:active:focus,.gl-button.gl-button.btn-confirm-secondary.active:focus,.gl-button.gl-button.btn-confirm-tertiary:active:focus,.gl-button.gl-button.btn-confirm-tertiary.active:focus,.gl-button.gl-button.btn-info-secondary:active:focus,.gl-button.gl-button.btn-info-secondary.active:focus,.gl-button.gl-button.btn-info-tertiary:active:focus,.gl-button.gl-button.btn-info-tertiary.active:focus,.gl-button.gl-button.btn-block.btn-confirm-secondary:active:focus,.gl-button.gl-button.btn-block.btn-confirm-secondary.active:focus,.gl-button.gl-button.btn-block.btn-confirm-tertiary:active:focus,.gl-button.gl-button.btn-block.btn-confirm-tertiary.active:focus,.gl-button.gl-button.btn-block.btn-info-secondary:active:focus,.gl-button.gl-button.btn-block.btn-info-secondary.active:focus,.gl-button.gl-button.btn-block.btn-info-tertiary:active:focus,.gl-button.gl-button.btn-block.btn-info-tertiary.active:focus{box-shadow:inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-success,.gl-button.gl-button.btn-block.btn-success{background-color:#108548;box-shadow:inset 0 0 0 1px #217645}.gl-button.gl-button.btn-success:hover,.gl-button.gl-button.btn-block.btn-success:hover{box-shadow:inset 0 0 0 2px #0d532a,0 2px 2px 0 rgba(0,0,0,0.08);background:#217645}.gl-button.gl-button.btn-success:focus,.gl-button.gl-button.btn-block.btn-success:focus{box-shadow:inset 0 0 0 1px #0d532a, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#217645}.gl-button.gl-button.btn-success:active,.gl-button.gl-button.btn-success.active,.gl-button.gl-button.btn-block.btn-success:active,.gl-button.gl-button.btn-block.btn-success.active{box-shadow:inset 0 0 0 1px #0a4020, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#24663b}.gl-button.gl-button.btn-success:active:focus,.gl-button.gl-button.btn-success.active:focus,.gl-button.gl-button.btn-block.btn-success:active:focus,.gl-button.gl-button.btn-block.btn-success.active:focus{box-shadow:inset 0 0 0 1px #0a4020, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-success-secondary,.gl-button.gl-button.btn-success-tertiary,.gl-button.gl-button.btn-block.btn-success-secondary,.gl-button.gl-button.btn-block.btn-success-tertiary{background-color:transparent;color:#108548;font-weight:400;box-shadow:inset 0 0 0 1px #108548}.gl-button.gl-button.btn-success-secondary:hover,.gl-button.gl-button.btn-success-tertiary:hover,.gl-button.gl-button.btn-block.btn-success-secondary:hover,.gl-button.gl-button.btn-block.btn-success-tertiary:hover{color:#24663b;box-shadow:inset 0 0 0 2px #24663b,0 2px 2px 0 rgba(0,0,0,0.08);background:#ecf4ee}.gl-button.gl-button.btn-success-secondary:focus,.gl-button.gl-button.btn-success-tertiary:focus,.gl-button.gl-button.btn-block.btn-success-secondary:focus,.gl-button.gl-button.btn-block.btn-success-tertiary:focus{color:#24663b;box-shadow:inset 0 0 0 1px #24663b, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#ecf4ee}.gl-button.gl-button.btn-success-secondary:active,.gl-button.gl-button.btn-success-secondary.active,.gl-button.gl-button.btn-success-tertiary:active,.gl-button.gl-button.btn-success-tertiary.active,.gl-button.gl-button.btn-block.btn-success-secondary:active,.gl-button.gl-button.btn-block.btn-success-secondary.active,.gl-button.gl-button.btn-block.btn-success-tertiary:active,.gl-button.gl-button.btn-block.btn-success-tertiary.active{color:#0a4020;box-shadow:inset 0 0 0 1px #0a4020, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#c3e6cd}.gl-button.gl-button.btn-success-secondary:active:focus,.gl-button.gl-button.btn-success-secondary.active:focus,.gl-button.gl-button.btn-success-tertiary:active:focus,.gl-button.gl-button.btn-success-tertiary.active:focus,.gl-button.gl-button.btn-block.btn-success-secondary:active:focus,.gl-button.gl-button.btn-block.btn-success-secondary.active:focus,.gl-button.gl-button.btn-block.btn-success-tertiary:active:focus,.gl-button.gl-button.btn-block.btn-success-tertiary.active:focus{box-shadow:inset 0 0 0 1px #0a4020, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-danger,.gl-button.gl-button.btn-block.btn-danger{background-color:#dd2b0e;box-shadow:inset 0 0 0 1px #c91c00}.gl-button.gl-button.btn-danger:hover,.gl-button.gl-button.btn-block.btn-danger:hover{box-shadow:inset 0 0 0 2px #8d1300,0 2px 2px 0 rgba(0,0,0,0.08);background:#c91c00}.gl-button.gl-button.btn-danger:focus,.gl-button.gl-button.btn-block.btn-danger:focus{box-shadow:inset 0 0 0 1px #8d1300, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#c91c00}.gl-button.gl-button.btn-danger:active,.gl-button.gl-button.btn-danger.active,.gl-button.gl-button.btn-block.btn-danger:active,.gl-button.gl-button.btn-block.btn-danger.active{box-shadow:inset 0 0 0 1px #660e00, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#ae1800}.gl-button.gl-button.btn-danger:active:focus,.gl-button.gl-button.btn-danger.active:focus,.gl-button.gl-button.btn-block.btn-danger:active:focus,.gl-button.gl-button.btn-block.btn-danger.active:focus{box-shadow:inset 0 0 0 1px #660e00, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-danger-secondary,.gl-button.gl-button.btn-danger-tertiary,.gl-button.gl-button.btn-block.btn-danger-secondary,.gl-button.gl-button.btn-block.btn-danger-tertiary{background-color:transparent;color:#dd2b0e;font-weight:400;box-shadow:inset 0 0 0 1px #dd2b0e}.gl-button.gl-button.btn-danger-secondary:hover,.gl-button.gl-button.btn-danger-tertiary:hover,.gl-button.gl-button.btn-block.btn-danger-secondary:hover,.gl-button.gl-button.btn-block.btn-danger-tertiary:hover{color:#ae1800;box-shadow:inset 0 0 0 2px #ae1800,0 2px 2px 0 rgba(0,0,0,0.08);background:#fcf1ef}.gl-button.gl-button.btn-danger-secondary:focus,.gl-button.gl-button.btn-danger-tertiary:focus,.gl-button.gl-button.btn-block.btn-danger-secondary:focus,.gl-button.gl-button.btn-block.btn-danger-tertiary:focus{color:#ae1800;box-shadow:inset 0 0 0 1px #ae1800, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#fcf1ef}.gl-button.gl-button.btn-danger-secondary:active,.gl-button.gl-button.btn-danger-secondary.active,.gl-button.gl-button.btn-danger-tertiary:active,.gl-button.gl-button.btn-danger-tertiary.active,.gl-button.gl-button.btn-block.btn-danger-secondary:active,.gl-button.gl-button.btn-block.btn-danger-secondary.active,.gl-button.gl-button.btn-block.btn-danger-tertiary:active,.gl-button.gl-button.btn-block.btn-danger-tertiary.active{color:#660e00;box-shadow:inset 0 0 0 1px #660e00, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;background-color:#fdd4cd}.gl-button.gl-button.btn-danger-secondary:active:focus,.gl-button.gl-button.btn-danger-secondary.active:focus,.gl-button.gl-button.btn-danger-tertiary:active:focus,.gl-button.gl-button.btn-danger-tertiary.active:focus,.gl-button.gl-button.btn-block.btn-danger-secondary:active:focus,.gl-button.gl-button.btn-block.btn-danger-secondary.active:focus,.gl-button.gl-button.btn-block.btn-danger-tertiary:active:focus,.gl-button.gl-button.btn-block.btn-danger-tertiary.active:focus{box-shadow:inset 0 0 0 1px #660e00, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-default-secondary,.gl-button.gl-button.btn-dashed-secondary,.gl-button.gl-button.btn-confirm-secondary,.gl-button.gl-button.btn-info-secondary,.gl-button.gl-button.btn-success-secondary,.gl-button.gl-button.btn-danger-secondary,.gl-button.gl-button.btn-block.btn-default-secondary,.gl-button.gl-button.btn-block.btn-dashed-secondary,.gl-button.gl-button.btn-block.btn-confirm-secondary,.gl-button.gl-button.btn-block.btn-info-secondary,.gl-button.gl-button.btn-block.btn-success-secondary,.gl-button.gl-button.btn-block.btn-danger-secondary{background-color:#fff}.gl-button.gl-button.btn-default-tertiary,.gl-button.gl-button.btn-dashed-tertiary,.gl-button.gl-button.btn-confirm-tertiary,.gl-button.gl-button.btn-info-tertiary,.gl-button.gl-button.btn-success-tertiary,.gl-button.gl-button.btn-danger-tertiary,.gl-button.gl-button.btn-block.btn-default-tertiary,.gl-button.gl-button.btn-block.btn-dashed-tertiary,.gl-button.gl-button.btn-block.btn-confirm-tertiary,.gl-button.gl-button.btn-block.btn-info-tertiary,.gl-button.gl-button.btn-block.btn-success-tertiary,.gl-button.gl-button.btn-block.btn-danger-tertiary{box-shadow:none;mix-blend-mode:multiply}.gl-button.gl-button.btn-default-tertiary:hover,.gl-button.gl-button.btn-dashed-tertiary:hover,.gl-button.gl-button.btn-confirm-tertiary:hover,.gl-button.gl-button.btn-info-tertiary:hover,.gl-button.gl-button.btn-success-tertiary:hover,.gl-button.gl-button.btn-danger-tertiary:hover,.gl-button.gl-button.btn-block.btn-default-tertiary:hover,.gl-button.gl-button.btn-block.btn-dashed-tertiary:hover,.gl-button.gl-button.btn-block.btn-confirm-tertiary:hover,.gl-button.gl-button.btn-block.btn-info-tertiary:hover,.gl-button.gl-button.btn-block.btn-success-tertiary:hover,.gl-button.gl-button.btn-block.btn-danger-tertiary:hover{box-shadow:none}.gl-button.gl-button.btn-default-tertiary:active,.gl-button.gl-button.btn-default-tertiary:focus,.gl-button.gl-button.btn-default-tertiary:focus:active,.gl-button.gl-button.btn-dashed-tertiary:active,.gl-button.gl-button.btn-dashed-tertiary:focus,.gl-button.gl-button.btn-dashed-tertiary:focus:active,.gl-button.gl-button.btn-confirm-tertiary:active,.gl-button.gl-button.btn-confirm-tertiary:focus,.gl-button.gl-button.btn-confirm-tertiary:focus:active,.gl-button.gl-button.btn-info-tertiary:active,.gl-button.gl-button.btn-info-tertiary:focus,.gl-button.gl-button.btn-info-tertiary:focus:active,.gl-button.gl-button.btn-success-tertiary:active,.gl-button.gl-button.btn-success-tertiary:focus,.gl-button.gl-button.btn-success-tertiary:focus:active,.gl-button.gl-button.btn-danger-tertiary:active,.gl-button.gl-button.btn-danger-tertiary:focus,.gl-button.gl-button.btn-danger-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-default-tertiary:active,.gl-button.gl-button.btn-block.btn-default-tertiary:focus,.gl-button.gl-button.btn-block.btn-default-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-dashed-tertiary:active,.gl-button.gl-button.btn-block.btn-dashed-tertiary:focus,.gl-button.gl-button.btn-block.btn-dashed-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-confirm-tertiary:active,.gl-button.gl-button.btn-block.btn-confirm-tertiary:focus,.gl-button.gl-button.btn-block.btn-confirm-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-info-tertiary:active,.gl-button.gl-button.btn-block.btn-info-tertiary:focus,.gl-button.gl-button.btn-block.btn-info-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-success-tertiary:active,.gl-button.gl-button.btn-block.btn-success-tertiary:focus,.gl-button.gl-button.btn-block.btn-success-tertiary:focus:active,.gl-button.gl-button.btn-block.btn-danger-tertiary:active,.gl-button.gl-button.btn-block.btn-danger-tertiary:focus,.gl-button.gl-button.btn-block.btn-danger-tertiary:focus:active{box-shadow:0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-default-tertiary.selected,.gl-button.gl-button.btn-block.btn-default-tertiary.selected{box-shadow:inset 0 0 0 2px #a4a3a8}.gl-button.gl-button.btn-sm,.gl-button.gl-button.btn-block.btn-sm{padding-top:0.25rem;padding-bottom:0.25rem;padding-left:0.5rem;padding-right:0.5rem;line-height:1rem;font-size:0.875rem}.gl-button.gl-button.btn-sm gl-emoji,.gl-button.gl-button.btn-block.btn-sm gl-emoji{font-size:0.75rem}.gl-button.gl-button.btn-dashed,.gl-button.gl-button.btn-dashed-tertiary,.gl-button.gl-button.btn-block.btn-dashed,.gl-button.gl-button.btn-block.btn-dashed-tertiary{box-shadow:inset 0 0 0 1px #89888d;background-color:#fff;outline:3px dotted #fff;outline-offset:-1px}.gl-button.gl-button.btn-dashed:hover,.gl-button.gl-button.btn-dashed-tertiary:hover,.gl-button.gl-button.btn-block.btn-dashed:hover,.gl-button.gl-button.btn-block.btn-dashed-tertiary:hover{box-shadow:inset 0 0 0 1px #89888d;background-color:#ececef}.gl-button.gl-button.btn-dashed:focus,.gl-button.gl-button.btn-dashed-tertiary:focus,.gl-button.gl-button.btn-block.btn-dashed:focus,.gl-button.gl-button.btn-block.btn-dashed-tertiary:focus{box-shadow:inset 0 0 0 1px #89888d, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;outline:3px dotted #ececef;outline-offset:-1px}.gl-button.gl-button.btn-dashed:active,.gl-button.gl-button.btn-dashed.active,.gl-button.gl-button.btn-dashed-tertiary:active,.gl-button.gl-button.btn-dashed-tertiary.active,.gl-button.gl-button.btn-block.btn-dashed:active,.gl-button.gl-button.btn-block.btn-dashed.active,.gl-button.gl-button.btn-block.btn-dashed-tertiary:active,.gl-button.gl-button.btn-block.btn-dashed-tertiary.active{box-shadow:inset 0 0 0 1px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;outline:3px dotted #dcdcde;outline-offset:-1px;background-color:#dcdcde}.gl-button.gl-button.btn-dashed:active:focus,.gl-button.gl-button.btn-dashed.active:focus,.gl-button.gl-button.btn-dashed-tertiary:active:focus,.gl-button.gl-button.btn-dashed-tertiary.active:focus,.gl-button.gl-button.btn-block.btn-dashed:active:focus,.gl-button.gl-button.btn-block.btn-dashed.active:focus,.gl-button.gl-button.btn-block.btn-dashed-tertiary:active:focus,.gl-button.gl-button.btn-block.btn-dashed-tertiary.active:focus{box-shadow:inset 0 0 0 1px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none;outline:3px dotted #dcdcde;outline-offset:-1px}.gl-button.gl-button.btn-icon,.gl-button.gl-button.btn-block.btn-icon{padding:0.5rem;line-height:1rem}.gl-button.gl-button.btn-icon .gl-button-icon,.gl-button.gl-button.btn-block.btn-icon .gl-button-icon{margin-right:0}.gl-button.gl-button.btn-icon.btn-sm,.gl-button.gl-button.btn-block.btn-icon.btn-sm{padding:0.25rem}.gl-button.gl-button.button-ellipsis-horizontal,.gl-button.gl-button.button-ellipsis-horizontal.btn-sm,.gl-button.gl-button.btn-block.button-ellipsis-horizontal,.gl-button.gl-button.btn-block.button-ellipsis-horizontal.btn-sm{padding-top:0;padding-bottom:0;padding-left:0.25rem;padding-right:0.25rem}.gl-button.gl-button.button-ellipsis-horizontal svg,.gl-button.gl-button.button-ellipsis-horizontal.btn-sm svg,.gl-button.gl-button.btn-block.button-ellipsis-horizontal svg,.gl-button.gl-button.btn-block.button-ellipsis-horizontal.btn-sm svg{height:1rem;width:1rem;margin:0}.gl-button.gl-button.btn-label,.gl-button.gl-button.btn-label:hover,.gl-button.gl-button.btn-label:focus,.gl-button.gl-button.btn-label:active,.gl-button.gl-button.btn-block.btn-label,.gl-button.gl-button.btn-block.btn-label:hover,.gl-button.gl-button.btn-block.btn-label:focus,.gl-button.gl-button.btn-block.btn-label:active{background-color:#fbfafd;color:#333238;fill:currentColor;box-shadow:inset 0 0 0 1px #bfbfc3;cursor:default;-webkit-user-select:text;user-select:text}.gl-button.gl-button.btn-link,.gl-button.gl-button.btn-block.btn-link{background-color:transparent;border-width:0;font-size:0.875rem;line-height:1rem;color:#1f75cb;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;box-shadow:none}.gl-button.gl-button.btn-link:hover,.gl-button.gl-button.btn-block.btn-link:hover{background-color:transparent;color:#1f75cb}.gl-button.gl-button.btn-link:active,.gl-button.gl-button.btn-block.btn-link:active{color:#0b5cad;text-decoration:underline}.gl-button.gl-button.btn-link:active,.gl-button.gl-button.btn-link:focus,.gl-button.gl-button.btn-link:focus:active,.gl-button.gl-button.btn-block.btn-link:active,.gl-button.gl-button.btn-block.btn-link:focus,.gl-button.gl-button.btn-block.btn-link:focus:active{background-color:transparent;box-shadow:0 0 0 1px #fff, 0 0 0 3px #428fdc;outline:none}.gl-button.gl-button.btn-link.disabled,.gl-button.gl-button.btn-link[disabled],.gl-button.gl-button.btn-block.btn-link.disabled,.gl-button.gl-button.btn-block.btn-link[disabled]{background-color:transparent;box-shadow:none}.gl-button.gl-button.disabled,.gl-button.gl-button.disabled:hover,.gl-button.gl-button.disabled:focus,.gl-button.gl-button.disabled:active,.gl-button.gl-button.disabled.selected,.gl-button.gl-button[disabled],.gl-button.gl-button[disabled]:hover,.gl-button.gl-button[disabled]:focus,.gl-button.gl-button[disabled]:active,.gl-button.gl-button.selected[disabled],.gl-button.gl-button.btn-block.disabled,.gl-button.gl-button.btn-block.disabled:hover,.gl-button.gl-button.btn-block.disabled:focus,.gl-button.gl-button.btn-block.disabled:active,.gl-button.gl-button.btn-block.disabled.selected,.gl-button.gl-button.btn-block[disabled],.gl-button.gl-button.btn-block[disabled]:hover,.gl-button.gl-button.btn-block[disabled]:focus,.gl-button.gl-button.btn-block[disabled]:active,.gl-button.gl-button.btn-block.selected[disabled]{background-color:#fbfafd;color:#737278;box-shadow:inset 0 0 0 1px #dcdcde;opacity:1;cursor:not-allowed !important}.gl-button.gl-button.disabled .gl-button-icon,.gl-button.gl-button.disabled:hover .gl-button-icon,.gl-button.gl-button.disabled:focus .gl-button-icon,.gl-button.gl-button.disabled:active .gl-button-icon,.gl-button.gl-button.disabled.selected .gl-button-icon,.gl-button.gl-button[disabled] .gl-button-icon,.gl-button.gl-button[disabled]:hover .gl-button-icon,.gl-button.gl-button[disabled]:focus .gl-button-icon,.gl-button.gl-button[disabled]:active .gl-button-icon,.gl-button.gl-button.selected[disabled] .gl-button-icon,.gl-button.gl-button.btn-block.disabled .gl-button-icon,.gl-button.gl-button.btn-block.disabled:hover .gl-button-icon,.gl-button.gl-button.btn-block.disabled:focus .gl-button-icon,.gl-button.gl-button.btn-block.disabled:active .gl-button-icon,.gl-button.gl-button.btn-block.disabled.selected .gl-button-icon,.gl-button.gl-button.btn-block[disabled] .gl-button-icon,.gl-button.gl-button.btn-block[disabled]:hover .gl-button-icon,.gl-button.gl-button.btn-block[disabled]:focus .gl-button-icon,.gl-button.gl-button.btn-block[disabled]:active .gl-button-icon,.gl-button.gl-button.btn-block.selected[disabled] .gl-button-icon{fill:#89888d}.gl-button.gl-button.disabled[class*='-tertiary'],.gl-button.gl-button[disabled][class*='-tertiary'],.gl-button.gl-button.btn-block.disabled[class*='-tertiary'],.gl-button.gl-button.btn-block[disabled][class*='-tertiary']{background-color:transparent;box-shadow:none}body{color:#666;text-align:center;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin:auto;font-size:0.875rem}h1{font-size:56px;line-height:100px;font-weight:400;color:#456}h2{font-size:24px;color:#666;line-height:1.5em}h3{color:#456;font-size:20px;font-weight:400;line-height:28px}img{max-width:80vw;display:block;margin:40px auto}a{text-decoration:none;color:#1068bf}.page-container{margin:auto 20px}.container{margin:auto;max-width:600px;border-bottom:1px solid #dcdcde;padding-bottom:1em}.action-container{padding:0.5em 0}.form-inline-flex{display:flex;flex-wrap:wrap}.form-inline-flex button{display:block;width:100%}.form-inline-flex .field{display:block;width:100%;margin-bottom:1em}@media (min-width: 576px){.form-inline-flex{flex-wrap:nowrap}.form-inline-flex button{width:auto}.form-inline-flex .field{margin-bottom:0;margin-right:0.5em;flex:1}}.error-nav{padding:16px 0 0;text-align:center}.error-nav li{display:block;padding-bottom:1em}@media (min-width: 576px){.error-nav li{display:inline-block;padding-bottom:0}.error-nav li:not(:first-child)::before{content:'\00B7';display:inline-block;padding:0 1em}}.tanuki-logo{width:210px;height:210px;max-width:40vw;display:block;margin:24px auto}
 
-[Rewrite]
-# > version
-^https?:\/\/2023.04.15\/v2.0.295 - reject
-# > 58
-^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
-# > 555
-^https?:\/\/run\.api\.qyfxgd\.cn:9313\/api\/v1\/advert - reject
-# > 12123
-^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery - reject
-# > 36kr
-^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show - reject
-# > acfun
-^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
-# > aihuishou
-^https?:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
-# > appso
-^https?:\/\/sso.ifanr.com\/jiong\/IOS\/appso\/splash\/ - reject
-# > alibaba
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ - reject
-# > baidufanyi
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo - reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
-# > baiduwenku
-^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad - reject
-# > baiduwangpan
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - reject
-^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad - reject
-^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
-# > beijingshouqi
-^https?:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json - reject
-# > bishengke
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome - reject
-# > beikezhaofang
-^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) - reject
-# > boluobaoqingxiaoshuo
-^https:\/\/api\.sfacg\.com\/ioscfg - reject
-# > bit
-^https?:\/\/pan-api\.bitqiu\.com\/activity\/getPromoteGuide - reject
-# > clicli
-^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/top_notice - reject
-# > chelaile
-^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad - reject
-^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub - reject
-^https?:\/\/api.chelaile.net.cn\/adpub\/ - reject
-^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ - reject
-^https?:\/\/atrace.chelaile.net.cn\/adpub\/ - reject
-^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image - reject
-^https?:\/\/pic1.chelaile.net.cn\/adv\/ - reject
-# > chaoxingxuexitong
-^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig - reject
-# > caifu
-^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d - reject
-# > caijingzazhi
-^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/ - reject
-# > caiyun
-^https:\/\/api\.caiyunapp\.com\/v1\/activity - reject
-# > ciweimaoyuedu
-^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list - reject
-# > csdn
-^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad - reject
-# > cailianshe
-^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad - reject
-# > dongkakongjian*
-^https?:\/\/m\.creditcard\.ecitic\.com\/citiccard\/mbk\/appspace-getway\/getWay\/dkkj-system-web\/system\/v\d\/init-config - reject
-# > dangdang
-^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init - reject
-# > dashixiong
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
-# > douban
-^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject
-# > dingdongmaicai
-^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ - reject
-# > didichuxing
-https?://res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
-https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
-# > daoyu
-^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
-# > douyu
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - reject
-# > dewu
-^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement\/ - reject
-# > dazhihui
-^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson - reject
-# > dangdangyuedu
-^https?:\/\/e.dangdang.com\/media\/api.+\?action=getDeviceStartPage - reject
-^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init - reject
-^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
-^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage - reject
-# > dianshijia
-^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ - reject
-^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ - reject
-# > dongqiudi
-^https?:\/\/ap\.dongqiudi\.com\/plat\/v - reject
-# > dongfangcaifu
-^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 - reject
-# > damai
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome - reject
-# > dami
-^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
-# > elema
-^https?:\/\/elemecdn.com\/.+\/sitemap - reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
-^https?:\/\/fuss10.elemecdn.com\/.+.mp4 - reject
-^https?:\/\/www1.elecfans.com\/www\/delivery\/ - reject
-# > echongdian
-^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 - reject-200
-# > fandengdushu
-^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
-# > feizhu
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allresource - reject
-# > feikechaguan
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis - reject
-# > gongshijilu
-^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg - reject
-^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
-# > gaidepaihang
-https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do - reject
-# > guanyu
-https://guanyu.longfor.com/app-server/api/v1/main/start - reject
-# > guangqibentian
-^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType - reject
-# > guojiadili
-^https?:\/\/dili\.bdatu\.com\/jiekou\/ad - reject
-^https?:\/\/wap\.ngchina\.cn\/news\/adverts - reject
-# > haoxingtizhongcheng
-^http:\/\/open\.fitdays\.cn\/uploads\/ad\/ - reject
-# > huazhu
-^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ - reject
-# > hupu
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject-img
-^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} - reject-img
-# > hongbanbao
-https://fbchina.flipchina.cn/v2/ad/query/* - reject
-# > huyazhibo
-^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
-# > haoqixinribao
-^https?:\/\/app3\.qdaily\.com\/app\d\/boot_advertisements\.json - reject
-# > huxiu
-^https:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo - reject
-# > huangyouxiangji
-^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
-# > hanglvzongheng
-^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
-# > hangzhougongjiao
-^https?:\/\/m.ibuscloud.com\/v2\/app\/getStartPage - reject
-# > haohaozhu
-^https?:\/\/api\.haohaozhu\.cn\/index\.php\/home\/AppInit\/getStartPhoto - reject
-# > huabaozhitou
-^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement - reject
-# > i4
-^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
-# > jingdongdushu
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens - reject-200
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup - reject-200
-# > jingdong
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject-200
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject-200
-# > jingdongjinrong
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture - reject-200
-# > jingdongyun
-^https:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash - reject-200
-# > jianxun
-^https?:\/\/api\.tipsoon\.com\/api\/v\d\/top\/ad - reject-200
-# > jiaohangmaidanba
-^https?:\/\/creditcardapp\.bankcomm\.com\/mapp\/common\/(queryGuidePageAds|getPopAds)\.do$ - reject
-# > jiemianxinwen
-^https?:\/\/img\.jiemian\.com\/ads\/ - reject
-# > jinshi
-^https?:\/\/jad-api\.jin10\.com\/ad - reject
-# > jijianhuilv
-^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\/ - reject
-# > jiaxiaoediantong
-^https?:\/\/api\.jxedt\.com\/ad\/ - reject
-# > jiakaobaodian
-^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
-# > jianhanglife
-^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(2|9) - reject
-# > kfc
-^https?:\/\/res.kfc.com.cn\/advertisement\/ - reject
-# > kuaikan
-^https?:\/\/api.kkmh.com\/v\d\/(ad|advertisement)\/ - reject
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - reject-dict
-# > kanlixiang
-^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
-# > kantianxia
-https://open3.vistastory.com/v3/api/index/loading_ad - reject
-https://open3.vistastory.com/v3/api.*get_popup - reject
-# > kuake
-^https?:\/\/open-cms-api\.uc\.cn\/open-cms - reject-dict
-# > kuaishou
-^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
-# > lingclub
-^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode - reject-200
-# > linxi
-^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList) - reject
-# > lecheng
-https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* - reject
-# > lanjie100
-https://tagit.hyhuo.com/recover/list - reject
-# > laiChon
-^https?:\/\/(mobile|shop)\.laichon\.com\/api\/(v1\/goods\/goodsList|exposureAdvStatistics|getWebAdvList) - reject
-# host-suffix, admobile.top, reject
-https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
-# > lanRenTingShu
-^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action - reject
-# > lanjiyin
-^https?:\/\/tk\.lanjiyin\.com\.cn\/ad\/getAdList - reject
-# > MeiRiYouXian
-^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ - reject
-^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ - reject
-# > MeiTuan
-^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage - reject
-^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
-^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) - reject
-^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg - reject
-^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp - reject
-# > MeiTuanWaiMai
-^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) - reject
-^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) - reject
-^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time - reject
-# > MeiWeiBuYongDeng
-^https?:\/\/capi.mwee.cn\/app-api\/V12\/app\/getstartad - reject
-# > MaFengWo
-^https://mapi.mafengwo.cn\/ad\/get_launch_ad_list\/v2 - reject
-# > MaiDuiDui
-^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert - reject
-# > ManHuaRen
-^https?:\/\/.*mangaapi\.manhuaren\.com\/(v2\/public\/getStartUpMessage|v1\/public\/getStartPageAds) - reject
-^https?:\/\/.*mangaapi\.manhuaren\.com\/v2\/ad\/getMultiAdsStrategy - reject
-^https?:\/\/.*mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity - reject
-# > MIX
-^https:\/\/dispatcher\.camera360\.com\/api\/v1\/list$ - reject
-# > MaKaLong
-^https:\/\/app\.api\.versa-ai\.com\/launch\/ads\? - reject
-# > MoMo
-^https?:\/\/open\.taou\.com\/maimai\/launch_ad - reject
-^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad - reject
-^https?:\/\/track\.mm\.taou\.com/v\d\/track - reject
-# > maidanba
-^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do - reject
-# > mixuebingcheng
-^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/limitedAds$ - reject
-# > maoyan*
-^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? - reject-img
-# > nanfanghangkong
-^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement - reject
-# > omofun
-^https?:\/\/103\.91\.210\.141\:2515\/xgapp\.php\/v2\/top_notice - reject
-# > One
-^http:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad - reject
-# > Oray
-^https?:\/\/slapi\.oray\.net\/client\/ad - reject
-^https?:\/\/slapi\.oray\.net\/adver - reject
-# > one
-^https?:\/\/api\.21ec74\.com\/v2\.5\/ad - reject
-# > pikpak
-https://access.mypikpak.com/access_controller/v1/area_accessible - reject
-# > pinduoduo
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
-# > PiaoGen
-^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ - reject
-# > pengpainews
-^https?:\/\/adpai\.thepaper\.cn\/.+&ad= - reject
-# > pufayinhang
-^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/(getAdvList|prefetchAdvList)\.ah - reject
-# > qqbrower
-^https:\/\/us\.l\.qq\.com\/exapp\?spsa=\d - reject
-# > QuNaEr
-https://homefront.qunar.com/front/splash/ad - reject
-^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd - reject
-# > QiCheZhiJia
-^https?:\/\/adproxy.autohome.com.cn\/AdvertiseService\/ - reject
-^https?:\/\/app2.autoimg.cn\/appdfs\/ - reject
-# > QiDianDuShu
-^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
-# > RenMinRiBao
-^https:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) - reject
-^https?:\/\/stat\.peopleapp\.com\/ - reject
-# > shaoshupai
-https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
-# > ShunFengYouXuan
-^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* - reject
-# > spotify
-^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) - reject-img
-^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ - reject-img
-# > SanLianZhongDu
-https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig - reject
-# > ShunFeng
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade - reject
-https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages - reject
-^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
-# > shihuo
-^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) - reject
-# > Soul
-^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report$ - reject
-# > suning
-^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
-# > shanmu
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
-# > shanxianyixia
-^https:\/\/api\.gameplus\.qq\.com\/community\.OnloadSrv\/GetPreloadScreenInfo - reject
-# > shoulvrujia
-^https?:\/\/app\.homeinns\.com\/api\/landing - reject
-# > tianxingjinrong
-^https?:\/\/t1\.market\.xiaomi\.com\/thumbnail\/webp\/w1170q100\/ - reject
-# > tianyiyunpan
-^https?:\/\/api\.cloud\.189\.cn\/guns\/getOpenscreenBanners - reject
-# > tianmaojingling
-^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig - reject
-# > TengXunShouJiGuanJia
-^https://otheve.beacon.qq.com\/analytics\/upload\?sid=.* - reject
-# > TuNiu
-^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
-# > TaoPiaoPiao
-^https://acs.m.taobao.com\/gw\/mtop.film.mtopadvertiseapi.queryadvertise\/5.0.* - reject
-# > TianTianJiJin
-^https?:\/\/appactive\.1234567\.com\.cn\/AppoperationApi\/OperationService\/GetAppStartImg - reject
-# > topwidget
-https://top-widgets-api.xiaozujian.com/api/ad/config - reject
-# > TencentNews
-^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
-^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) - reject
-# > taipinyang
-^https?:\/\/mrobot\.pconline\.com\.cn\/s-900\/onlineinfo\/cms\/launch - reject
-# > tonghuashun
-^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend - reject
-# > tengxundongman
-^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen) - reject
-# > tujiaminxu
-^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getStartPictureAdvertising - reject
-# > weipinhui
-^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get - reject
-https://b.appsimg.com/upload/momin/ - reject
-https://mapi.appvipshop.com/vips-mobile/rest/activity/advertisement/get - reject
-^https:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report - reject
-# > WangYiDaShen
-^https?:\/\/god\.gameyw\.netease\.com\/v\d\/ad\/serving\/app-start - reject
-# > WangYiyunyinyue
-#^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
-# > WangYiYouXiang
-^https?:\/\/appconf\.mail\.163\.com\/mmad\/get\.do - reject
-^https?:\/\/client\.mail\.163.com\/apptrack\/confinfo\/(searchMultiAds.do|showAds.do) - reject
-# > WangYiYanXuan
-https://support.you.163.com/appversync/check.do - reject
-^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json - reject
-^https?:\/\/yanxuan.nosdn.127.net\/(static-union\/)?.*\.gif - reject
-https:\/\/yanxuan.nosdn.127.net\/.*\.mp4 - reject
-# > weixindaihuo
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info - reject
-# > Weifeng
-^https?:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) - reject
-# > Weico
-^https?:\/\/overseas.weico.cc\/portal.php\?a=get_coopen_ads - reject
-# > wangyiwoniudushu
-^https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\/ - reject
-# > wangyikaola
-^https?:\/\/sp\.kaola\.com\/api\/openad - reject
-^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd - reject
-# > xinyue
-^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash - reject
-# > xierdun
-^https?:\/\/wcprd\.hilton\.com\.cn\/app-middleware\/graphql\?type=splashAd - reject
-# > XiaoShuiMian
-^https?:\/\/api.psy-1.com\/cosleep\/startup - reject
-# > XieCheng
-^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
-^https:\/\/m\.ctrip\.com\/restapi\/.+json\/tripAds - reject
-^https:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$ - reject
-^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare - reject
-# > XiChuangZhu
-^https?:\/\/lchttpapi\.xczim\.com\/1\.1\/functions\/getLaunchImageForIOS - reject
-# > XiaoYi
-^https://api.xiaoyi.com\/v5\/app\/mobile\/ads - reject
-^https://api.xiaoyi.com\/v5\/app\/config\?userid=.* - reject
-# > xiachufang
-^https:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
-# > xiaolishenghuo
-^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment - reject
-# > xiaomi
-^https?:\/\/api\.m\.mi\.com\/v1\/app\/start - reject
-# > xiaomiyoupin
-^https?:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig - reject
-# > xifandongman
-^https?:\/\/pzoap\.moedot\.net\/xgapp\.php\/v2\/top_notice - reject
-# > xiangrikui
-^https?:\/\/client-api\.oray\.com\/materials\/SLCC_IOS_STARTUP\?lang=zh-Hans-CN - reject
-# > xinruijulebu
-^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash - reject
-# > yanaifei
-^https?:\/\/pipi\.4kya\.com\/\/xgapp\.php\/v3\/advert\.position=[^2]+ - reject
-# > YangShiPin
-^https?:\/\/cdn\.cmgadx\.com\/sdk\/pool\/\w+\.json - reject
-# > YiHaoDian
-^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig - reject
-# > YiKaoBang
-^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd - reject
-^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage - reject
-# > YouLinYouKe
-https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
-# > YinkeZhiBo
-^https?:\/\/service\.busi\.inke\.cn\/api\/flash\/screen - reject
-# > YinxiangNote
-^https?:\/\/app\.yinxiang\.com\/ads\/ - reject
-# > yonghui
-^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd - reject
-# > youshu
-^https?:\/\/gongdu\.youshu\.cc\/m\/open_screen\/list_by_udid - reject
-# > yingshiyun
-^https?:\/\/i\.ys7\.com\/api\/ads\/ - reject
-# > yuxueyuan
-^https?:\/\/yxyapi2\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen - reject
-# > zhangshangshenghuo
-#^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject
-# > zhongguoyidong
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
-# > zhongguoyidongjiangsu
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
-# > zhongguoyidongshandong
-https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
-# > zhongguoliantong
-^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) - reject
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) - reject
-# > zhongguoyidonganhui*
-^https?:\/\/api\.ahmobile\.cn:443\/eip\?eip_serv_id=app\.getAllNew - reject
-# > zhuanzhuan
-^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo - reject
-# > zhiboba
-^https?:\/\/a\.qiumibao\.com\/activities\/config\.php$ - reject
-^https?:\/\/a\.qiumibao\.com\/ios\/config\/\?version_code= - reject
-# > zuoyebang
-^https?:\/\/syh\.zybang\.com\/com\/adx\/ - reject
-# > ZuiYou
-^https?:\/\/adapi\.izuiyou\.com\/ - reject
-^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
-# > zhuishushenqi
-^https?:\/\/adx-cn\.anythinktech\.com\/bid - reject
-# > zhangshangdaojucheng
-^https?:\/\/djcapp\.game\.qq\.com\/daoju\/igw\/main\/\?_service=welink\.ad\.list - reject
-# > zhangyue
-^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad - reject
-^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad - reject
-^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad - reject
-# > ziru
-^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open - reject
-# > zhongguoyinhang
-#^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-img
-# > zhuijudaren
-^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
-# > zhangshangyingxionglianmeng
-^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend - reject
-# > zhongguoyidongguangdong
-^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 - reject
+</style>
+</head>
+<body>
+<div class="page-container">
+<img alt="404" src="/assets/illustrations/error-404-4ac0f2ed92ff27c0f80853181c4dceb1858dac25d9e744d6594f067d60a45b48.svg" />
+<div class="container">
+<h3>
+Page Not Found
+</h3>
+<p>
+Make sure the address is correct and the page hasn&#39;t moved.
+</p>
+<p>
+Please contact your GitLab administrator if you think this is a mistake.
+</p>
+<div class="action-container">
+<form class="form-inline-flex" action="/search" accept-charset="UTF-8" method="get"><div class="field">
+<input type="search" name="search" id="search" value="" placeholder="Search for projects, issues, etc." class="form-control" />
+</div>
+<button type="submit" class="gl-button btn btn-sm btn-confirm "><span class="gl-button-text">
+Search
 
-[Script]
-# > 12306
-http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://github.com/ddgksf2013/Scripts/raw/master/12306.js, requires-body = true
+</span>
 
-# > baiduditu
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js, requires-body = true
+</button></form></div>
+</div>
+<nav>
+<ul class="error-nav">
+<li>
+<a href="/">Home</a>
+</li>
+<li>
+<a href="/users/sign_in?redirect_to_referer=yes">Sign In / Register</a>
+</li>
+<li>
+<a href="/help">Help</a>
+</li>
+</ul>
+</nav>
 
-# > crunchyroll
-http-response https://beta-api.crunchyroll.com/cms script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "offset_ms":\d+->offset_ms":99999999999999"
 
-# > caixin
-http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path = https://github.com/ddgksf2013/Scripts/raw/master/caixinads.js, requires-body = true
+</div>
+<script nonce="C5kRMqSUd1N/rUvWvheTAQ==">
+//<![CDATA[
+(function(){
+  var goBackElement = document.querySelector('.js-go-back');
 
-# > donghuafeng
-#http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true
-http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument="adv->ddgksf2013"
-http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://github.com/ddgksf2013/Scripts/raw/master/fly.js, requires-body = true
+  if (goBackElement && history.length > 1) {
+    goBackElement.removeAttribute('hidden');
 
-# > i3
-#http-response ^https?:\/\/www\.i3zh\.com script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "cm-pop-up-banners->ddgksf2013"
-# > iQiYi
-http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://github.com/ddgksf2013/Scripts/raw/master/iqiyi_open_ads.js, requires-body = true
+    goBackElement.querySelector('button').addEventListener('click', function() {
+      history.back();
+    });
+  }
 
-# > jingxi
-http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://github.com/ddgksf2013/Scripts/raw/master/startup.js, requires-body = true
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js, requires-body = true
+  // We do not have rails_ujs here, so we're manually making a link trigger a form submit.
+  document.querySelector('.js-sign-out-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.js-sign-out-form')?.submit();
+  });
+}());
 
-# > jingdonglite
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "jdLiteAdvertisingVO->ddgksf2013"
-
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "pushData->ddgksf2013"
-
-# > ku'an
-http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body = true
-
-# > spotify pro
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true
-
-http-response https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow script-path = https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js, requires-body = true
-
-# > Stay
-# http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/stay.js, requires-body = true
-
-# > tianfutong
-http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "officialAdvertResultVo->ddgksf2013"
-
-# > WeChatpublicarticle
-# http-response ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = ""advertisement_num":\d,"advertisement_info":\[.+\],->"advertisement_num":0,"advertisement_info":[],"
-#http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "dataList":\[.+\]->dataList":[{}]"
-
-# > XiaoTe
-http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "screenSplashAd->ddgksf2013"
-
-# > Zhihu
-http-response ^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 script-path = https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js, requires-body = true
-
-[Mitm]
-hostname = open-cms-api.uc.cn, yxyapi2.yuxueyuan.cn, pan-api.bitqiu.com, m.ctrip.com, client.tujia.com, vip7.fzwdyy.cn, run.api.qyfxgd.cn, *cupid.iqiyi.com, gateway.36kr.com, shopapi.io.mi.com, tk.lanjiyin.com, gongdu.youshu.cc, api.21ec74.com, ztoread.ziroom.com, iphone.ac.qq.com, web.chelaile.net.cn, gd.10086.cn, api.00bang.cn, app.hbooker.com, api.sfacg.com, newclient.map.baidu.com, api3.cls.cn, gateway-api.dushu365.com, p0.pipi.cn, jdread-api.jd.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, api.m.jd.com, router-app-api.jdcloud.com, app.homeinns.com, cdn-evone-ceph.echargenet.com, mlol.qt.qq.com, gg.caixin.com, app-gw.csdn.net, api.gameplus.qq.com, mrobot.pconline.com.cn, djcapp.game.qq.com, mxsa.mxbc.net, zjdr666.com, api.caiyunapp.com, api.ahmobile.cn, gx.10086.cn, emdcadvertise.eastmoney.com, acs.m.taobao.com, api-sams.walmartmobile.cn, creditcardapp.bankcomm.cn, m.creditcard.ecitic.com, lban.spdb.com.cn, adapi.izuiyou.com, i.ys7.com, apps.api.ke.com, api.yonghuivip.com, access.mypikpak.com, gateway.shouqiev.com, res.pizzahut.com.cn, api.caijingmobile.com, 3g.csair.com, client-api.oray.com, bgw.xinyue.qq.com, api-new.app.acfun.cn, m.client.10010.com, open.fitdays.cn, gha.ghac.cn, ap.dongqiudi.com, sh-gateway.shihuo.cn, wcprd.hilton.com, ad.12306.cn, 103.91.210.141, adx-cn.anythinktech.com, js-ad.ayximgs.com, api.dangdang.com, pzoap.moedot.com, pipi.4kya.com, vip7.fzwdyy.cn, sdk.alibaba.com.ailbaba.me, tft-app.cdtft.cn, bgw.xinyue.qq.com, pan.baidu.com, yunbusiness.ccb.com, client.app.coc.10086.cn, t1.market.xiaomi.com, api.m.mi.com, app.zhuanzhuan.com, api.cloud.189.cn, appwk.baidu.com, us.l.qq.com, open.e.kuaishou.com, mi.gdt.qq.com, emdcadvertise.eastmoney.com, adm.10jqka.com.cn, a.qiumibao.com, api.tipsoon.com, b.appsimg.com, ios.sspai.com, zconfig.alibabausercontent.com, api.touker.com, mpcs.suning.com, api.pinduoduo.com, api.yangkeduo.com, easyreadfs.nosdn.127.net, sp.kaola.com, gw.kaola.com, mime.baidu.com, learn.chaoxing.com, mapi.dangdang.com, api.dangdang.com, open.e.kuaishou.com, client.qunar.com, mpos-pic.helipay.com, dili.bdatu.com, wap.ngchina.cn, ih2.ireader.com, adpai.thepaper.cn, api.haohaozhu.cn, list-app-m.i4.cn, api.xiachufang.com, peisongapi.meituan.com, *gaoqingdianshi.com, *.kakamobi.cn, api.jxedt.com, slapi.oray.net, r.inews.qq.com, app.yinxiang.com, mapi.appvipshop.com, syh.zybang.com, cdn.cmgadx.com, api.internetofcity.cn, img.meituan.net, lcen.xiaote.net, venus.yhd.com, api.shenyin.name, mage*.if.qidian.com, god.gameyw.netease.com, m.ibuscloud.com, e.dangdang.com, app2.autoimg.cn, adproxy.autohome.com.cn, discardrp.umetrip.com, startup.umetrip.com, explorer.tratao.com, overseas.weico.cc, 118.178.214.118, dapis.mting.info, acs.m.taobao.com, open3.vistastory.com, ssp.dzh.com.cn, maicai.api.ddxq.mobi, www.meituan.com, client.mail.163.com, api.izuiyou.com, appapi.huazhu.com, api.wfdata.club, interface*.music.163.com, api.psy-1.com, res.kfc.com.cn, mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, cdn.*.chelaileapp.cn, api.coolapk.com, app3.qdaily.com, daoyu.sdo.com, img.jiemian.com, ccsp-egmas.sf-express.com, *.laichon.com, app.ap.d3yuiw4.com, www.i3zh.com, api.yikaobang.com.cn, api-ad-product.huxiu.com, jad-api.jin10.com, mob.mddcloud.com.cn, appactive.1234567.com.cn, rtbapi.douyucdn.cn, service.busi.inke.cn, gab.122.gov.cn, dispatcher.camera360.com, app.api.versa-ai.com, open.taou.com, api.taou.com, track.mm.taou.com, app.dewu.com, data-collector.soulapp.cn, api.gamer.com.tw, beta-api.crunchyroll.com, api.vistopia.com.cn, pss.txffp.com, m.sd.10086.cn, helper.2bulu.com, 47.100.65.202, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, wap.js.10086.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com, tel.mangaapi.manhuaren.com, apis.lifeweek.com.cn, support.you.163.com, yanxuan.nosdn.127.net, *.peopleapp.com, new-app-api.ylyk.com, gw.aihuishou.com, *.58cdn.com.cn, app.58.com, api.zhihu.com, creditcardapp.bankcomm.com, res.xiaojukeji.com, 116.85.2.15, 116.85.2.14, lchttpapi.xczim.com, business.msstatic.com, mangaapi.manhuaren.com, api.kkmh.com, *.chelaile.net.cn, api.jr.mi.com, api.m.mi.com, guanyu.longfor.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, m.tuniu.com, mapi.mafengwo.cn, api.xiaoyi.com, api.douban.com, otheve.beacon.qq.com, mapi.sfbest.com, api.mwee.cn, sso.ifanr.com, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, testflight.apple.com, wmapi.meituan.com, appconf.mail.163.com, dl-cu-hz.lechange.cn, fbchina.flipchina.cn, zone.guiderank-app.com, homefront.qunar.com, afd.baidu.com, j-image.missfresh.cn, ma-adx.ctrip.com, mbd.baidu.com, img.rr.tv, api.rr.tv, *.hoopchina.com, goblin.hupu.com, spclient.wg.spotify.com
+//]]>
+</script></body>
+</html>
