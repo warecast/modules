@@ -4,18 +4,15 @@
 #!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-11-04 19:25:41
+#!date = 2023-11-14 18:20:41
 
 [Rule]
 # 请求放行
 DOMAIN, wbapp.uve.weibo.com, DIRECT
 
 # 请求拦截
-DOMAIN, adstrategy.biz.weibo.com, REJECT
-DOMAIN, kadmimage.biz.weibo.com, REJECT
-DOMAIN, sdkaction.biz.weibo.com, REJECT
-DOMAIN, sdkclick.biz.weibo.com, REJECT
-DOMAIN, sdkmonitor.biz.weibo.com, REJECT
+# 微博开屏广告
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播

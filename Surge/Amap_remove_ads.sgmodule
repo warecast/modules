@@ -4,7 +4,7 @@
 #!author = RuCu6 kokoryh
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Amap.png
-#!date = 2023-09-15 11:20:57
+#!date = 2023-11-15 18:30:57
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
@@ -36,6 +36,7 @@ http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅

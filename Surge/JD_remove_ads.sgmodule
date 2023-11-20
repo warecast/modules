@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/JD.png
-#!date = 2023-11-12 15:50:15
+#!date = 2023-11-14 07:25:15
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
@@ -12,10 +12,10 @@ IP-CIDR, 101.124.19.122/32, REJECT, no-resolve
 IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT, no-resolve
 
 [URL Rewrite]
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend) reject
 
 [Script]
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start|welcomeHome) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body = true
 
 [Mitm]
 hostname = %APPEND% api.m.jd.com

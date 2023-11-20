@@ -4,7 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/WeixinMiniPrograms.png
-#!date = 2023-10-29 21:19:11
+#!date = 2023-11-17 09:08:44
 
 [Rule]
 # 小程序通用规则
@@ -242,6 +242,10 @@ DOMAIN, ads-shopping.shouqianba.com, REJECT
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query reject
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/member(Goods\/pointMallService\/goodsList|Manage\/memberEquity\/queryRecommendEquity|ActLengthy\/fullGiveActivityService\/fullGiveInfo) reject
 
+#滴滴代驾 daijia.kuaidadi.com, as.xiaojukeji.com
+^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= reject
+^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe reject
+
 [Script]
 #EMS中国邮政物流速递 @TEAXS ump.ems.com.cn
 http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/WexinMiniPrograms/ems/ems.js, requires-body = true
@@ -283,4 +287,4 @@ http-response ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-
 http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% res.pizzahut.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com, ads.ishansong.com, minicap.caocaokeji.cn, r2.gzyct.com, applets.jtexpress.com.cn, api.hellobike.com, api.kuaidihelp.com, wxproj.seeyouyima.com, suyun-guest.daojia.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, dock.tenchii.com, webchatapp.fcbox.com, dsp.fcbox.com, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, *.didapinche.com, conf.diditaxi.com.cn, hdgateway.zto.com, fscdn.zto.com, mobile-api.imlaidian.com, wxs-weixin.sd.zhumanggroup.com, s.jiediankeji.com, smarket.dian.so, file.dian.so, aag.enmonster.com, ad.xiaotucc.com, api-marketing.zhinengxiyifang.cn, api.songguo7.com, api.hongyibo.com.cn, res.hongyibo.com.cn, ccmsupport-sz.tenpay.com, tm-api.pin-dao.cn, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, wx.bthhotels.com, app.homeinns.com, mxsa.mxbc.net, plt.yorentown.com, member.lxjchina.com.cn, cbd-gateway-service-applets.hualala.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, triangle.wearemanner.com, images.qmai.cn, gw-passenger-wap.01zhuanche.com, www.deppon.com, passengerapi.saicmobility.com, ump.ems.com.cn, common.diditaxi.com.cn, mapi.xiaotucc.com, minifm.maxxipoint.com, lawsonapi.yorentown.com, miniapp.sexytea2013.com, coco-com.e.verystar.net, htwkop.xiaojukeji.com, cappapi.alittle-tea.com, api.prod.dj.mstand.cn, webapi.qmai.cn, passenger.t3go.cn, m.ctrip.com, newton.gumingnc.com, ad.maoyan.com, mkt-gateway.tuhu.cn, api.hengdianfilm.com, tbgapplet.carlsberg.asia, api.pinduoduo.com, ads-shopping.shouqianba.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com
+hostname = %APPEND% res.pizzahut.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com, ads.ishansong.com, minicap.caocaokeji.cn, r2.gzyct.com, applets.jtexpress.com.cn, api.hellobike.com, api.kuaidihelp.com, wxproj.seeyouyima.com, suyun-guest.daojia.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, dock.tenchii.com, webchatapp.fcbox.com, dsp.fcbox.com, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, *.didapinche.com, conf.diditaxi.com.cn, hdgateway.zto.com, fscdn.zto.com, mobile-api.imlaidian.com, wxs-weixin.sd.zhumanggroup.com, s.jiediankeji.com, smarket.dian.so, file.dian.so, aag.enmonster.com, ad.xiaotucc.com, api-marketing.zhinengxiyifang.cn, api.songguo7.com, api.hongyibo.com.cn, res.hongyibo.com.cn, ccmsupport-sz.tenpay.com, tm-api.pin-dao.cn, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, wx.bthhotels.com, app.homeinns.com, mxsa.mxbc.net, plt.yorentown.com, member.lxjchina.com.cn, cbd-gateway-service-applets.hualala.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, triangle.wearemanner.com, images.qmai.cn, gw-passenger-wap.01zhuanche.com, www.deppon.com, passengerapi.saicmobility.com, ump.ems.com.cn, common.diditaxi.com.cn, mapi.xiaotucc.com, minifm.maxxipoint.com, lawsonapi.yorentown.com, miniapp.sexytea2013.com, coco-com.e.verystar.net, htwkop.xiaojukeji.com, cappapi.alittle-tea.com, api.prod.dj.mstand.cn, webapi.qmai.cn, passenger.t3go.cn, m.ctrip.com, newton.gumingnc.com, ad.maoyan.com, mkt-gateway.tuhu.cn, api.hengdianfilm.com, tbgapplet.carlsberg.asia, api.pinduoduo.com, ads-shopping.shouqianba.com, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, daijia.kuaidadi.com, as.xiaojukeji.com

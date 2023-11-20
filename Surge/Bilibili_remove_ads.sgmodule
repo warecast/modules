@@ -4,7 +4,7 @@
 #!author = Maasea RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-11-02 22:30:57
+#!date = 2023-11-19 11:45:57
 
 [Rule]
 # 放行规则
@@ -88,6 +88,9 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-pa
 
 # 精简我的页面
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true
+
+# 解锁4K画质及1080P高码率 //app.bilibili.com
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true
 
 [MitM]
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
