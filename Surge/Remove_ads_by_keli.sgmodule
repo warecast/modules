@@ -4,15 +4,18 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/KeLee.png
-#!date = 2023-11-12 16:44:20
+#!date = 2023-11-25 00:31:09
 
 [Rule]
 # 广告联盟
+DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
-DOMAIN, mi.gdt.qq.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
+DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
@@ -22,6 +25,32 @@ DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+
+# 阿里巴巴
+DOMAIN, ossgw.alicdn.com, REJECT
+DOMAIN, ems.youku.com, REJECT
+DOMAIN, hudong.alicdn.com, REJECT
+DOMAIN-SUFFIX, ut.taobao.com, REJECT
+
+# 腾讯
+DOMAIN, adsmind.gdtimg.com, REJECT
+DOMAIN, info4.video.qq.com, REJECT
+DOMAIN, info6.video.qq.com, REJECT
+DOMAIN, ios.video.mpush.qq.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, tpns.qq.com, REJECT
+DOMAIN, vv.video.qq.com, REJECT
+DOMAIN, vv6.video.qq.com, REJECT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN-SUFFIX, l.qq.com, REJECT
+DOMAIN-KEYWORD, trace.qq.com, REJECT
+DOMAIN-KEYWORD, trace.video.qq.com, REJECT
+IP-CIDR, 47.110.187.87/32, REJECT
+
+# 百度
+DOMAIN, mobads.baidu.com, REJECT
+DOMAIN-SUFFIX, pos.baidu.com, REJECT
 
 # 美团
 DOMAIN, al-log.d.meituan.net, REJECT
@@ -34,6 +63,18 @@ DOMAIN, route-stats.d.meituan.net, REJECT
 DOMAIN, acdn.adnxs.com, REJECT
 DOMAIN, mediation.adnxs.com, REJECT
 DOMAIN, sin3-ib.adnxs.com, REJECT
+
+# 酷我音乐去广告
+DOMAIN, splashimgbssdl.yun.kugou.com, REJECT
+DOMAIN, report.tencentmusic.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/album\/adBar, REJECT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert, REJECT
+URL-REGEX, ^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer, REJECT
+URL-REGEX, ^http:\/\/mobilead\.kuwo\.cn\/EcomResourceServer, REJECT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/startup, REJECT
+URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/AdService, REJECT
 
 # 小米
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
@@ -76,6 +117,9 @@ DOMAIN, waapdg.jd.com, REJECT
 [URL Rewrite]
 # 摩托范弹窗广告
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk reject
+
+# 最右
+^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/ reject
 
 #网易新闻
 ^https?:\/\/interface\.music\.163\.com\/eapi\/ad reject
@@ -138,7 +182,8 @@ DOMAIN, waapdg.jd.com, REJECT
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
 
-# QQ - 钱包推广 m.qianbao.qq.com
+# QQ
+# 钱包推广 m.qianbao.qq.com
 ^https?:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\?invisible reject
 ^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible reject
 
@@ -219,4 +264,4 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
+hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn

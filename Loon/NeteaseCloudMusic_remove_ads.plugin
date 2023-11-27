@@ -4,12 +4,13 @@
 #!author = Keywos
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/NeteaseCloudMusic.png
-#!date = 2023-09-21 23:32:12
+#!date = 2023-11-22 22:42:22
 
 [Rule]
-DOMAIN, gdt.qq.com, REJECT
+DOMAIN, httpdns.music.163.com, REJECT
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
 DOMAIN, iadmusicmat.music.126.net, REJECT
 DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
