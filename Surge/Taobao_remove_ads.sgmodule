@@ -2,7 +2,7 @@
 #!desc = 过滤淘宝开屏广告
 #!openUrl = 
 #!author = RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Taobao.png
 #!date = 2023-11-10 13:51:52
 
@@ -29,8 +29,8 @@ DOMAIN, ut.taobao.com, REJECT
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) reject
 
 [Script]
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
-http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
 
 [Mitm]
 hostname = %APPEND% acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
