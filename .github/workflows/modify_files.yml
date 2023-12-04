@@ -37,7 +37,6 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin"
-          "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_Price.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouKu_Video_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin"
@@ -45,6 +44,7 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin"
         )
 
         # loop through the URLs and fetch the contents
