@@ -3,8 +3,8 @@
 #!openUrl = 
 #!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-11-26 16:35:41
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Weibo.png
+#!date = 2023-12-01 12:45
 
 [Rule]
 # 请求放行
@@ -79,4 +79,4 @@ http-request ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= script
 http-response ^https:\/\/(sinaurl|t)\.cn\/ script-path = https://gitlab.com/lodepuly/vpn_tool/raw/master/Resource/Script/Weibo/Weibo_remove_redirect.js
 
 [Mitm]
-hostname = %APPEND% *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn
+hostname = %APPEND% *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn, weibo.cn

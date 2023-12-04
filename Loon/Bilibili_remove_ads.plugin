@@ -3,13 +3,10 @@
 #!openUrl = 
 #!author = Maasea RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-11-19 11:45:57
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Bilibili.png
+#!date = 2023-12-03 13:02:40
 
 [Rule]
-# 放行规则
-DOMAIN, mall.bilibili.com, DIRECT
-DOMAIN, passport.bilibili.com, DIRECT
 # 开屏广告
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT
 
