@@ -4,13 +4,17 @@
 #!author = Maasea RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Bilibili.png
-#!date = 2023-12-03 13:02:40
+#!date = 2023-12-10 00:42:12
 
 [Rule]
 # 开屏广告
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT
+URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT
 
 [URL Rewrite]
+# 开屏广告
+^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? reject
+
 # 移除搜索中的默认关键词
 ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ reject
 # 移除搜索中的大家都在搜
