@@ -128,15 +128,15 @@ jobs:
                   prev_line=""
                 fi
               done < <(echo "$modified_contents")
-
-              # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
-              echo "Finalizing content modifications..."
-              modified_contents=$(echo "$modified_contents" | sed '/reject[-_]/d')
-              if [ ! -z "$processed_reject_lines" ]; then
-                modified_contents="$modified_contents"$'\n'$'\n'"[Map Local]"$'\n'"$processed_reject_lines"
-              fi
             else
               echo "No 'reject-xxx' or 'reject_xxx' lines found, skipping this step."
+            fi
+
+            # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
+            echo "Finalizing content modifications..."
+            modified_contents=$(echo "$modified_contents" | sed '/reject[-_]/d')
+            if [ ! -z "$processed_reject_lines" ]; then
+              modified_contents="$modified_contents"$'\n'$'\n'"[Map Local]"$'\n'"$processed_reject_lines"
             fi
 
             # Save modified contents to Surge directory and change file extension
