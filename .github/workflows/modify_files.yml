@@ -70,25 +70,35 @@ jobs:
 
       - name: Process files
         run: |
+          echo "Starting the script..."
+
           # Read all file contents from Loon directory
           files=$(find ./Loon -type f)
+          echo "Found files in Loon directory: $files"
+
           for file in $files
           do
-            # Apply existing sed modifications
-            modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
-                            -e 's/reject-.*$/reject/gmi' \
-                            -e 's/hostname =/hostname = %APPEND%/g' \
-                            -e 's/, tag =.*$//gm' \
-                            -e 's/, tag=.*$//gm' "$file")
+            echo "Processing file: $file"
 
+            # Apply existing sed modifications
+            echo "Applying existing modifications..."
+            modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
+                                      -e 's/PROXY/📽️Tiktok/gm' \
+                                      -e 's/reject-.*$/reject/gmi' \
+                                      -e 's/hostname =/hostname = %APPEND%/g' \
+                                      -e 's/, tag =.*$//gm' \
+                                      -e 's/, tag=.*$//gm' "$file")
 
             # Replace 'reject' with '_ reject'
+            echo "Replacing 'reject' with '_ reject'..."
             modified_contents=$(echo "$modified_contents" | sed 's/\breject\b/_ reject/g')
 
             # Extract and process 'reject-xxx' or 'reject_xxx' lines
+            echo "Processing 'reject-xxx' or 'reject_xxx' lines..."
             reject_lines=$(echo "$modified_contents" | grep -E 'reject[-_]')
             processed_reject_lines=""
             while read -r line; do
+              echo "Processing line: $line"
               case $line in
                 *reject-dict*|*reject_dict*)
                   line=$(echo "$line" | sed 's/reject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
@@ -107,6 +117,7 @@ jobs:
             done <<< "$reject_lines"
 
             # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
+            echo "Finalizing content modifications..."
             modified_contents=$(echo "$modified_contents" | sed '/reject[-_]/d')
             if [ ! -z "$processed_reject_lines" ]; then
               modified_contents="$modified_contents\n\n[Map Local]\n$processed_reject_lines"
@@ -114,9 +125,10 @@ jobs:
 
             # Save modified contents to Surge directory and change file extension
             surge_dir=./Surge
-            surge_file=$(basename $file .plugin).sgmodule
+            surge_file=$(basename "$file" .plugin).sgmodule
             surge_path=$surge_dir/$surge_file
 
+            echo "Saving modified contents to $surge_path"
             # Check if the file exists
             if [ -f "$surge_path" ]; then
               # Compare the contents of the existing file with the modified contents
@@ -128,12 +140,14 @@ jobs:
                 echo "$surge_file is up to date"
               fi
             else
+              echo "Creating new file: $surge_file"
               mkdir -p "$surge_dir"
-              echo "Creating $surge_file"
               # Create a new file with the modified contents
               echo "$modified_contents" > "$surge_path"
             fi
           done
+
+          echo "Script completed."
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
