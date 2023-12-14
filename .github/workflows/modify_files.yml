@@ -25,7 +25,6 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin"
-          "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Amap_remove_ads.plugin"
@@ -44,7 +43,7 @@ jobs:
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin"
           "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin"
-          "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin?ref_type=heads"
+          "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin"
         )
 
         # loop through the URLs and fetch the contents
