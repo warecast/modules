@@ -95,39 +95,36 @@ jobs:
             echo "Checking for 'reject-xxx' or 'reject_xxx' lines..."
             if grep -qE '\breject[-_]' "$file"; then
               echo "'reject-xxx' or 'reject_xxx' lines found, processing..."
+              reject_lines=$(grep -E '\breject[-_]' "$file")
+
+              echo "Extracted reject lines:"
+              echo "$reject_lines"
               processed_reject_lines=""
-              prev_line=""
-              while IFS= read -r line; do
-                if [[ $line =~ ^\#.* ]]; then
-                  prev_line=$line
-                elif [[ $line =~ \breject[-_] ]]; then
-                  echo "Found reject line: $line"
-                  # Apply necessary transformations to the reject line
-                  case $line in
-                    *reject-dict*|*reject_dict*)
-                      line=$(echo "$line" | sed 's/\breject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
-                      ;;
-                    *reject-200*|*reject_200*)
-                      line=$(echo "$line" | sed 's/\breject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
-                      ;;
-                    *reject-img*|*reject_img*)
-                      line=$(echo "$line" | sed 's/\breject[-_]img/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-img.gif"/')
-                      ;;
-                    *reject-array*|*reject_array*)
-                      line=$(echo "$line" | sed 's/\breject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
-                      ;;
-                  esac
-                  echo "Processed line: $line"
-                  if [ ! -z "$prev_line" ]; then
-                    echo "Adding preceding comment line: $prev_line"
-                    processed_reject_lines+="$prev_line"$'\n'
-                    prev_line=""
-                  fi
-                  processed_reject_lines+="$line"$'\n'
-                else
-                  prev_line=""
+              while read -r line; do
+                if [ -z "$line" ]; then
+                  echo "Skipping empty line."
+                  continue
                 fi
-              done < <(echo "$modified_contents")
+                echo "Processing line: $line"
+                case $line in
+                  *reject-dict*|*reject_dict*)
+                    echo "Found reject-dict or reject_dict"
+                    line=$(echo "$line" | sed 's/\breject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
+                    echo "Processed line: $line"
+                    ;;
+                  *reject-200*|*reject_200*)
+                    line=$(echo "$line" | sed 's/reject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
+                    ;;
+                  *reject-img*|*reject_img*)
+                    line=$(echo "$line" | sed 's/reject[-_]img/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-img.gif"/')
+                    ;;
+                  *reject-array*|*reject_array*)
+                    line=$(echo "$line" | sed 's/reject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
+                    ;;
+                esac
+                echo "Processed line: $line"
+                processed_reject_lines+="$line"$'\n'
+              done <<< "$reject_lines"
             else
               echo "No 'reject-xxx' or 'reject_xxx' lines found, skipping this step."
             fi
