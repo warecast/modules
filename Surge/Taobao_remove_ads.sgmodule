@@ -1,0 +1,25 @@
+#!name = 淘宝去广告
+#!desc = 过滤淘宝开屏广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Taobao.png
+#!date = 2023-11-10 13:51:52
+
+[Rule]
+DOMAIN, adashx.m.taobao.com, REJECT
+DOMAIN, ossgw.alicdn.com, REJECT
+DOMAIN, ems.youku.com, REJECT
+DOMAIN, hudong.alicdn.com, REJECT
+DOMAIN, h-adashx.ut.taobao.com, REJECT
+DOMAIN, ut.taobao.com, REJECT
+
+[URL Rewrite]
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+
+[Script]
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body = true
+
+[Mitm]
+hostname = %APPEND% acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
