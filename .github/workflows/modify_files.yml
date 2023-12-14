@@ -152,8 +152,6 @@ jobs:
             fi
           done
 
-          echo "Script completed."
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
