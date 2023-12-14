@@ -100,26 +100,27 @@ jobs:
               echo "No reject-xxx or reject_xxx lines found."
             else
               echo "Extracted reject lines: $reject_lines"
-            processed_reject_lines=""
-            while read -r line; do
-              echo "Processing line: $line"
-              case $line in
-                *reject-dict*|*reject_dict*)
-                  line=$(echo "$line" | sed 's/reject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
-                  ;;
-                *reject-200*|*reject_200*)
-                  line=$(echo "$line" | sed 's/reject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
-                  ;;
-                *reject-img*|*reject_img*)
-                  line=$(echo "$line" | sed 's/reject[-_]img/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-img.gif"/')
-                  ;;
-                *reject-array*|*reject_array*)
-                  line=$(echo "$line" | sed 's/reject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
-                  ;;
-              esac
-              echo "Processed line: $line"
-              processed_reject_lines+="$line\n"
-            done <<< "$reject_lines"
+              processed_reject_lines=""
+              while read -r line; do
+                echo "Processing line: $line"
+                case $line in
+                  *reject-dict*|*reject_dict*)
+                    line=$(echo "$line" | sed 's/reject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
+                    ;;
+                  *reject-200*|*reject_200*)
+                    line=$(echo "$line" | sed 's/reject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
+                    ;;
+                  *reject-img*|*reject_img*)
+                    line=$(echo "$line" | sed 's/reject[-_]img/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-img.gif"/')
+                    ;;
+                  *reject-array*|*reject_array*)
+                    line=$(echo "$line" | sed 's/reject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
+                    ;;
+                esac
+                echo "Processed line: $line"
+                processed_reject_lines+="$line\n"
+              done <<< "$reject_lines"
+            fi
 
             # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
             echo "Finalizing content modifications..."
