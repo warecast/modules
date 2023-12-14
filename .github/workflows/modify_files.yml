@@ -96,6 +96,7 @@ jobs:
             # Extract and process 'reject-xxx' or 'reject_xxx' lines
             echo "Processing 'reject-xxx' or 'reject_xxx' lines..."
             reject_lines=$(echo "$modified_contents" | grep -E 'reject[-_]')
+            echo "Extracted reject lines: $reject_lines"
             processed_reject_lines=""
             while read -r line; do
               echo "Processing line: $line"
@@ -113,6 +114,7 @@ jobs:
                   line=$(echo "$line" | sed 's/reject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
                   ;;
               esac
+              echo "Processed line: $line"
               processed_reject_lines+="$line\n"
             done <<< "$reject_lines"
 
