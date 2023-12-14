@@ -83,8 +83,6 @@ jobs:
             # Apply existing sed modifications
             echo "Applying existing modifications..."
             modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
-                                      -e 's/PROXY/📽️Tiktok/gm' \
-                                      -e 's/reject-.*$/reject/gmi' \
                                       -e 's/hostname =/hostname = %APPEND%/g' \
                                       -e 's/, tag =.*$//gm' \
                                       -e 's/, tag=.*$//gm' "$file")
@@ -93,19 +91,26 @@ jobs:
             echo "Replacing 'reject' with '_ reject'..."
             modified_contents=$(echo "$modified_contents" | sed 's/\breject\b/_ reject/g')
 
-            # Extract and process 'reject-xxx' or 'reject_xxx' lines
-            echo "Processing 'reject-xxx' or 'reject_xxx' lines..."
-            reject_lines=$(echo "$modified_contents" | grep -E 'reject[-_]')
-            if [ -z "$reject_lines" ]; then
-              echo "No reject-xxx or reject_xxx lines found."
-            else
-              echo "Extracted reject lines: $reject_lines"
+            # Check if the file contains 'reject-xxx' or 'reject_xxx' lines
+            echo "Checking for 'reject-xxx' or 'reject_xxx' lines..."
+            if grep -qE '\breject[-_]' "$file"; then
+              echo "'reject-xxx' or 'reject_xxx' lines found, processing..."
+              reject_lines=$(grep -E '\breject[-_]' "$file")
+
+              echo "Extracted reject lines:"
+              echo "$reject_lines"
               processed_reject_lines=""
               while read -r line; do
+                if [ -z "$line" ]; then
+                  echo "Skipping empty line."
+                  continue
+                fi
                 echo "Processing line: $line"
                 case $line in
                   *reject-dict*|*reject_dict*)
-                    line=$(echo "$line" | sed 's/reject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
+                    echo "Found reject-dict or reject_dict"
+                    line=$(echo "$line" | sed 's/\breject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
+                    echo "Processed line: $line"
                     ;;
                   *reject-200*|*reject_200*)
                     line=$(echo "$line" | sed 's/reject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
@@ -120,6 +125,8 @@ jobs:
                 echo "Processed line: $line"
                 processed_reject_lines+="$line\n"
               done <<< "$reject_lines"
+            else
+              echo "No 'reject-xxx' or 'reject_xxx' lines found, skipping this step."
             fi
 
             # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
