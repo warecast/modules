@@ -49,31 +49,31 @@ DOMAIN,logger.qmai.cn, REJECT
 ^https:\/\/activity\.yonghuivip\.com\/api\/\/web\/shensuan\/ad reject
 ^https:\/\/sauron-report\.yonghuivip\.com\/collect reject
 
-#必胜客 @是豆豆呀 res.pizzahut.com.cn
+#必胜客 res.pizzahut.com.cn
 ^https:\/\/res\.pizzahut\.com\.cn\/CRM reject
 
-#肯德基 @是豆豆呀 orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn
+#肯德基 orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn
 #^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon reject
 #^https:\/\/dynamicad\.kfc\.com\.cn\/api reject
 #^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp reject
 #^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity reject
 
-#麦当劳 @是豆豆呀 api.mcd.cn
+#麦当劳 api.mcd.cn
 ^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity reject
 
-#星巴克 @是豆豆呀 3pp.starbucks.com.cn
+#星巴克 3pp.starbucks.com.cn
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup reject
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner reject
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global reject
 
-#石家庄公交乘车码 @是豆豆呀 wechat-api.i-xiaoma.com.cn
+#石家庄公交乘车码 wechat-api.i-xiaoma.com.cn
 ^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content reject
 
-#神州租车 @是豆豆呀 apiproxy.zuche.com
+#神州租车 apiproxy.zuche.com
 ^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/marketing reject
 ^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/page\/advertising reject
 
-#闪送 @是豆豆呀 miniprogram.ishansong.com, ads.ishansong.com
+#闪送 miniprogram.ishansong.com, ads.ishansong.com
 ^https:\/\/miniprogram\.ishansong\.com\/cms\/faq\/query reject
 ^https:\/\/ads\.ishansong\.com\/advert reject
 
@@ -84,55 +84,55 @@ DOMAIN,logger.qmai.cn, REJECT
 #EMS @ArthasYZ
 ^https:\/\/ump\.ems\.com\.cn\/mailAd$ reject
 
-#曹操出行 @是豆豆呀 minicap.caocaokeji.cn
+#曹操出行 minicap.caocaokeji.cn
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert reject
 
-#羊城通 @是豆豆呀 r2.gzyct.com
+#羊城通 r2.gzyct.com
 ^https:\/\/r2\.gzyct\.com\/qrcode\/advert reject
 
-#极兔快递 @是豆豆呀 applets.jtexpress.com.cn
+#极兔快递 applets.jtexpress.com.cn
 ^https:\/\/applets\.jtexpress\.com\.cn reject
 
-#哈啰 @是豆豆呀 api.hellobike.com
+#哈啰 api.hellobike.com
 ^https:\/\/api\.hellobike\.com\/api\?adx reject
 
-#微快递 @是豆豆呀 api.kuaidihelp.com
+#微快递 api.kuaidihelp.com
 ^https:\/\/api\.kuaidihelp\.com\/g_order_core\/v2\/mina\/User\/getBannerList reject
 
-#美柚 @是豆豆呀 wxproj.seeyouyima.com
+#美柚 wxproj.seeyouyima.com
 ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips reject
 
-#快狗打车搬家 @是豆豆呀 suyun-user.daojia.com
+#快狗打车搬家 suyun-user.daojia.com
 ^https:\/\/suyun-guest\.daojia\.com\/api\/kuaigou\/banjia\/review reject
 
-#货拉拉 @是豆豆呀 qapi.huolala.cn, appuser-static.huolala.cn
+#货拉拉 qapi.huolala.cn, appuser-static.huolala.cn
 ^https:\/\/qapi\.huolala\.cn\/ads reject
 ^https:\/\/qapi\.huolala\.cn\/home_new_user reject
 ^https:\/\/qapi\.huolala\.cn\/get_service_list reject
 ^https:\/\/appuser-static\.huolala\.cn\/imgs reject
 
-#广州地铁乘车码 @是豆豆呀 apis.alenable.com
+#广州地铁乘车码 apis.alenable.com
 ^https:\/\/apis\.alenable\.com\/mall\/v1\/api\/mall\/skin\/user\/get reject
 ^https:\/\/apis\.alenable\.com\/ycx\/v1\/api\/adPut reject
 
-#上海地铁Metro大都会乘车码 @是豆豆呀 dock.tenchii.com
+#上海地铁Metro大都会乘车码 dock.tenchii.com
 ^https:\/\/dock\.tenchii\.com\/DockCard\/api\/mini\/card\/list reject
 
-#花小猪打车 @是豆豆呀 api.hongyibo.com.cn, res.hongyibo.com.cn
+#花小猪打车 api.hongyibo.com.cn, res.hongyibo.com.cn
 ^https:\/\/api\.hongyibo\.com\.cn reject
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity reject
 
-#申通快递 @是豆豆呀 customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co
+#申通快递 customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co
 ^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner reject
 ^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images reject
 
-#达达快送 @是豆豆呀 supplier-api.imdada.cn
+#达达快送 supplier-api.imdada.cn
 ^https:\/\/supplier-api\.imdada\.cn\/fe\/public\/ad\/spot\?forwardServiceName=growth-activity reject
 
-#滴滴出行 @是豆豆呀 common.diditaxi.com.cn, capis*.didapinche.com
+#滴滴出行 common.diditaxi.com.cn, capis*.didapinche.com
 ^https:\/\/capis(-\d)?\.didapinche\.com\/adbase reject
 
-#滴滴打车 @是豆豆呀 conf.diditaxi.com.cn 
+#滴滴打车 conf.diditaxi.com.cn 
 ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core reject
 
 #中通快递 @ArthasYZ
@@ -142,98 +142,98 @@ DOMAIN,logger.qmai.cn, REJECT
 ^https:\/\/hdgateway\.zto\.com\/listJumperShow reject
 ^https:\/\/fscdn\.zto\.com\/fs1 reject
 
-#来电 @是豆豆呀 mobile-api.imlaidian.com
+#来电 mobile-api.imlaidian.com
 ^https:\/\/mobile-api\.imlaidian\.com\/api\/args reject
 
-#搜电充电 @是豆豆呀 wxs-weixin.sd.zhumanggroup.com
+#搜电充电 wxs-weixin.sd.zhumanggroup.com
 ^https:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad reject
 
-#街电 @是豆豆呀 s.jiediankeji.com
+#街电 s.jiediankeji.com
 ^https:\/\/s\.jiediankeji\.com\/adv reject
 
-#小电充电 @是豆豆呀 smarket.dian.so,file.dian.so
+#小电充电 smarket.dian.so,file.dian.so
 ^https:\/\/smarket\.dian\.so reject
 ^https:\/\/file\.dian\.so\/c\/leto reject
 
-#怪兽充电 @是豆豆呀 aag.enmonster.com
+#怪兽充电 aag.enmonster.com
 ^https:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
 
-#小兔充充 @是豆豆呀 ad.xiaotucc.com, mapi.xiaotucc.com
+#小兔充充 ad.xiaotucc.com, mapi.xiaotucc.com
 ^https:\/\/ad\.xiaotucc\.com\/advert reject
 
-#U净 @是豆豆呀 api-marketing.zhinengxiyifang.cn
+#U净 api-marketing.zhinengxiyifang.cn
 ^https:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid reject
 
 #松果出行 @keywos api.songguo7.com
 ^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info|unlock_without_order|unlock_operate_info) reject
 
-#花小猪打车 @是豆豆呀 api.hongyibo.com.cn, res.hongyibo.com.cn
+#花小猪打车 api.hongyibo.com.cn, res.hongyibo.com.cn
 ^https:\/\/api\.hongyibo\.com\.cn reject
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity reject
 
 #乘车码 @jinlvei ccmsupport-sz.tenpay.com
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi reject
 
-#奈雪 @是豆豆呀 tm-api.pin-dao.cn
+#奈雪 tm-api.pin-dao.cn
 ^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/index\/activeConfig\/v2 reject
 ^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/resource\/config\/homeBannerNodes reject
 
-#华住会 @是豆豆呀 api-fouth-mem.huazhu.com
+#华住会 api-fouth-mem.huazhu.com
 ^https:\/\/api-fouth-mem\.huazhu\.com\/api\/rights\/bannerList reject
 
-#锦江酒店 @是豆豆呀 wxapp.bestwehotel.com
+#锦江酒店 wxapp.bestwehotel.com
 ^https:\/\/wxapp\.bestwehotel\.com\/gw3\/app-mini\/trip-hotel-banner\/activity\/getActivityInfo reject
 
-#首旅如家 @是豆豆呀 app.homeinns.com, wx.bthhotels.com
+#首旅如家 app.homeinns.com, wx.bthhotels.com
 ^https:\/\/wx\.bthhotels\.com\/miniapp\/weixin\/v1\/home\/index_banner reject
 ^https:\/\/app\.homeinns\.com\/api\/v6\/indexs reject
 ^https:\/\/app\.homeinns\.com\/api\/v5\/local reject
 ^https:\/\/app\.homeinns\.com\/api\/v5\/index reject
 
-#蜜雪冰城 @是豆豆呀 mxsa.mxbc.net
+#蜜雪冰城 mxsa.mxbc.net
 ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query reject
 
-#滴滴青桔 @是豆豆呀 htwkop.xiaojukeji.com
+#滴滴青桔 htwkop.xiaojukeji.com
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery reject
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo reject
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend reject
 
-#罗森点点 @是豆豆呀 lawsonapi.yorentown.com, plt.yorentown.com
+#罗森点点 lawsonapi.yorentown.com, plt.yorentown.com
 ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting reject
 ^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner reject
 
-#老乡鸡 @是豆豆呀 member.lxjchina.com.cn
+#老乡鸡 member.lxjchina.com.cn
 ^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner reject
 
-#茶百道 @是豆豆呀 cbd-gateway-service-applets.hualala.com
+#茶百道 cbd-gateway-service-applets.hualala.com
 ^https:\/\/cbd-gateway-service-applets\.hualala\.com\/arch\/api\/banner\/QueryBannerImgList reject
 
-#一点点 @是豆豆呀 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
+#一点点 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
 ^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle reject
 
-#Manner @是豆豆呀 triangle.wearemanner.com
+#Manner triangle.wearemanner.com
 ^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads reject
 
-#M Stand @是豆豆呀 api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
+#M Stand api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
 ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/app\/mdm\/index\/listAdv\?types reject
 
-#挪瓦咖啡 @是豆豆呀 webapi.qmai.cn, images.qmai.cn
+#挪瓦咖啡 webapi.qmai.cn, images.qmai.cn
 ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ad reject
 ^https:\/\/images\.qmai\.cn\/s214925\/2023 reject
 
-#首汽约车 @是豆豆呀 gw-passenger-wap.01zhuanche.com
+#首汽约车 gw-passenger-wap.01zhuanche.com
 ^https:\/\/gw-passenger-wap\.01zhuanche\.com\/gw-passenger-wap\/zhuanche-passenger-token\/commonSkipToken\/common\/getAdList reject
 
-#德邦快递 @是豆豆呀 www.deppon.com
+#德邦快递 www.deppon.com
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface reject
 
-#享道出行 @是豆豆呀 passengerapi.saicmobility.com
+#享道出行 passengerapi.saicmobility.com
 ^https:\/\/passengerapi\.saicmobility\.com\/(ad\/requestAd|pay\/v1\/queryOpenedCouponPackages) reject
 
-#T3出行 @是豆豆呀 passenger.t3go.cn
+#T3出行 passenger.t3go.cn
 ^https:\/\/passenger\.t3go\.cn\/passenger-activity-api\/notoken\/api\/v1\/resource\/getSource reject
 
-#携程旅行 @是豆豆呀 m.ctrip.com
+#携程旅行 m.ctrip.com
 ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/tripAds reject
 ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/12673\/queryWeChatHotEvent reject
 
@@ -294,34 +294,34 @@ http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path = htt
 #小兔充充 @TEAXS mapi.xiaotucc.com
 http-response ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/xiaotucc/xiaotucc.js, requires-body = true
 
-#全家微会员 @是豆豆呀 minifm.maxxipoint.com
+#全家微会员 minifm.maxxipoint.com
 http-response ^https:\/\/minifm\.maxxipoint\.com\/banner\/list script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/FamilyMart/FamilyMart.js, requires-body = true
 
-#罗森点点 @是豆豆呀 lawsonapi.yorentown.com, plt.yorentown.com
+#罗森点点 lawsonapi.yorentown.com, plt.yorentown.com
 http-response ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/lawson/lawson.js, requires-body = true
 
-#茶颜悦色 @是豆豆呀 miniapp.sexytea2013.com
+#茶颜悦色 miniapp.sexytea2013.com
 http-response ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body = true
 
-#COCO点单 @是豆豆呀 coco-com.e.verystar.net
+#COCO点单 coco-com.e.verystar.net
 http-response ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/coco/coco.js, requires-body = true
 
-#滴滴青桔 @是豆豆呀 htwkop.xiaojukeji.com
+#滴滴青桔 htwkop.xiaojukeji.com
 http-response ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/qingju/qingju.js, requires-body = true
 
-#一点点+ @是豆豆呀 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
+#一点点+ cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
 http-response ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body = true
 
-#M Stand @是豆豆呀 api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
+#M Stand api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
 http-response ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/mini\/app\/index\/info script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body = true
 
-#挪瓦咖啡 @是豆豆呀 webapi.qmai.cn, images.qmai.cn
+#挪瓦咖啡 webapi.qmai.cn, images.qmai.cn
 http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body = true
 
-#T3出行 @是豆豆呀 passenger.t3go.cn
+#T3出行 passenger.t3go.cn
 http-response ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/T3/T3.js, requires-body = true
 
-#古茗 @是豆豆呀 newton.gumingnc.com
+#古茗 newton.gumingnc.com
 http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body = true
 
 [Mitm]

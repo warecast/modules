@@ -77,7 +77,7 @@ URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/startup, REJECT
 URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/AdService, REJECT
 
 # 小米
-DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
+DOMAIN, sdkconfig.ad.xiaomi.com, reject
 DOMAIN, data.mistat.xiaomi.com, REJECT
 DOMAIN, tracking.intl.miui.com, REJECT
 # 米家
@@ -108,11 +108,11 @@ IP-CIDR, 122.229.29.89/32, REJECT
 DOMAIN, waapdg.jd.com, REJECT
 
 #向日葵 #开屏广告 #主机名client-api-v2.oray.com
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUPreject
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject
 #向日葵 #首页文字广告
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICEreject
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject
 #向日葵 #发现页广告
-^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTIONreject
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject
 
 [URL Rewrite]
 # 摩托范弹窗广告
