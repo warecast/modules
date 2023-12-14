@@ -77,13 +77,19 @@ jobs:
             # Read file content into a variable
             content=$(cat "$file")
 
+            # Apply existing sed modifications
+            modified_contents=$(echo "$content" | sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
+                                                      -e 's/PROXY/📽️Tiktok/gm' \
+                                                      -e 's/reject-.*$/reject/gmi' \
+                                                      -e 's/hostname =/hostname = %APPEND%/g' \
+                                                      -e 's/, tag =.*$//gm' \
+                                                      -e 's/, tag=.*$//gm')
+
             # Replace 'reject' with '_ reject'
-            content=$(echo "$content" | sed 's/\breject\b/_ reject/g')
+            modified_contents=$(echo "$modified_contents" | sed 's/\breject\b/_ reject/g')
 
             # Extract and process 'reject-xxx' or 'reject_xxx' lines
-            reject_lines=$(echo "$content" | grep -E 'reject[-_]')
-
-            # Process each reject line
+            reject_lines=$(echo "$modified_contents" | grep -E 'reject[-_]')
             processed_reject_lines=""
             while read -r line; do
               case $line in
@@ -103,10 +109,10 @@ jobs:
               processed_reject_lines+="$line\n"
             done <<< "$reject_lines"
 
-            # Remove 'reject-xxx' or 'reject_xxx' lines from original content and append them at the end
-            content=$(echo "$content" | sed '/reject[-_]/d')
+            # Remove 'reject-xxx' or 'reject_xxx' lines from modified content and append them at the end
+            modified_contents=$(echo "$modified_contents" | sed '/reject[-_]/d')
             if [ ! -z "$processed_reject_lines" ]; then
-              content="$content\n\n[Map Local]\n$processed_reject_lines"
+              modified_contents="$modified_contents\n\n[Map Local]\n$processed_reject_lines"
             fi
 
             # Save modified contents to Surge directory and change file extension
@@ -117,10 +123,10 @@ jobs:
             # Check if the file exists
             if [ -f "$surge_path" ]; then
               # Compare the contents of the existing file with the modified contents
-              if ! cmp -s <(echo "$content") "$surge_path"; then
+              if ! cmp -s <(echo "$modified_contents") "$surge_path"; then
                 echo "Updating $surge_file"
                 # Overwrite the existing file with the modified contents
-                echo "$content" > "$surge_path"
+                echo "$modified_contents" > "$surge_path"
               else
                 echo "$surge_file is up to date"
               fi
@@ -128,7 +134,7 @@ jobs:
               mkdir -p "$surge_dir"
               echo "Creating $surge_file"
               # Create a new file with the modified contents
-              echo "$content" > "$surge_path"
+              echo "$modified_contents" > "$surge_path"
             fi
           done
 
