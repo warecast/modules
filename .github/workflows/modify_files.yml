@@ -74,16 +74,13 @@ jobs:
           files=$(find ./Loon -type f)
           for file in $files
           do
-            # Read file content into a variable
-            content=$(cat "$file")
-
             # Apply existing sed modifications
-            modified_contents=$(echo "$content" | sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
-                                                      -e 's/PROXY/📽️Tiktok/gm' \
-                                                      -e 's/reject-.*$/reject/gmi' \
-                                                      -e 's/hostname =/hostname = %APPEND%/g' \
-                                                      -e 's/, tag =.*$//gm' \
-                                                      -e 's/, tag=.*$//gm')
+            modified_contents=$(sed -e 's/\[Rewrite\]/[URL Rewrite]/gmi' \
+                            -e 's/reject-.*$/reject/gmi' \
+                            -e 's/hostname =/hostname = %APPEND%/g' \
+                            -e 's/, tag =.*$//gm' \
+                            -e 's/, tag=.*$//gm' "$file")
+
 
             # Replace 'reject' with '_ reject'
             modified_contents=$(echo "$modified_contents" | sed 's/\breject\b/_ reject/g')
