@@ -15,7 +15,7 @@ hostname = %APPEND% weixin110.qq.com, security.wechat.com
 [Map Local]
 ^https?:\/\/(ipv4|interface3?)\.music\.163.com\/eapi\/(ocpc\/)?ad\/.* data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/(resource|strategy)|music\/songshare\/text\/recommend\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/strategy|music\/songshare\/text\/recommend\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(community\/task\/complete|mlog\/vinyl\/story\/list) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"

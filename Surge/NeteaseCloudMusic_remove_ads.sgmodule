@@ -4,7 +4,7 @@
 #!author = Keywos RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/NeteaseCloudMusic.png
-#!date = 2023-11-27 20:25
+#!date = 2023-11-16 01:40
 
 [Rule]
 DOMAIN, httpdns.music.163.com, REJECT
@@ -39,7 +39,7 @@ hostname = %APPEND% interface.music.163.com, interface3.music.163.com, ipv4.musi
 [Map Local]
 ^https?:\/\/(ipv4|interface3?)\.music\.163.com\/eapi\/(ocpc\/)?ad\/.* data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/(resource|strategy)|music\/songshare\/text\/recommend\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/strategy|music\/songshare\/text\/recommend\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(community\/task\/complete|mlog\/vinyl\/story\/list) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
