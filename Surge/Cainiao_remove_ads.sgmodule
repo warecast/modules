@@ -4,7 +4,7 @@
 #!author = keywos RuCu6
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Cainiao.png
-#!date = 2023-11-12 14:45:36
+#!date = 2023-11-19 09:35:36
 
 [Rule]
 DOMAIN, adsmind.ugdtimg.com, REJECT
