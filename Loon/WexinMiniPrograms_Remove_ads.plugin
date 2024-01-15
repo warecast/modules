@@ -4,7 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/WeixinMiniPrograms.png
-#!date = 2023-11-22 15:51:15
+#!date = 2024-01-14 14:39:20
 
 [Rule]
 # 小程序通用规则
@@ -15,11 +15,8 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 # 收钱吧广告
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 
-#猫眼电影
+# 猫眼电影
 DOMAIN, ad.maoyan.com, REJECT
-
-# 七麦
-DOMAIN,logger.qmai.cn, REJECT
 
 [Rewrite]
 # 交通银行小程序开屏广告 @张军

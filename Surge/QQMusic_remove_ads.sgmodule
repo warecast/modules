@@ -4,7 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/QQMusic.png
-#!date = 2023-12-23 02:56:26
+#!date = 2024-01-10 13:51:07
 
 [Rule]
 DOMAIN, adstats.tencentmusic.com, REJECT-DROP
@@ -17,8 +17,7 @@ DOMAIN, otheve.beacon.qq.com, REJECT-DROP
 DOMAIN, mazu.m.qq.com, REJECT-DROP
 DOMAIN, monitor.music.qq.com, REJECT-DROP
 DOMAIN, stat.y.qq.com, REJECT
-# 下面这条不可用REJECT-DROP，会显著延长开屏时间。
-DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
 DOMAIN, oth.str.mdt.qq.com, REJECT
 DOMAIN, h.trace.qq.com, REJECT
 DOMAIN, sdk.e.qq.com, REJECT
