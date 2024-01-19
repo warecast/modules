@@ -62,4 +62,4 @@ http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/(v\d\/resource\/com
 http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/batch script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, tag = 移除网易音乐广告
 
 [Mitm]
-hostname = interface*.music.163.com
+hostname = interface.music.163.com, interface3.music.163.com

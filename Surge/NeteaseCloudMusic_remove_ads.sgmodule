@@ -45,7 +45,7 @@ http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/(v\d\/resource\/com
 http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/batch script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% interface*.music.163.com
+hostname = %APPEND% interface.music.163.com, interface3.music.163.com
 
 [Map Local]
 ^https:\/\/interface3?\.music\.163\.com\/eapi\/(community\/task\/complete|mlog\/vinyl\/story\/list) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
