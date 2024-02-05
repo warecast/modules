@@ -33,14 +33,5 @@ DOMAIN-SUFFIX, imtmp.net, REJECT
 # hostname = %APPEND% shc6.y.qq.com
 
 [Map Local]
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-200.txt"
 

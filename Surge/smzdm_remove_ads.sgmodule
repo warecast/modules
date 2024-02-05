@@ -42,3 +42,7 @@ http-response ^https:\/\/qianbao\.smzdm\.com\/v\d\/app\/home script-path = https
 
 [Mitm]
 hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com ,qianbao.smzdm.com, s3.zdmimg.com
+
+[Map Local]
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+

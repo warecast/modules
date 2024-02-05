@@ -60,5 +60,5 @@ http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage  script-pa
 hostname = %APPEND% *.xima*.*, *.xmcdn.*
 
 [Map Local]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-200.txt"
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 
