@@ -95,8 +95,5 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-pa
 # 精简我的页面
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 精简我的页面
 
-# 解锁4K画质及1080P高码率 //app.bilibili.com
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 画质解锁
-
 [MitM]
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com

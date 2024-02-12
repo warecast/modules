@@ -60,5 +60,21 @@ http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage  script-pa
 hostname = %APPEND% *.xima*.*, *.xmcdn.*
 
 [Map Local]
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(community\/task\/complete|mlog\/vinyl\/story\/list) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(link\/position\/show\/strategy|link\/scene\/show\/resource|music\/songshare\/text\/recommend\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/zone\/songplay\/entry\/get url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/banner\/ad\/get|link\/scene\/show\/resource) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/(batch-)?deliver|yunbei\/account\/entrance\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/event\/floating\/layer url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/moment\/tab\/info\/get url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(content\/activity\/music\/jar\/|content\/exposure\/vinyl\/comment\/entrance\/get|v1\/content\/exposure\/comment\/banner\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/comment\/(hotcomment\/collect\/fetchmodelinfov2|feed\/inserted\/resources|tips\/v2\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(mine\/applet\/redpoint|sp\/flow\/popup\/query|voice\/play\/page\/ad\/info) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/interface3?\.music\.163\.com\/weapi\/(activity\/bonus\/playpage\/time\/query|middle\/clientcfg\/config\/list) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/e?api\/(ocpc\/)?ad\/ url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) url data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 
