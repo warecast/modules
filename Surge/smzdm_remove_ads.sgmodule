@@ -42,10 +42,3 @@ http-response ^https:\/\/qianbao\.smzdm\.com\/v\d\/app\/home script-path = https
 
 [Mitm]
 hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com ,qianbao.smzdm.com, s3.zdmimg.com
-
-[Map Local]
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-
