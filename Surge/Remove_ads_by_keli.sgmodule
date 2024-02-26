@@ -4,7 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/KeLee.png
-#!date = 2024-01-31 05:31:59
+#!date = 2024-02-21 17:41:44
 
 [Rule]
 # 字节跳动 - 广告服务商
@@ -138,21 +138,6 @@ IP-CIDR, 122.229.29.89/32, REJECT
 # 弃用地址
 DOMAIN, waapdg.jd.com, REJECT
 
-# 小象买菜 - 兜底TCP请求下发广告
-IP-CIDR, 101.50.8.64/32, REJECT, no-resolve
-IP-CIDR, 101.50.8.75/32, REJECT, no-resolve
-IP-CIDR, 103.37.152.161/32, REJECT, no-resolve
-IP-CIDR, 103.37.152.162/32, REJECT, no-resolve
-IP-CIDR, 103.63.160.64/32, REJECT, no-resolve
-IP-CIDR, 119.29.48.215/32, REJECT, no-resolve
-IP-CIDR, 119.29.48.215/32, REJECT, no-resolve
-IP-CIDR, 202.90.110.8/32, REJECT, no-resolve
-IP-CIDR, 203.76.217.241/32, REJECT, no-resolve
-IP-CIDR, 203.76.217.243/32, REJECT, no-resolve
-IP-CIDR, 203.76.217.37/32, REJECT, no-resolve
-IP-CIDR6, 2405:1480:3000:303f::303f/128, REJECT, no-resolve
-
-
 [URL Rewrite]
 # 摩托范弹窗广告
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk _ reject
@@ -258,9 +243,6 @@ IP-CIDR6, 2405:1480:3000:303f::303f/128, REJECT, no-resolve
 # 威锋 - 开屏广告
 ^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/yesList _ reject
 
-# 小象超市 - 开屏广告
-# 小象超市 - 首页领券悬浮红包
-
 # 闲鱼 - 开屏广告
 # 闲鱼 - 底部浮层发布球
 
@@ -315,8 +297,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome\.do data="ht
 ^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https?:\/\/toblog\.ctobsnssdk\.com data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-200.txt"
 ^https?:\/\/conf-darwin\.xycdn\.com data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"

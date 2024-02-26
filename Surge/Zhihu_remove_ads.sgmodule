@@ -4,7 +4,7 @@
 #!author = RuCu6 blackmatrix7
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Zhihu.png
-#!date = 2024-01-24 13:20:06
+#!date = 2024-02-19 20:05:06
 
 [Rule]
 # 知乎
@@ -20,6 +20,8 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
 [URL Rewrite]
 # 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片
+
+# 会员页面 - 弹窗、悬浮动图
 
 # 我的页面 - 项目列表、会员卡片
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card _ reject
@@ -59,13 +61,14 @@ http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https:/
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% *.zhihu.com
+hostname = %APPEND% api.zhihu.com, www.zhihu.com, appcloud2.zhihu.com, link.zhihu.com, zhuanlan.zhihu.com, m-cloud.zhihu.com
 
 [Map Local]
 ^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/root\/window data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/me\/guides data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/search\/preset_words data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
 ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
