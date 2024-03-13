@@ -108,18 +108,16 @@ jobs:
                 echo "Processing line: $line"
                 case $line in
                   *reject-dict*|*reject_dict*)
-                    echo "Found reject-dict or reject_dict"
-                    line=$(echo "$line" | sed 's/\breject[-_]dict/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-dict.json"/')
-                    echo "Processed line: $line"
+                    line=$(echo "$line" | sed 's/\breject[-_]dict/data-type=file data="data\/reject-dict.json"/')
                     ;;
                   *reject-200*|*reject_200*)
-                    line=$(echo "$line" | sed 's/reject[-_]200/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-200.txt"/')
+                    line=$(echo "$line" | sed 's/\breject[-_]200/data-type=text data="{}" status-code=200/')
                     ;;
                   *reject-img*|*reject_img*)
-                    line=$(echo "$line" | sed 's/reject[-_]img/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-img.gif"/')
+                    line=$(echo "$line" | sed 's/\breject[-_]img/data-type=tiny-gif status-code=200/')
                     ;;
                   *reject-array*|*reject_array*)
-                    line=$(echo "$line" | sed 's/reject[-_]array/data="https:\/\/raw.githubusercontent.com\/warecast\/modules\/main\/Data\/reject-array.json"/')
+                    line=$(echo "$line" | sed 's/\breject[-_]array/data-type=file data="data\/reject-array.json"/')
                     ;;
                 esac
                 echo "Processed line: $line"
