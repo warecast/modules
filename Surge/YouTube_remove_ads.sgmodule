@@ -18,5 +18,5 @@ http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|p
 hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
 
 [Map Local]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-200.txt"
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="{}" status-code=200
 

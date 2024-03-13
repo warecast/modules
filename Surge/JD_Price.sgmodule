@@ -13,5 +13,5 @@ http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBu
 hostname = %APPEND% api.m.jd.com
 
 [Map Local]
-^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data-type=file data="data/reject-dict.json"
 

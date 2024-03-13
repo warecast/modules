@@ -16,8 +16,8 @@ http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api
 hostname = %APPEND% 114.115.217.129, home.umetrip.com
 
 [Map Local]
-^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=file data="data/reject-dict.json"
+^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=file data="data/reject-dict.json"
+^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data-type=file data="data/reject-dict.json"
+^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data-type=file data="data/reject-dict.json"
 

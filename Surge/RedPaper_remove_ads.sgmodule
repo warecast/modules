@@ -39,8 +39,8 @@ http-response https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(imagefeed|
 hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
 
 [Map Local]
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data="https://raw.githubusercontent.com/warecast/modules/main/Data/reject-dict.json"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data-type=file data="data/reject-dict.json"
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=file data="data/reject-dict.json"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data-type=file data="data/reject-dict.json"
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data-type=file data="data/reject-dict.json"
 
