@@ -89,14 +89,14 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
 
 [Map Local]
-^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data-type=file data="data/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data-type=file data="data/reject-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data-type=file data="data/reject-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr data-type=file data="data/reject-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist data-type=file data="data/reject-dict.json"
-^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data-type=file data="data/reject-dict.json"
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data-type=file data="data/reject-dict.json"
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash data-type=file data="data/reject-dict.json"
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data-type=file data="data/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data-type=text data="{}" status-code=200
+^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data-type=file data="{}"
+^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data-type=file data="{}"
+^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data-type=file data="{}"
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr data-type=file data="{}"
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist data-type=file data="{}"
+^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data-type=file data="{}"
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data-type=file data="{}"
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash data-type=file data="{}"
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data-type=file data="{}"
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data-type=text data="" status-code=200
 

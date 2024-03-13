@@ -49,16 +49,16 @@ http-response ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_ca
 hostname = %APPEND% m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
 
 [Map Local]
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan)\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=file data="data/reject-dict.json"
-^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data-type=file data="data/reject-dict.json"
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order\/car\/king_toolbox_car_bubble|tips\/onscene_visual_optimization)\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order\/car\/king_toolbox_car_bubble)\? data-type=file data="data/reject-dict.json"
-^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order_web\/friendly_information|tips\/onscene_visual_optimization)\? data-type=file data="data/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan)\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=file data="{}"
+^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=file data="{}"
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data-type=file data="{}"
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=file data="{}"
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order\/car\/king_toolbox_car_bubble|tips\/onscene_visual_optimization)\? data-type=file data="{}"
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order\/car\/king_toolbox_car_bubble)\? data-type=file data="{}"
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order_web\/friendly_information|tips\/onscene_visual_optimization)\? data-type=file data="{}"
 

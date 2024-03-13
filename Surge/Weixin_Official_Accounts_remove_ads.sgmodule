@@ -16,5 +16,5 @@
 hostname = %APPEND% mp.weixin.qq.com
 
 [Map Local]
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data-type=file data="data/reject-dict.json"
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data-type=file data="{}"
 

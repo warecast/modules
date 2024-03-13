@@ -17,5 +17,5 @@ http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = h
 hostname = %APPEND% api.coolapk.com
 
 [Map Local]
-^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=file data="data/reject-dict.json"
+^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=file data="{}"
 

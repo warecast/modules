@@ -258,48 +258,48 @@ http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\
 hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn, api.wfdata.club, mall.meituan.com, iyes.youku.com, acs.m.goofish.com, portal-portm.meituan.com, service.gd.10086.cn
 
 [Map Local]
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data-type=file data="data/reject-dict.json"
-^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest data-type=file data="data/reject-dict.json"
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=file data="data/reject-dict.json"
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=file data="data/reject-dict.json"
-^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start data-type=text data="{}" status-code=200
-^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ data-type=text data="{}" status-code=200
-^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen data-type=text data="{}" status-code=200
-^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? data-type=text data="{}" status-code=200
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data-type=file data="{}"
+^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest data-type=file data="{}"
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=file data="{}"
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=file data="{}"
+^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start data-type=text data="" status-code=200
+^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ data-type=text data="" status-code=200
+^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen data-type=text data="" status-code=200
+^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? data-type=text data="" status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? data-type=tiny-gif status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? data-type=tiny-gif status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? data-type=tiny-gif status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? data-type=tiny-gif status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? data-type=tiny-gif status-code=200
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? data-type=tiny-gif status-code=200
-^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data="{}" status-code=200
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data-type=file data="data/reject-dict.json"
-^http:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data="{}" status-code=200
-^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=file data="data/reject-dict.json"
-^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=file data="data/reject-dict.json"
-^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getFootData\? data-type=file data="data/reject-dict.json"
-^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data-type=file data="data/reject-dict.json"
-^https?:\/\/us\.l\.qq\.com\/exapp data-type=text data="{}" status-code=200
-^https:\/\/dict\.youdao\.com\/course\/tab\/translateTab data-type=file data="data/reject-dict.json"
-^https:\/\/dict\.youdao\.com\/homepage\/tile data-type=file data="data/reject-dict.json"
-^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig data-type=file data="data/reject-dict.json"
-^https:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup data-type=file data="data/reject-dict.json"
-^https:\/\/dict\.youdao\.com\/commonsearch data-type=file data="data/reject-dict.json"
-^https:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo data-type=file data="data/reject-dict.json"
-^https:\/\/dict\.youdao\.com\/dictusertask\/system data-type=file data="data/reject-dict.json"
-^https:\/\/service\.gd\.10086\.cn\/gdcmc\/reso\/d\/ts-area\/10011001-1246\.json data-type=file data="data/reject-dict.json"
-https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome\.do data-type=file data="data/reject-dict.json"
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v1\/market_content\.page\.queryHasIt data-type=file data="data/reject-dict.json"
-^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data="{}" status-code=200
-^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=file data="data/reject-dict.json"
-^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data="{}" status-code=200
-^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data="{}" status-code=200
-^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data-type=file data="data/reject-dict.json"
-^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data="{}" status-code=200
-^https?:\/\/conf-darwin\.xycdn\.com data-type=file data="data/reject-dict.json"
-^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data-type=file data="data/reject-dict.json"
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data-type=file data="data/reject-dict.json"
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=file data="data/reject-dict.json"
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data-type=file data="data/reject-dict.json"
-^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=file data="data/reject-dict.json"
+^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data="" status-code=200
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data-type=file data="{}"
+^http:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data="" status-code=200
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=file data="{}"
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=file data="{}"
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getFootData\? data-type=file data="{}"
+^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data-type=file data="{}"
+^https?:\/\/us\.l\.qq\.com\/exapp data-type=text data="" status-code=200
+^https:\/\/dict\.youdao\.com\/course\/tab\/translateTab data-type=file data="{}"
+^https:\/\/dict\.youdao\.com\/homepage\/tile data-type=file data="{}"
+^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig data-type=file data="{}"
+^https:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup data-type=file data="{}"
+^https:\/\/dict\.youdao\.com\/commonsearch data-type=file data="{}"
+^https:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo data-type=file data="{}"
+^https:\/\/dict\.youdao\.com\/dictusertask\/system data-type=file data="{}"
+^https:\/\/service\.gd\.10086\.cn\/gdcmc\/reso\/d\/ts-area\/10011001-1246\.json data-type=file data="{}"
+https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome\.do data-type=file data="{}"
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v1\/market_content\.page\.queryHasIt data-type=file data="{}"
+^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data="" status-code=200
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=file data="{}"
+^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data="" status-code=200
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data="" status-code=200
+^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data-type=file data="{}"
+^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data="" status-code=200
+^https?:\/\/conf-darwin\.xycdn\.com data-type=file data="{}"
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data-type=file data="{}"
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data-type=file data="{}"
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=file data="{}"
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data-type=file data="{}"
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=file data="{}"
 
