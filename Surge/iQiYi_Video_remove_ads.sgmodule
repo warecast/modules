@@ -57,8 +57,8 @@ http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path = ht
 hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com
 
 [Map Local]
-^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=file data="{}"
-^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=file data="{}"
-^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data-type=file data="{}"
-^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data-type=file data="{}"
+^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=text data="{}"
+^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=text data="{}"
+^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data-type=text data="{}"
+^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data-type=text data="{}"
 

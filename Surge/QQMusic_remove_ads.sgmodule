@@ -31,3 +31,7 @@ DOMAIN-SUFFIX, imtmp.net, REJECT
 
 # [Mitm]
 # hostname = %APPEND% shc6.y.qq.com
+
+[Map Local]
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) url data-type=text data="{}"
+
