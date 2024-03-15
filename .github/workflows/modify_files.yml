@@ -108,7 +108,7 @@ jobs:
                 echo "Processing line: $line"
                 case $line in
                   *reject-dict*|*reject_dict*)
-                    line=$(echo "$line" | sed 's/\breject[-_]dict/data-type=file data="\{\}"/')
+                    line=$(echo "$line" | sed 's/\breject[-_]dict/data-type=text data="\{\}"/')
                     ;;
                   *reject-200*|*reject_200*)
                     line=$(echo "$line" | sed 's/\breject[-_]200/data-type=text data="" status-code=200/')
@@ -117,7 +117,7 @@ jobs:
                     line=$(echo "$line" | sed 's/\breject[-_]img/data-type=tiny-gif status-code=200/')
                     ;;
                   *reject-array*|*reject_array*)
-                    line=$(echo "$line" | sed 's/\breject[-_]array/data-type=file data="\[\]"/')
+                    line=$(echo "$line" | sed 's/\breject[-_]array/data-type=text data="\[\]"/')
                     ;;
                 esac
                 echo "Processed line: $line"
