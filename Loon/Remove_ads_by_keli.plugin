@@ -4,7 +4,7 @@
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/KeLee.png
-#!date = 2024-02-21 17:41:44
+#!date = 2024-03-29 21:28:58
 
 [Rule]
 # 字节跳动 - 广告服务商
@@ -69,7 +69,7 @@ DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, l.qq.com, REJECT
 DOMAIN-KEYWORD, trace.qq.com, REJECT
 DOMAIN-KEYWORD, trace.video.qq.com, REJECT
-IP-CIDR, 47.110.187.87/32, REJECT
+IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
 
 # 手机QQ
 DOMAIN, adsmind.gdtimg.com, REJECT
@@ -121,7 +121,7 @@ DOMAIN-SUFFIX, v1d.szbdyd.com, REJECT
 URL-REGEX, ^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$, REJECT
 
 # 中国移动
-IP-CIDR, 120.240.95.37/32, REJECT
+IP-CIDR, 120.240.95.37/32, REJECT, no-resolve
 
 # 中国联通
 DOMAIN-SUFFIX, m1.ad.10010.com, REJECT
@@ -131,8 +131,8 @@ DOMAIN, ad.21cn.com, REJECT
 DOMAIN, ad.k.21cn.com, REJECT
 DOMAIN, admarket.21cn.com, REJECT
 DOMAIN, adshows.21cn.com, REJECT
-IP-CIDR, 122.229.8.47/32, REJECT
-IP-CIDR, 122.229.29.89/32, REJECT
+IP-CIDR, 122.229.8.47/32, REJECT, no-resolve
+IP-CIDR, 122.229.29.89/32, REJECT, no-resolve
 
 # 京东
 # 弃用地址
@@ -287,6 +287,12 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome\.do reject-d
 # 闲鱼 - 底部浮层发布球
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ reject-dict
 
+# 创客贴设计 - 开屏广告
+^https:\/\/gw\.chuangkit\.com\/team\/app\/common\/ad\/ reject-dict
+
+# 稿定设计 - 开屏广告
+^https:\/\/qiye\.gaoding\.com\/api\/v3\/oc\/v2\/delivery-pits\/ios-splash\/ reject-dict
+
 [Script]
 # 快手联盟、腾讯优量汇、字节跳动穿山甲
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body = true, tag = 移除广告联盟广告
@@ -299,4 +305,4 @@ http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\
 ^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
 
 [Mitm]
-hostname = api-access.pangolin-sdk-toutiao.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn, api.wfdata.club, mall.meituan.com, iyes.youku.com, acs.m.goofish.com, portal-portm.meituan.com, service.gd.10086.cn
+hostname = api-access.pangolin-sdk-toutiao.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, acs.m.taobao.com, guide-acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, client.app.coc.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn, api.wfdata.club, mall.meituan.com, iyes.youku.com, acs.m.goofish.com, portal-portm.meituan.com, service.gd.10086.cn, gw.chuangkit.com, qiye.gaoding.com
