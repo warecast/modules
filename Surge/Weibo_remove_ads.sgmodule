@@ -4,7 +4,7 @@
 #!author = RuCu6 zmqcherish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Weibo.png
-#!date = 2024-02-07 17:35:47
+#!date = 2024-04-13 19:05:47
 
 [Rule]
 # 请求放行

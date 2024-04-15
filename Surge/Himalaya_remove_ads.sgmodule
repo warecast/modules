@@ -60,8 +60,8 @@ http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage  script-pa
 hostname = %APPEND% *.xima*.*, *.xmcdn.*
 
 [Map Local]
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data-type=text data="{}"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/surprisebox\/(get_style|open|submit_action) data-type=text data="{}"
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}"
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data-type=text data="{}"
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data-type=text data="{}"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}"
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/(ads\/resource|hey\/\w+\/hey_gallery) data-type=text data="{}"
 
