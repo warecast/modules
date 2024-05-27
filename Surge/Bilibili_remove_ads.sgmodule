@@ -4,7 +4,7 @@
 #!author = Maasea RuCu6 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Bilibili.png
-#!date = 2024-05-12 08:01:06
+#!date = 2024-05-23 13:25:06
 
 [Rule]
 # 开屏广告
@@ -89,7 +89,7 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
 
 [Map Local]
-^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data-type=text data="{}"
+^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? data-type=text data="{}"
 ^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data-type=text data="{}"
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data-type=text data="{}"
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr data-type=text data="{}"
