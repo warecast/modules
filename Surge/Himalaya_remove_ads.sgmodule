@@ -58,3 +58,7 @@ http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage  script-pa
 
 [Mitm]
 hostname = %APPEND% *.xima*.*, *.xmcdn.*
+
+[Map Local]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="{}"
+
