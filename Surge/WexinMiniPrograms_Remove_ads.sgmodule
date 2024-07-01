@@ -1,43 +1,44 @@
 #!name = 微信小程序去广告
 #!desc = 收录常用小程序的去广告，作者署名在插件内。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id414478124
 #!author = 可莉🅥
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/WeixinMiniPrograms.png
-#!date = 2024-06-22 21:27:36
+#!date = 2024-06-30 20:18:22
 
 [Rule]
-#  微信小程序通用规则
+# 微信小程序通用规则
 DOMAIN, wxsnsdy.wxs.qq.com, REJECT
 DOMAIN, wxsmsdy.video.qq.com, REJECT
 DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 
-#  收钱吧广告
+# 收钱吧广告
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 
-#  猫眼电影
+# 猫眼电影
 DOMAIN, ad.maoyan.com, REJECT
 
 [URL Rewrite]
-#  企麦点餐系统
-^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$ _ reject
+# 企迈点单系统
+^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach _ reject
+# 挪瓦咖啡 webapi.qmai.cn
 
-#  交通银行小程序开屏广告 @张军
+# 交通银行小程序开屏广告 @张军
 ^https:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaMdbcardWeb\/page\/getGuidePageAds _ reject
 
-#  招行首页横幅广告 @ArthasYZ
+# 招行首页横幅广告 @ArthasYZ
 ^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic _ reject
 
 # 丰巢 @ArthasYZ
 ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage _ reject
 ^https:\/\/dsp\.fcbox\.com _ reject
 
-#  中国石油去广告 @张军
-#  中石油去开屏广告发现
+# 中国石油去广告 @张军
+# 中石油去开屏广告发现
 ^https:\/\/app\.95504\.net\/app\/json\/page_ad\/initPageAd\?ver= _ reject
-#  中油好客e站小程序弹窗广告
+# 中油好客e站小程序弹窗广告
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData _ reject
-#  中油好客e站小程序底部横幅广告
+# 中油好客e站小程序底部横幅广告
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData _ reject
 
 # 多点 @ArthasYZ
@@ -152,8 +153,6 @@ DOMAIN, ad.maoyan.com, REJECT
 
 # M Stand api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
 
-# 挪瓦咖啡 webapi.qmai.cn
-
 # 首汽约车 gw-passenger-wap.01zhuanche.com
 
 # 德邦快递 www.deppon.com
@@ -164,34 +163,37 @@ DOMAIN, ad.maoyan.com, REJECT
 
 # 携程旅行 m.ctrip.com
 
-#  猫眼电影
-#  弹窗广告+横幅广告 # 主机名ad.maoyan.com
-#  电竞赛事+热门赛事 # 主机名wx.maoyan.com
-#  猫眼放映厅 # 主机名vod-movie.maoyan.com
-#  精彩演出
-#  七日精选
-#  今日必抢
-#  大咖新动态
-#  为你推荐
-#  首页底部推荐 # 主机名api.maoyan.com
-#  演出页面全部拦截
+# 猫眼电影
+# 弹窗广告+横幅广告 # 主机名ad.maoyan.com
+# 电竞赛事+热门赛事 # 主机名wx.maoyan.com
+# 猫眼放映厅 # 主机名vod-movie.maoyan.com
+# 精彩演出
+# 七日精选
+# 今日必抢
+# 大咖新动态
+# 为你推荐
+# 首页底部推荐 # 主机名api.maoyan.com
+# 演出页面全部拦截
 
-#  途虎养车小程序 @张军
+# 途虎养车小程序 @张军
 
-#  横店电影小程序 @张军
+# 横店电影小程序 @张军
 
-#  乐堡潮玩馆小程序
+# 乐堡潮玩馆小程序
 
-#  收钱吧小程序 @可莉🅥
+# 收钱吧小程序 @可莉🅥
 ^https:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ _ reject
 
-#  顺丰速运+ @可莉🅥
-#  顺丰速运+ 弹窗广告  @ArthasYZ
+# 顺丰速运+ @可莉🅥
+# 顺丰速运+ 弹窗广告  @ArthasYZ
 ^https:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list _ reject
 
 # 滴滴代驾 daijia.kuaidadi.com, as.xiaojukeji.com
 
 [Script]
+# 企迈点单系统 webapi.qmai.cn, images.qmai.cn
+http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body = true
+
 # EMS中国邮政物流速递 @TEAXS ump.ems.com.cn
 http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/ems/ems.js, requires-body = true
 
@@ -222,8 +224,6 @@ http-response ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.
 # M Stand api.prod.dj.mstand.cn, api.prod.dj.mstand.cn
 http-response ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/mini\/app\/index\/info script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body = true
 
-# 挪瓦咖啡 webapi.qmai.cn, images.qmai.cn
-http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body = true
 
 # T3出行 passenger.t3go.cn
 http-response ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/T3/T3.js, requires-body = true
@@ -239,6 +239,7 @@ hostname = %APPEND% 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip
 
 [Map Local]
 ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ data-type=text data="{}"
+^https:\/\/images\.qmai\.cn\/s214925\/2023 data-type=text data="{}"
 ^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}"
 # ^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon data-type=text data="{}"
 # ^https:\/\/dynamicad\.kfc\.com\.cn\/api data-type=text data="{}"
@@ -298,7 +299,6 @@ hostname = %APPEND% 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip
 ^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle data-type=text data="{}"
 ^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads data-type=text data="{}"
 ^https:\/\/api\.prod\.dj\.mstand\.cn\/scrm\/app\/mdm\/index\/listAdv\?types data-type=text data="{}"
-^https:\/\/images\.qmai\.cn\/s214925\/2023 data-type=text data="{}"
 ^https:\/\/gw-passenger-wap\.01zhuanche\.com\/gw-passenger-wap\/zhuanche-passenger-token\/commonSkipToken\/common\/getAdList data-type=text data="{}"
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface data-type=text data="{}"
 ^https:\/\/passengerapi\.saicmobility\.com\/(ad\/requestAd|pay\/v1\/queryOpenedCouponPackages) data-type=text data="{}"
