@@ -18,8 +18,9 @@ URL-REGEX, ^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stod
 # http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true
 
 [Mitm]
-hostname = %APPEND% mp.weixin.qq.com
+hostname = %APPEND% mp.weixin.qq.com, *.wxs.qq.com
 
 [Map Local]
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data-type=text data="{}"
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/snssvpdownload\/SH\/reserved\/ads_svp_video data-type=text data="{}"
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}"
 
