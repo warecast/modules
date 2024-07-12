@@ -11,3 +11,7 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 
 [Mitm]
 hostname = %APPEND% weixin110.qq.com, security.wechat.com
+
+[Map Local]
+^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data-type=text data="{}"
+
