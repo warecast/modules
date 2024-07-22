@@ -46,6 +46,7 @@ jobs:
             "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/DiDi_remove_ads.plugin"
             "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/FlyerTea_remove_ads.plugin"
             "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XiaoHeiHe_remove_ads.plugin"
+            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BlockAdvertisers.plugin"
           )
 
           # loop through the URLs and fetch the contents
