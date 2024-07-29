@@ -1,16 +1,16 @@
 #!name = 广告平台拦截器
-#!desc = 拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、锐讯灵通等广告平台的广告请求，更适合iOS平台的应用。
+#!desc = 拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通等广告平台的广告请求，更适合iOS平台的应用。
 #!openUrl = 
 #!author = 可莉🅥
 #!keyword = 去广告, 可莉
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Website_icon/120px/TencentAd.png
-#!date = 2024-07-22 03:35:52
+#!date = 2024-07-29 02:52:11
 
 [Rule]
 # 字节跳动广告
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
-AND, ((DOMAIN-KEYWORD, -sign-), (DOMAIN-SUFFIX, tiktokcdn.com)), REJECT
+# AND, ((DOMAIN-KEYWORD, -sign-), (DOMAIN-SUFFIX, tiktokcdn.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, ssdk-), (DOMAIN-SUFFIX, pangle.io)), REJECT
 AND, ((DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssdk.com)), REJECT
@@ -53,6 +53,8 @@ DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
 DOMAIN-KEYWORD, api-access.pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, log-api.pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, -ad.byteoversea.com, REJECT
+DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 
 # 讯飞AI营销
 DOMAIN-KEYWORD, iflyad.bj.openstorage.cn, REJECT
@@ -69,10 +71,14 @@ DOMAIN, gdfp.gifshow.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN-SUFFIX, adukwai.com, REJECT
 
+# SupersonicAds
+DOMAIN, init.supersonicads.com, REJECT
+
 # 上海倍孜
 DOMAIN, sdk.beizi.biz, REJECT
 
 # 秒针系统 - 广告服务商
+DOMAIN, admaster.com.cn, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
 
 # 艾狄墨搏 - 广告服务商
@@ -131,7 +137,6 @@ DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, appsupport.qq.com, REJECT
 DOMAIN, c2.gdt.qq.com, REJECT
 DOMAIN, huatuocode.huatuo.qq.com, REJECT
-DOMAIN, i.gtimg.cn, REJECT
 DOMAIN, info4.video.qq.com, REJECT
 DOMAIN, info6.video.qq.com, REJECT
 DOMAIN, ios.bugly.qq.com, REJECT
@@ -154,7 +159,6 @@ DOMAIN, tmeadcomm.y.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
 DOMAIN, v.gdt.qq.com, REJECT
 DOMAIN, v2.gdt.qq.com, REJECT
-DOMAIN, vv.video.qq.com, REJECT
 DOMAIN, win.gdt.qq.com, REJECT
 DOMAIN, wup.imtt.qq.com, REJECT
 DOMAIN, tpstelemetry.tencent.com, REJECT
@@ -169,6 +173,9 @@ IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
 DOMAIN-SUFFIX, openinstall.io, REJECT
 
 # 个推
+DOMAIN, sdk-open-phone.getui.com, REJECT
+DOMAIN, c-hzgt2.getui.com, REJECT
+DOMAIN, sdk-conf.getui.com, REJECT
 DOMAIN-SUFFIX, mobileservice.cn, REJECT
 DOMAIN-SUFFIX, getui.com, REJECT
 DOMAIN-SUFFIX, igexin.com, REJECT
@@ -185,6 +192,9 @@ DOMAIN, aspect-upush.umeng.com, REJECT
 DOMAIN, plbslog.umeng.com, REJECT
 DOMAIN, log.umtrack.com, REJECT
 DOMAIN, aaid.umeng.com, REJECT
+
+# FUNLINK - 北京泛连科技
+DOMAIN, adtracker.adfunlink.com, REJECT
 
 # 天目 - 广告服务商
 DOMAIN, sdk.tianmu.mobi, REJECT
@@ -203,6 +213,7 @@ DOMAIN, hudong.alicdn.com, REJECT
 DOMAIN, et.tanx.com, REJECT
 DOMAIN, beacon-api.aliyuncs.com, REJECT
 DOMAIN, adash.man.aliyuncs.com, REJECT
+DOMAIN, applog.uc.cn, REJECT
 AND, ((DOMAIN-KEYWORD, adash), (DOMAIN-SUFFIX, ut.taobao.com)), REJECT
 
 # 网易
