@@ -2,7 +2,10 @@
 #!desc = 在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式，且需要应用版本不高于12.6.0。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = zwf234
-#!keyword = 功能增强, zwf234
+#!tag = 功能增强, zwf234
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.2.1(372)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/JD.png
 #!date = 2024-04-21 15:41:08
@@ -14,8 +17,5 @@ http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBu
 hostname = %APPEND% api.m.jd.com
 
 [Map Local]
-^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=text data="{}"
-^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=text data="{}"
-^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data-type=text data="{}"
-^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data-type=text data="{}"
+^https:\/\/api\.xiaoheihe\.cn\/account\/get_ads_info_v2 data-type=text data="{}"
 
