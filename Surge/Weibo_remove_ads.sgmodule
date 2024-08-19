@@ -1,14 +1,14 @@
 #!name = 微博去广告
 #!desc = 过滤微博广告及去除各部分推广模块
 #!openUrl = https://apps.apple.com/app/id350962117
-#!author = RuCu6 zmqcherish
-#!tag = 去广告, RuCu6, zmqcherish
-#!system = iOS
+#!author = RuCu6[https://github.com/RuCu6], zmqcherish[https://github.com/zmqcherish]
+#!tag = 去广告
+#!system = 
 #!system_version = 
-#!loon_version = 3.2.1(372)
+#!loon_version = 3.2.1(732)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Weibo.png
-#!date = 2024-08-02 23:00:56
+#!date = 2024-08-17 19:47:54
 
 [Rule]
 # 请求放行
@@ -74,6 +74,7 @@ hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
 [Map Local]
 ^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? data-type=text data="{}"
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? data-type=text data="{}"
+^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\?flowId=\d+&invokeType=manual&manualType=scroll&pageDataType=flow&taskType=loadMore& data-type=text data="{}"
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? data-type=text data="{}"
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? data-type=text data="{}"
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info)\? data-type=text data="{}"
