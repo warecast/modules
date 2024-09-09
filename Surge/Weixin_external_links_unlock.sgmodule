@@ -13,10 +13,15 @@
 [Script]
 http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true
 
-[Mitm]
+[MitM]
 hostname = %APPEND% weixin110.qq.com, security.wechat.com
 
 [Map Local]
-^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}"
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}"
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget data-type=text data="{}"
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds data-type=text data="{}"
+^https:\/\/daijia\.kuaidadi\.com\/gateway data-type=text data="{}"
+^https:\/\/freight\.xiaojukeji\.com\/gateway data-type=text data="{}"
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}"
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast data-type=text data="{}"
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf data-type=text data="{}"
 

@@ -42,7 +42,7 @@ http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/feed|no
 # 移除图片和实况照片水印
 http-response https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/(imagefeed|live_photo\/save) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true
 
-[Mitm]
+[MitM]
 hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
 
 [Map Local]

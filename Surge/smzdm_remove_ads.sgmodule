@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(745)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/smzdm.png
-#!date = 2024-02-11 01:02
+#!date = 2024-09-08 20:59:02
 
 [Rule]
 DOMAIN, aaid.uyunad.com, REJECT
@@ -37,7 +37,7 @@ http-response ^https:\/\/s3\.zdmimg\.com\/third\/index  script-path = https://gi
 http-response ^https:\/\/post\.m\.smzdm\.com\/ajax_app\/ajax_get_footer_list  script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/smzdm/smzdm_remove_ads.js, requires-body = true
 
 
-[Mitm]
+[MitM]
 hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com ,qianbao.smzdm.com, s3.zdmimg.com
 
 [Map Local]
