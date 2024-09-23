@@ -17,11 +17,7 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 hostname = %APPEND% weixin110.qq.com, security.wechat.com
 
 [Map Local]
-^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget data-type=text data="{}"
-^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds data-type=text data="{}"
-^https:\/\/daijia\.kuaidadi\.com\/gateway data-type=text data="{}"
-^https:\/\/freight\.xiaojukeji\.com\/gateway data-type=text data="{}"
-^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}"
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast data-type=text data="{}"
-^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf data-type=text data="{}"
+^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=vip_coupon data-type=text data="{}"
+^https:\/\/ptf\.flyertrip\.com\/static\/img\/common\/ic_plate_mine_button\.png data-type=tiny-gif status-code=200
+^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata data-type=text data="{}"
 

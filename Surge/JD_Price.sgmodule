@@ -1,21 +1,34 @@
 #!name = 京东比价
-#!desc = 在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式，且需要应用版本不高于12.6.0。
+#!desc = 在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式，且需要应用版本不高于12.4.3。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = zwf234[https://github.com/zwf234]
+#!author = 苍井灰灰[https://github.com/wf021325], githubdulong[https://github.com/githubdulong]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.1(745)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/JD.png
-#!date = 2024-04-21 15:41:08
+#!date = 2024-09-18 16:14:34
 
 [Script]
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_Price.js, requires-body = true
+http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_Price.js, requires-body = true
   
 [MitM]
 hostname = %APPEND% api.m.jd.com
 
 [Map Local]
-^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul)|^https:\/\/s3\.zdmimg\.com\/third\/index|^https:\/\/app-api\.smzdm\.com\/util\/loading data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/root\/window data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/search\/preset_words data-type=text data="{}"
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/ad-style-service\/request data-type=text data="{}"
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}"
 
