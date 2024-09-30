@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(745)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/WeixinMiniPrograms.png
-#!date = 2024-09-10 21:33:04
+#!date = 2024-09-27 22:18:09
 
 [Rule]
 # 微信小程序通用规则
@@ -22,6 +22,9 @@ DOMAIN, ads-shopping.shouqianba.com, REJECT
 # 猫眼电影
 DOMAIN, ad.maoyan.com, REJECT
 
+# 捷停车 @怎么肥事
+DOMAIN, e.jparking.cn, REJECT
+
 [URL Rewrite]
 # 企迈点单系统
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach _ reject
@@ -33,9 +36,12 @@ DOMAIN, ad.maoyan.com, REJECT
 # 招行首页横幅广告 @ArthasYZ
 ^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic _ reject
 
-# 丰巢 @ArthasYZ
-^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage _ reject
-^https:\/\/dsp\.fcbox\.com _ reject
+# 丰巢 - 首页服务推广
+# 丰巢 - 首页丰巢直播
+# 丰巢 - 横幅和广告配置
+# 丰巢 - 订单页面 - 邀请开通会员横幅
+# 丰巢 - 订单页面 - 好友助力
+# 丰巢 - 订单页面 - 悬浮窗
 
 # 中国石油去广告 @张军
 # 中石油去开屏广告发现
@@ -234,6 +240,12 @@ hostname = %APPEND% 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip
 [Map Local]
 ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ data-type=text data="{}"
 ^https:\/\/images\.qmai\.cn\/s214925\/2023 data-type=text data="{}"
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/modulesAggregated\? data-type=text data="{}"
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage\/getHomeLiveInfo$ data-type=text data="{}"
+^https:\/\/dsp\.fcbox\.com\/adSearch\/ data-type=text data="{}"
+^https:\/\/webchatapp\.fcbox\.com\/post\/suggestion\/query$ data-type=text data="{}"
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/v2\/infoWithItems$ data-type=text data="{}"
+^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/info$ data-type=text data="{}"
 ^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}"
 # ^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon data-type=text data="{}"
 # ^https:\/\/dynamicad\.kfc\.com\.cn\/api data-type=text data="{}"
