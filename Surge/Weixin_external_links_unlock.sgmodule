@@ -17,7 +17,15 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 hostname = %APPEND% weixin110.qq.com, security.wechat.com
 
 [Map Local]
-^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=vip_coupon data-type=text data="{}"
-^https:\/\/ptf\.flyertrip\.com\/static\/img\/common\/ic_plate_mine_button\.png data-type=tiny-gif status-code=200
-^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan) data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=text data="{}"
+^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(main-page-assets|main-page-location|ridewalk-end-fc) data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data-type=text data="{}"
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=text data="{}"
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order\/car\/king_toolbox_car_bubble|tips\/onscene_visual_optimization) data-type=text data="{}"
 

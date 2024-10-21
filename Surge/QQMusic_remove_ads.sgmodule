@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(749)
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/QQMusic.png
-#!date = 2024-07-07 15:31:22
+#!date = 2024-10-19 17:18:31
 
 [Rule]
 DOMAIN, adstats.tencentmusic.com, REJECT
@@ -31,12 +31,19 @@ DOMAIN, tangram.e.qq.com, REJECT
 DOMAIN, tmeadbak.y.qq.com, REJECT
 DOMAIN-SUFFIX, imtmp.net, REJECT
 
-# [URL Rewrite]
-# ^https:\/\/shc6\.y\.qq\.com\/tips\/fcgi-bin\/fcg_get_advert\.fcg
-
-# [MitM]
-# hostname = %APPEND% shc6.y.qq.com
-
 [Map Local]
-^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/root\/window data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}"
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/ad-style-service\/request data-type=text data="{}"
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}"
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}"
 

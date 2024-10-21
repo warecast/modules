@@ -17,18 +17,11 @@ http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusine
 hostname = %APPEND% api.m.jd.com
 
 [Map Local]
-^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/root\/window data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}"
-^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/ad-style-service\/request data-type=text data="{}"
-^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}"
-^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}"
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget data-type=text data="{}"
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds data-type=text data="{}"
+^https:\/\/daijia\.kuaidadi\.com\/gateway data-type=text data="{}"
+^https:\/\/freight\.xiaojukeji\.com\/gateway data-type=text data="{}"
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}"
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast data-type=text data="{}"
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf data-type=text data="{}"
 
