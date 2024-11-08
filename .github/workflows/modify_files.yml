@@ -5,7 +5,7 @@ on:
     branches: [main]
   # schedule a weekly auto update at 12:00 AM every Monday
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: '0 0 * * 1'
   # allow manual trigger via the GitHub UI or API
   workflow_dispatch:
 
@@ -20,33 +20,33 @@ jobs:
       - name: Fetch URLs and update files
         run: |
           declare -a URLS=(
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Zhihu_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Amap_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_Price.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouKu_Video_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CoolApk_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/DiDi_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/FlyerTea_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XiaoHeiHe_remove_ads.plugin"
-            "https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BlockAdvertisers.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Tencent_Video_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/YouKu_Video_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/iQiYi_Video_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/FlyerTea_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/XiaoHeiHe_remove_ads.plugin"
+            "https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin"
           )
 
           # loop through the URLs and fetch the contents
@@ -165,10 +165,10 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: "."
-          author_name: "GitHub Action"
-          author_email: "action@github.com"
-          message: "update and save files"
+          add: '.'
+          author_name: 'GitHub Action'
+          author_email: 'action@github.com'
+          message: 'update and save files'
 
       - name: Get list of changed files
         run: |
@@ -179,6 +179,6 @@ jobs:
         with:
           commit-message: "Changes made to the following files:\n- ${{ env.CHANGED_FILES }}"
           branch: notify-file-changes
-          title: "Notification: Files changed"
+          title: 'Notification: Files changed'
           body: "This pull request is generated automatically to notify that the following files have been changed in the recent commit:\n\n${{ env.CHANGED_FILES }}"
           token: ${{ secrets.GITHUB_TOKEN }}
