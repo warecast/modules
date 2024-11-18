@@ -1,64 +1,93 @@
-#!name = 喜马拉雅去广告
-#!desc = 过滤喜马拉雅广告
-#!openUrl = https://apps.apple.com/app/id876336838
-#!author = 佚名
-#!tag = 去广告
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.1(749)
-#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Himalaya.png
-#!date = 2023-10-29 13:48:55
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
 
-[Rewrite]
-# 修复轮播广告失效
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF reject
-# 播放页直播
-^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ reject
-# 我的页面红点提醒
-^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list reject
-# 屏蔽大红包提示
-^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status reject
-# 屏蔽动图弹窗广告
-^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ reject
-# gslb
-^https?:\/\/gslb.*\.xima.*\.com\/ reject
-# 屏蔽Aged请求
-^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) reject
-# 部分标签弹窗
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant reject
-# 屏蔽红点提示
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread reject
-# 屏蔽minor请求
-^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop reject
-# 屏蔽隐私搜集
-^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d reject
-# 屏蔽版本更新
-^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck reject
-# 屏蔽开屏广告
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* reject
-# 屏蔽位置请求
-^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location reject
-# 屏蔽热搜词
-^https?:\/\/.*\.xima.*\.com\/hotWord reject
-# 屏蔽搜索框定时广告
-^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord reject
-# 屏蔽实时广告请求
-^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime reject
-# 屏蔽ting广告
-^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? reject
 
-[Script]
-# 首页顶部去除直播
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories  script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广
-# 屏蔽首页横幅广告
-http-response ^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic  script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页横幅广告
-# 屏蔽首页动态广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix  script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告
-# 屏蔽标签页滚动广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category  script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除标签页滚动广告
-# 去除我的页面广告标签
-http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage  script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
 
-[MitM]
-hostname = *.xima*.*, *.xmcdn.*
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> kelee.one</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">8e43d4690a032d0d</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">172.183.132.65</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>
